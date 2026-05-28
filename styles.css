@@ -109,7 +109,7 @@ nav {
   background: linear-gradient(to bottom, rgba(247,243,238,0.55) 0%, rgba(247,243,238,0.85) 100%);
 }
 
-.hero-inner { position: relative; z-index: 1; max-width: 900px; }
+.hero-inner { position: relative; z-index: 1; width: 100%; text-align: center; }
 
 .hero-eyebrow {
   font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
@@ -117,25 +117,31 @@ nav {
   opacity: 0; animation: fadeUp 0.9s 0.1s forwards;
 }
 .hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Abadi', 'Abadi MT Condensed Light', 'Century Gothic', Calibri, sans-serif;
   font-size: clamp(2.5rem, 5.5vw, 8rem);
   font-weight: 400; line-height: 1.08;
   color: var(--charcoal); letter-spacing: -0.01em;
   white-space: nowrap;
   opacity: 0; animation: fadeUp 0.9s 0.25s forwards;
-  margin-bottom: 28px;
+  margin-bottom: 0;
 }
 .hero h1 em { font-style: italic; color: var(--oak); }
 
 .hero-sub {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.35rem; font-weight: 300; font-style: italic;
-  color: var(--mid); max-width: 520px; margin: 0 auto 44px;
-  opacity: 0; animation: fadeUp 0.9s 0.4s forwards;
+  font-family: 'Abadi', 'Abadi MT Condensed Light', 'Century Gothic', Calibri, sans-serif;
+  font-size: 1.2rem; font-weight: 400;
+  color: var(--mid); max-width: 560px; margin: 0 auto 44px;
 }
 .hero-ctas {
   display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
-  opacity: 0; animation: fadeUp 0.9s 0.55s forwards;
+}
+
+/* ─── HERO BELOW ─────────────────────────────── */
+.hero-below {
+  background: var(--cream);
+  text-align: center;
+  padding: 80px 48px 96px;
+  border-bottom: 1px solid var(--border);
 }
 
 /* ─── HERO VARIANTS (Shop, Arch, Portfolio, Team, Contact) ─── */
