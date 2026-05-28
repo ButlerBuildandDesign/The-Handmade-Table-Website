@@ -204,6 +204,24 @@ const tables = [
     desc: "Poplar planks from the floor system of a very early barn. One of those tables that comes along every 15 to 20 pieces and simply stands apart from the rest. Shown with glass base.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0380.jpeg",
     inStock: true
+  },
+  {
+    id: 16,
+    name: "Betty",
+    type: "Farm Table · Pine",
+    wood: "pine",
+    length: "84",
+    width: "33",
+    style: "Threshing Floor",
+    price: "Contact for Price",
+    desc: "Two-board honey brown threshing floor top, 84 x 33. Pre-industrial pine boards with a warm, rich natural patina developed over centuries of hard use. No stain — every color you see is entirely the wood.",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%201%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%20%202-board%20top/Table%201%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%20%202-board%20top%20(1).jpeg",
+    images: [
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%201%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%20%202-board%20top/Table%201%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%20%202-board%20top%20(1).jpeg",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%201%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%20%202-board%20top/Table%201%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%20%202-board%20top%20(2).jpeg",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%201%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%20%202-board%20top/Table%201%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%20%202-board%20top%20(3).jpeg"
+    ],
+    inStock: true
   }
 ];
 
@@ -241,7 +259,8 @@ function showProductDetail(tableId) {
   const table = tables.find(t => t.id === tableId);
   if (!table) return;
 
-  // Populate detail page with product data
+  const images = table.images && table.images.length ? table.images : [table.image];
+
   document.getElementById('detail-title').textContent = table.name;
   document.getElementById('detail-type').textContent = table.type;
   document.getElementById('detail-name').textContent = table.name;
@@ -251,10 +270,26 @@ function showProductDetail(tableId) {
   document.getElementById('detail-width').textContent = table.width + '"';
   document.getElementById('detail-style').textContent = table.style.charAt(0).toUpperCase() + table.style.slice(1);
   document.getElementById('detail-description').textContent = table.desc;
-  document.getElementById('detail-main-image').src = table.image;
+  document.getElementById('detail-main-image').src = images[0];
   document.getElementById('detail-main-image').alt = table.name;
 
-  // Store current product for inquiry modal
+  const thumbsEl = document.getElementById('detail-thumbnails');
+  thumbsEl.innerHTML = '';
+  if (images.length > 1) {
+    images.forEach((src, i) => {
+      const t = document.createElement('img');
+      t.src = src;
+      t.alt = table.name + ' photo ' + (i + 1);
+      t.className = 'detail-thumbnail' + (i === 0 ? ' active' : '');
+      t.onclick = () => {
+        document.getElementById('detail-main-image').src = src;
+        thumbsEl.querySelectorAll('.detail-thumbnail').forEach(x => x.classList.remove('active'));
+        t.classList.add('active');
+      };
+      thumbsEl.appendChild(t);
+    });
+  }
+
   window.currentProduct = table;
 
   showPage('product');
@@ -395,6 +430,9 @@ document.addEventListener('DOMContentLoaded', () => {
       
       shopGrid.appendChild(card);
     });
+
+    document.getElementById('product-count').textContent =
+      `Showing ${tables.length} table${tables.length !== 1 ? 's' : ''}`;
   }
 
   // Close modal with Escape key

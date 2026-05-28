@@ -738,6 +738,19 @@ footer {
   border: 1px solid var(--border);
 }
 
+.detail-thumbnails {
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.detail-thumbnail {
+  width: calc(33.33% - 6px);
+  aspect-ratio: 4/3; object-fit: cover;
+  border-radius: 2px; cursor: pointer;
+  border: 2px solid transparent;
+  opacity: 0.65; transition: opacity 0.2s, border-color 0.2s;
+}
+.detail-thumbnail:hover { opacity: 0.9; }
+.detail-thumbnail.active { border-color: var(--oak); opacity: 1; }
+
 .product-detail-specs {
   display: grid; grid-template-columns: repeat(2, 1fr);
   gap: 16px; padding: 24px;
