@@ -544,8 +544,12 @@
 
       <div class="product-detail-grid">
         <div class="product-detail-images">
-          <img id="detail-main-image" src="https://via.placeholder.com/600x450" alt="Product">
-          <div id="detail-thumbnails" class="detail-thumbnails"></div>
+          <div class="detail-carousel">
+            <img id="detail-main-image" src="https://via.placeholder.com/600x450" alt="Product">
+            <button class="carousel-btn carousel-prev" id="detail-prev" onclick="detailImageNav(-1)">&#8592;</button>
+            <button class="carousel-btn carousel-next" id="detail-next" onclick="detailImageNav(1)">&#8594;</button>
+            <span class="carousel-counter" id="detail-counter"></span>
+          </div>
           <div class="product-detail-specs">
             <div class="spec-item">
               <span class="spec-label">Wood Type</span>

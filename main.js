@@ -2,6 +2,10 @@
    The Handmade Table — main.js
    ───────────────────────────────────────────────────────── */
 
+/* ═══ CAROUSEL STATE ════════════════════════════════════════ */
+let detailImages = [];
+let detailIndex = 0;
+
 /* ═══ TABLE DATA ═══════════════════════════════════════════ */
 
 /**
@@ -259,7 +263,8 @@ function showProductDetail(tableId) {
   const table = tables.find(t => t.id === tableId);
   if (!table) return;
 
-  const images = table.images && table.images.length ? table.images : [table.image];
+  detailImages = table.images && table.images.length ? table.images : [table.image];
+  detailIndex = 0;
 
   document.getElementById('detail-title').textContent = table.name;
   document.getElementById('detail-type').textContent = table.type;
@@ -270,29 +275,24 @@ function showProductDetail(tableId) {
   document.getElementById('detail-width').textContent = table.width + '"';
   document.getElementById('detail-style').textContent = table.style.charAt(0).toUpperCase() + table.style.slice(1);
   document.getElementById('detail-description').textContent = table.desc;
-  document.getElementById('detail-main-image').src = images[0];
-  document.getElementById('detail-main-image').alt = table.name;
 
-  const thumbsEl = document.getElementById('detail-thumbnails');
-  thumbsEl.innerHTML = '';
-  if (images.length > 1) {
-    images.forEach((src, i) => {
-      const t = document.createElement('img');
-      t.src = src;
-      t.alt = table.name + ' photo ' + (i + 1);
-      t.className = 'detail-thumbnail' + (i === 0 ? ' active' : '');
-      t.onclick = () => {
-        document.getElementById('detail-main-image').src = src;
-        thumbsEl.querySelectorAll('.detail-thumbnail').forEach(x => x.classList.remove('active'));
-        t.classList.add('active');
-      };
-      thumbsEl.appendChild(t);
-    });
-  }
+  const hasMultiple = detailImages.length > 1;
+  document.getElementById('detail-prev').style.display = hasMultiple ? '' : 'none';
+  document.getElementById('detail-next').style.display = hasMultiple ? '' : 'none';
+  document.getElementById('detail-counter').textContent = hasMultiple ? '1 / ' + detailImages.length : '';
+  document.getElementById('detail-main-image').src = detailImages[0];
+  document.getElementById('detail-main-image').alt = table.name;
 
   window.currentProduct = table;
 
   showPage('product');
+}
+
+function detailImageNav(dir) {
+  if (!detailImages || detailImages.length < 2) return;
+  detailIndex = (detailIndex + dir + detailImages.length) % detailImages.length;
+  document.getElementById('detail-main-image').src = detailImages[detailIndex];
+  document.getElementById('detail-counter').textContent = (detailIndex + 1) + ' / ' + detailImages.length;
 }
 
 /**
