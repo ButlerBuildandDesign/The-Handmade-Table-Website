@@ -219,6 +219,7 @@ const tables = [
     style: "Threshing Floor",
     price: "Contact for Price",
     desc: "Two-board honey brown threshing floor top, 84 x 33. Pre-industrial pine boards with a warm, rich natural patina developed over centuries of hard use. No stain — every color you see is entirely the wood.",
+    about: "This particular table has very interesting linear striations in its character and a deep, rich ebony patina. That is why we classify it as a \"art\" table. A table gets classified as an art piece if it has characteristics that will widely set it apart from anything else we have or have made. Let me add that catching and showing the real character of a table like this in a photograph is difficult so I am hoping you can see enough of it to understand the underlying beauty of it.\n\nThe species of wood we use in our studio spans the landscape of varieties. This table was made from an antique cypress, probably from the late 1800's, which came from the Philadelphia, PA area. As with almost everything we make what you see is the natural patina. There is no stain on this table. At the time this continent was settled by Europeans the cypress ranges stretched from the Mid Atlantic to Texas.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%201%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%20%202-board%20top/Table%201%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%20%202-board%20top%20(1).jpeg",
     images: [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%201%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%20%202-board%20top/Table%201%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%20%202-board%20top%20(1).jpeg",
@@ -282,6 +283,11 @@ function showProductDetail(tableId) {
   document.getElementById('detail-counter').textContent = hasMultiple ? '1 / ' + detailImages.length : '';
   document.getElementById('detail-main-image').src = detailImages[0];
   document.getElementById('detail-main-image').alt = table.name;
+
+  const defaultAbout = "Every piece of pre-industrial wood carries centuries of history. The patina, grain patterns, and unique characteristics you see are features, not flaws -- they’re what makes each piece one-of-a-kind and irreplaceable.";
+  const aboutEl = document.getElementById(‘detail-about’);
+  const aboutText = (table.about || defaultAbout).split(‘\n\n’);
+  aboutEl.innerHTML = ‘<strong>About this table:</strong> ‘ + aboutText.map((p, i) => i === 0 ? p : ‘<br><br>’ + p).join(‘’);
 
   window.currentProduct = table;
 
