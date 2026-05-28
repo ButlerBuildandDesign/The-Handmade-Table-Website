@@ -20,7 +20,7 @@ const tables = [
     style: "Art Table",
     price: "Contact for Price",
     desc: "Antique cypress from late 1800s Philadelphia with striking linear striations and a deep, rich ebony patina. No stain — every color is entirely natural. Classified as art for its extraordinary, one-of-a-kind character.",
-    image: "https://via.placeholder.com/400x300?text=AT+2020",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0366.jpeg",
     inStock: true
   },
   {
@@ -33,7 +33,7 @@ const tables = [
     style: "Farm Table",
     price: "Contact for Price",
     desc: "Made from boards cut from lake-edge mat material near Lake Erie — massive timber planks once used as roadway for windmill construction equipment. Very old wood, newly cut, with exceptional light cherry character.",
-    image: "https://via.placeholder.com/400x300?text=CT+5056a",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0367.jpeg",
     inStock: true
   },
   {
@@ -46,7 +46,7 @@ const tables = [
     style: "Art Table",
     price: "Contact for Price",
     desc: "A single granary pine board with an uneven, non-square end — left exactly as found. The rebel character of this piece defines it. Base is shown as traditional 4-leg but could be anything, including metal.",
-    image: "https://via.placeholder.com/400x300?text=AT+2001",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0368.jpeg",
     inStock: true
   },
   {
@@ -59,7 +59,7 @@ const tables = [
     style: "Art Table",
     price: "Contact for Price",
     desc: "Pub-height mosaic table assembled from saved pieces in a random angle-linear pattern that gives it a very contemporary appeal. We once made 9 of them for a restaurant. No two are alike.",
-    image: "https://via.placeholder.com/400x300?text=AT+2002",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0369.jpeg",
     inStock: true
   },
   {
@@ -72,7 +72,7 @@ const tables = [
     style: "Art Table",
     price: "Contact for Price",
     desc: "Base from an 1880s cabin in the Finger Lakes region of New York with just the right rust, corrosion, and old paint. Top boards circa 1820 — two very different histories that work beautifully together.",
-    image: "https://via.placeholder.com/400x300?text=AT+2003",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0370.jpeg",
     inStock: true
   },
   {
@@ -85,7 +85,7 @@ const tables = [
     style: "Art Table",
     price: "Contact for Price",
     desc: "Wavy pine thresher boards that undulate along the full length of the table with a deep ebony patina. Extraordinary and completely unique — nothing quite like it has passed through the shop.",
-    image: "https://via.placeholder.com/400x300?text=AT+2004",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0371.jpeg",
     inStock: true
   },
   {
@@ -98,7 +98,7 @@ const tables = [
     style: "Farm Table",
     price: "Contact for Price",
     desc: "Dark cypress with exceptional grain revealed by careful sanding — extraordinary enough that we decided to leave all the grain alone. One of four very similar tables available. Can be purchased with the shown distinctive base or a traditional 4-legged base.",
-    image: "https://via.placeholder.com/400x300?text=FT+1012",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0372.jpeg",
     inStock: true
   },
   {
@@ -111,7 +111,7 @@ const tables = [
     style: "Farm Table",
     price: "Contact for Price",
     desc: "Two boards circa 1820 with exceptional color, character, and patina. A large knot came off the board — we left it in. It simply made the table. There was not much discussion about whether to leave it or not.",
-    image: "https://via.placeholder.com/400x300?text=FT+1023",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0373.jpeg",
     inStock: true
   },
   {
@@ -124,7 +124,7 @@ const tables = [
     style: "Farm Table",
     price: "Contact for Price",
     desc: "Boards from an early grain bin, used exactly as found — nothing done except cut to length. The crazy natural edges are untouched and original. There is more to the story behind these materials if you are interested.",
-    image: "https://via.placeholder.com/400x300?text=FT+1026",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0374.jpeg",
     inStock: true
   },
   {
@@ -137,7 +137,7 @@ const tables = [
     style: "Farm Table",
     price: "Contact for Price",
     desc: "A complete surprise when it came out of finishing. No stain, yet the colors that emerged are impossible to replicate any other way. The photos do not do it justice — this one must be seen in person.",
-    image: "https://via.placeholder.com/400x300?text=FT+1032",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0375.jpeg",
     inStock: true
   },
   {
@@ -150,7 +150,7 @@ const tables = [
     style: "Farm Table",
     price: "Contact for Price",
     desc: "Boards set aside as parts became a top by accident. When it came out of finishing it was highly unusual, unpredictably cool, and entirely its own thing. The happy accidents here often turn out best.",
-    image: "https://via.placeholder.com/400x300?text=FT+1033",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0376.jpeg",
     inStock: true
   },
   {
@@ -163,7 +163,7 @@ const tables = [
     style: "Farm Table",
     price: "Contact for Price",
     desc: "Two perfectly matched boards over 19 inches wide — rare by any measure. From a circa 1820 to 1840 grain bin with the wear and patina of how they were originally used. A second matching set is available for different dimensions.",
-    image: "https://via.placeholder.com/400x300?text=FT+1035",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0377.jpeg",
     inStock: true
   },
   {
@@ -176,7 +176,7 @@ const tables = [
     style: "Farm Table",
     price: "Contact for Price",
     desc: "The gold standard of farm tables — classic long and narrow proportions from an era when rooms were small. Designed to be moved after meals and used as a work surface. Built to travel lightly and built to last. Great character and all-natural patina.",
-    image: "https://via.placeholder.com/400x300?text=FT+1036",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0378.jpeg",
     inStock: true
   },
   {
@@ -189,7 +189,7 @@ const tables = [
     style: "Thick Top",
     price: "Contact for Price",
     desc: "Two boards nearly 2 inches thick and almost 20 inches wide — one half of one tenth of one percent rare. Originally used as barn threshing floor, pre-1850. Extraordinary character from centuries of hard use.",
-    image: "https://via.placeholder.com/400x300?text=TT+3006",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0379.jpeg",
     inStock: true
   },
   {
@@ -202,7 +202,7 @@ const tables = [
     style: "Thick Top",
     price: "Contact for Price",
     desc: "Poplar planks from the floor system of a very early barn. One of those tables that comes along every 15 to 20 pieces and simply stands apart from the rest. Shown with glass base.",
-    image: "https://via.placeholder.com/400x300?text=TT+3008a",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0380.jpeg",
     inStock: true
   }
 ];
