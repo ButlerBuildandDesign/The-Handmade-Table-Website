@@ -284,10 +284,10 @@ function showProductDetail(tableId) {
   document.getElementById('detail-main-image').src = detailImages[0];
   document.getElementById('detail-main-image').alt = table.name;
 
-  const defaultAbout = "Every piece of pre-industrial wood carries centuries of history. The patina, grain patterns, and unique characteristics you see are features, not flaws -- they’re what makes each piece one-of-a-kind and irreplaceable.";
-  const aboutEl = document.getElementById(‘detail-about’);
-  const aboutText = (table.about || defaultAbout).split(‘\n\n’);
-  aboutEl.innerHTML = ‘<strong>About this table:</strong> ‘ + aboutText.map((p, i) => i === 0 ? p : ‘<br><br>’ + p).join(‘’);
+  const defaultAbout = "Every piece of pre-industrial wood carries centuries of history. The patina, grain patterns, and unique characteristics you see are features, not flaws -- they're what makes each piece one-of-a-kind and irreplaceable.";
+  const aboutEl = document.getElementById('detail-about');
+  const aboutText = (table.about || defaultAbout).split('\n\n');
+  aboutEl.innerHTML = '<strong>About this table:</strong> ' + aboutText.map((p, i) => i === 0 ? p : '<br><br>' + p).join('');
 
   window.currentProduct = table;
 
