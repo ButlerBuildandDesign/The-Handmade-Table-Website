@@ -1,0 +1,809 @@
+/* ─────────────────────────────────────────────────────────
+   The Handmade Table — styles.css
+   ───────────────────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #F7F3EE;
+  --warm-white: #FDFAF7;
+  --oak: #8B6343;
+  --oak-dark: #5C3D1E;
+  --oak-light: #C49A6C;
+  --charcoal: #2A2420;
+  --mid: #6B5B4E;
+  --soft: #A89080;
+  --border: rgba(139,99,67,0.18);
+  --shadow: rgba(44,30,15,0.10);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ─── NAV ─────────────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(247,243,238,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 72px;
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  line-height: 1.2;
+}
+.nav-logo span {
+  display: block;
+  font-size: 0.62rem;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--oak);
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex; align-items: center; gap: 36px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.78rem; font-weight: 400; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--mid);
+  text-decoration: none; transition: color 0.2s;
+  position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+  height: 1px; background: var(--oak); transform: scaleX(0);
+  transition: transform 0.25s;
+}
+.nav-links a:hover { color: var(--oak-dark); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-links a.active { color: var(--oak-dark); }
+.nav-links a.active::after { transform: scaleX(1); }
+
+.nav-shop-btn {
+  background: var(--oak);
+  color: white !important;
+  padding: 9px 22px;
+  border-radius: 2px;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.2em !important;
+  transition: background 0.2s !important;
+}
+.nav-shop-btn::after { display: none !important; }
+.nav-shop-btn:hover { background: var(--oak-dark) !important; color: white !important; }
+
+/* ─── HERO ─────────────────────────────────────── */
+.hero {
+  height: 100vh; min-height: 680px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 120px 48px 80px;
+  position: relative;
+  background:
+    linear-gradient(170deg, rgba(247,243,238,0.82) 40%, rgba(214,185,152,0.22) 100%),
+    url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&q=80') center/cover no-repeat;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(247,243,238,0.55) 0%, rgba(247,243,238,0.85) 100%);
+}
+
+.hero-inner { position: relative; z-index: 1; max-width: 760px; }
+
+.hero-eyebrow {
+  font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--oak); font-weight: 400; margin-bottom: 24px;
+  opacity: 0; animation: fadeUp 0.9s 0.1s forwards;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 400; line-height: 1.08;
+  color: var(--charcoal); letter-spacing: -0.01em;
+  opacity: 0; animation: fadeUp 0.9s 0.25s forwards;
+  margin-bottom: 28px;
+}
+.hero h1 em { font-style: italic; color: var(--oak); }
+
+.hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 300; font-style: italic;
+  color: var(--mid); max-width: 520px; margin: 0 auto 44px;
+  opacity: 0; animation: fadeUp 0.9s 0.4s forwards;
+}
+.hero-ctas {
+  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+  opacity: 0; animation: fadeUp 0.9s 0.55s forwards;
+}
+
+/* ─── HERO VARIANTS (Shop, Arch, Portfolio, Team, Contact) ─── */
+.shop-hero, .arch-hero, .portfolio-hero, .team-hero, .contact-hero {
+  background: var(--charcoal);
+  padding: 140px 48px 60px;
+  text-align: center;
+  margin-top: 72px;
+}
+
+.shop-hero .eyebrow, .arch-hero .eyebrow, .portfolio-hero .eyebrow,
+.team-hero .eyebrow, .contact-hero .eyebrow {
+  font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--oak-light); margin-bottom: 14px;
+}
+
+.shop-hero h1, .arch-hero h1, .portfolio-hero h1,
+.team-hero h1, .contact-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400; color: white; line-height: 1.1; margin-bottom: 16px;
+}
+
+.shop-hero h1 em, .arch-hero h1 em, .portfolio-hero h1 em,
+.team-hero h1 em, .contact-hero h1 em { color: var(--oak-light); font-style: italic; }
+
+.shop-hero p, .arch-hero p, .portfolio-hero p,
+.team-hero p, .contact-hero p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; color: rgba(255,255,255,0.6);
+  font-weight: 300; max-width: 480px; margin: 0 auto;
+}
+
+/* ─── BUTTONS ──────────────────────────────────── */
+.btn-primary {
+  background: var(--oak); color: white;
+  padding: 14px 36px; border: none; cursor: pointer;
+  font-family: 'Jost', sans-serif; font-size: 0.78rem;
+  font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; border-radius: 2px;
+  transition: background 0.22s, transform 0.18s;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--oak-dark); transform: translateY(-1px); }
+
+.btn-outline {
+  background: transparent; color: var(--charcoal);
+  padding: 13px 36px; border: 1px solid var(--charcoal);
+  cursor: pointer; font-family: 'Jost', sans-serif; font-size: 0.78rem;
+  font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; border-radius: 2px;
+  transition: border-color 0.2s, color 0.2s, transform 0.18s;
+  display: inline-block;
+}
+.btn-outline:hover { border-color: var(--oak); color: var(--oak); transform: translateY(-1px); }
+
+/* ─── ANIMATION ────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── SECTION WRAPPERS ─────────────────────────── */
+section { padding: 96px 48px; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+
+.section-label {
+  font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--oak); font-weight: 400; margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 400; color: var(--charcoal);
+  margin-bottom: 16px; line-height: 1.2;
+}
+.section-title em { font-style: italic; color: var(--oak); }
+
+.section-intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; color: var(--mid);
+  max-width: 540px; font-weight: 300;
+}
+
+/* ─── CATEGORIES ───────────────────────────────── */
+.categories {
+  background: var(--warm-white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 72px 48px;
+}
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 56px;
+}
+.cat-card {
+  position: relative; overflow: hidden;
+  aspect-ratio: 3/4;
+  cursor: pointer;
+  background: var(--charcoal);
+}
+.cat-card img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s ease, opacity 0.4s;
+  opacity: 0.85;
+}
+.cat-card:hover img { transform: scale(1.07); opacity: 0.7; }
+
+.cat-overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  justify-content: flex-end; padding: 32px 28px;
+  background: linear-gradient(to top, rgba(30,15,5,0.72) 0%, transparent 60%);
+}
+.cat-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; font-weight: 400;
+  color: white; margin-bottom: 6px;
+}
+.cat-link {
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--oak-light); text-decoration: none; font-weight: 400;
+}
+
+/* ─── STORY ─────────────────────────────────────── */
+.story-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center; margin-top: 64px;
+}
+.story-img { position: relative; }
+.story-img img {
+  width: 100%; height: 520px; object-fit: cover;
+  border-radius: 2px;
+}
+.story-text { }
+.story-badges {
+  display: flex; gap: 32px; margin-top: 28px;
+}
+.badge {
+  text-align: center;
+  flex: 1;
+}
+.badge-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem; color: var(--oak);
+  font-weight: 400; display: block; line-height: 1;
+}
+.badge-label {
+  font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--mid); margin-top: 4px;
+}
+
+/* ─── CUSTOM SECTION ───────────────────────────── */
+.custom-section {
+  background:
+    linear-gradient(135deg, rgba(44,36,32,0.93), rgba(92,61,30,0.88)),
+    url('https://images.unsplash.com/photo-1449247666642-264389f5f5b1?w=1200&q=80') center/cover no-repeat;
+  text-align: center; padding: 120px 48px;
+}
+.custom-section .section-label { color: var(--oak-light); }
+.custom-section .section-title { color: white; }
+.custom-section .section-intro { color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto 44px; }
+.custom-section .btn-outline { color: white; border-color: rgba(255,255,255,0.4); }
+.custom-section .btn-outline:hover { border-color: var(--oak-light); color: var(--oak-light); }
+
+/* ─── SHOP SECTION ──────────────────────────────── */
+.shop-section { background: var(--warm-white); border-top: 1px solid var(--border); }
+
+.shop-toolbar {
+  display: flex; justify-content: space-between;
+  align-items: flex-end; flex-wrap: wrap; gap: 20px;
+}
+
+.shop-filters {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px;
+}
+.filter-btn {
+  padding: 8px 20px; border: 1px solid var(--border);
+  background: transparent; cursor: pointer;
+  font-family: 'Jost', sans-serif; font-size: 0.72rem;
+  font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--mid); border-radius: 2px; transition: all 0.2s;
+}
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--oak); border-color: var(--oak); color: white;
+}
+
+.shop-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 32px; margin-top: 40px;
+}
+
+.product-count {
+  font-size: 0.78rem; color: var(--soft); letter-spacing: 0.08em;
+}
+
+.product-card {
+  background: white; border: 1px solid var(--border);
+  border-radius: 2px; overflow: hidden;
+  transition: box-shadow 0.25s, transform 0.25s;
+  cursor: pointer;
+}
+.product-card:hover {
+  box-shadow: 0 12px 40px var(--shadow);
+  transform: translateY(-4px);
+}
+
+.product-img {
+  position: relative; aspect-ratio: 4/3; overflow: hidden;
+  background: var(--cream);
+}
+.product-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s;
+}
+.product-card:hover .product-img img { transform: scale(1.05); }
+
+.product-badge {
+  position: absolute; top: 14px; left: 14px;
+  background: var(--oak); color: white;
+  font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 1px;
+}
+
+.product-info { padding: 24px; }
+.product-type {
+  font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--soft); margin-bottom: 6px;
+}
+.product-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem; font-weight: 400; color: var(--charcoal);
+  margin-bottom: 8px;
+}
+.product-desc {
+  font-size: 0.82rem; color: var(--mid); line-height: 1.6; margin-bottom: 20px;
+}
+.product-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid var(--border); padding-top: 18px;
+}
+.product-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; color: var(--oak); font-weight: 500;
+}
+
+.add-btn {
+  background: var(--charcoal); color: white;
+  border: none; cursor: pointer;
+  font-family: 'Jost', sans-serif; font-size: 0.7rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  padding: 10px 18px; border-radius: 2px;
+  transition: background 0.2s;
+}
+.add-btn:hover { background: var(--oak); }
+
+.shop-note {
+  margin-top: 48px;
+  padding: 32px 40px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: rgba(139,99,67,0.05);
+  display: flex; gap: 20px; align-items: flex-start;
+}
+.shop-note-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+.shop-note-text h4 {
+  font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 500;
+  color: var(--charcoal); margin-bottom: 6px;
+}
+.shop-note-text p { font-size: 0.85rem; color: var(--mid); }
+.shop-note-text a { color: var(--oak); text-decoration: none; }
+
+/* ─── ARCHITECTURAL SECTION ───────────────────────── */
+.arch-intro {
+  margin-bottom: 64px;
+}
+
+.arch-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.arch-card {
+  position: relative; overflow: hidden;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  background: var(--charcoal);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  transition: transform 0.3s;
+}
+
+.arch-card:hover {
+  transform: translateY(-6px);
+}
+
+.arch-card-img {
+  position: relative;
+  width: 100%; height: 100%;
+  overflow: hidden;
+}
+
+.arch-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.arch-card:hover .arch-card-img img {
+  transform: scale(1.08);
+}
+
+.arch-overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: flex-end;
+  padding: 28px;
+  background: linear-gradient(to top, rgba(30,15,5,0.8) 0%, transparent 50%);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem; font-weight: 400;
+  color: white;
+}
+
+/* ─── PORTFOLIO SECTION ────────────────────────────── */
+.portfolio-intro {
+  margin-bottom: 56px;
+}
+
+.portfolio-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.portfolio-item {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0 12px 40px var(--shadow);
+}
+
+.portfolio-item img {
+  width: 100%; height: 300px; object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-info {
+  padding: 32px;
+}
+
+.portfolio-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; font-weight: 400;
+  color: var(--charcoal); margin-bottom: 12px;
+}
+
+.portfolio-info p {
+  font-size: 0.9rem; color: var(--mid); line-height: 1.6;
+}
+
+/* ─── TEAM SECTION ─────────────────────────────────── */
+.team-intro {
+  margin-bottom: 64px;
+}
+
+.team-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.team-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.team-card-img {
+  width: 100%; aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.team-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.team-card:hover .team-card-img img {
+  transform: scale(1.06);
+}
+
+.team-card-info {
+  padding: 32px 28px;
+}
+
+.team-card-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem; font-weight: 400;
+  color: var(--charcoal); margin-bottom: 4px;
+}
+
+.team-role {
+  font-size: 0.72rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--oak);
+  margin-bottom: 16px; display: block;
+}
+
+.team-card-info p {
+  font-size: 0.88rem; color: var(--mid); line-height: 1.6;
+}
+
+/* ─── CONTACT SECTION ──────────────────────────────── */
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: start; margin-top: 56px;
+}
+
+.contact-form {
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem; font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: white;
+  color: var(--charcoal);
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--oak);
+}
+
+.form-group textarea {
+  resize: vertical;
+  font-family: 'Jost', sans-serif;
+}
+
+.contact-info {
+  max-width: 420px;
+}
+
+.info-block {
+  margin-bottom: 40px;
+}
+
+.info-block h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem; font-weight: 400;
+  color: var(--charcoal); margin-bottom: 8px;
+}
+
+.info-block p {
+  font-size: 0.95rem; color: var(--mid);
+  margin-bottom: 4px;
+}
+
+.info-block a {
+  color: var(--oak); text-decoration: none;
+}
+
+.info-block a:hover {
+  text-decoration: underline;
+}
+
+/* ─── FOOTER ─────────────────────────────────────── */
+footer {
+  background: var(--charcoal); color: rgba(255,255,255,0.55);
+  padding: 64px 48px 40px;
+}
+.footer-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px; padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-brand .nav-logo { color: white; margin-bottom: 14px; display: block; }
+.footer-brand p { font-size: 0.83rem; line-height: 1.7; max-width: 280px; }
+.footer-brand .contact { margin-top: 20px; font-size: 0.8rem; }
+.footer-brand .contact a { color: var(--oak-light); text-decoration: none; display: block; margin-top: 4px; }
+
+.footer-col h5 {
+  font-family: 'Jost', sans-serif; font-size: 0.68rem;
+  letter-spacing: 0.22em; text-transform: uppercase; color: white;
+  margin-bottom: 18px; font-weight: 400;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
+.footer-col a:hover { color: var(--oak-light); }
+
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 28px; font-size: 0.75rem;
+}
+.footer-bottom a { color: rgba(255,255,255,0.35); text-decoration: none; margin-left: 20px; }
+.footer-bottom a:hover { color: var(--oak-light); }
+
+/* ─── PAGE SWITCHING ──────────────────────────────── */
+.page { display: none; }
+.page.active { display: block; }
+
+/* ─── MODAL ───────────────────────────────────────── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(30,15,5,0.55); backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal {
+  background: var(--warm-white);
+  max-width: 520px; width: 90%; padding: 48px;
+  border-radius: 3px; position: relative;
+  transform: scale(0.94) translateY(16px);
+  transition: transform 0.3s cubic-bezier(.16,1,.3,1);
+}
+.modal-overlay.open .modal { transform: scale(1) translateY(0); }
+.modal h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 8px; }
+.modal-price { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--oak); margin-bottom: 20px; }
+.modal p { font-size: 0.88rem; color: var(--mid); line-height: 1.7; margin-bottom: 28px; }
+.modal-actions { display: flex; gap: 12px; }
+.modal-close {
+  position: absolute; top: 20px; right: 24px;
+  background: none; border: none; font-size: 1.4rem;
+  cursor: pointer; color: var(--mid);
+}
+
+/* ─── PRODUCT DETAIL PAGE ────────────────────────────── */
+.product-detail-hero {
+  background: var(--charcoal);
+  padding: 140px 48px 60px;
+  text-align: center;
+  margin-top: 72px;
+}
+
+.product-detail-hero .eyebrow {
+  font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--oak-light); margin-bottom: 14px;
+}
+
+.product-detail-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400; color: white; line-height: 1.1; margin-bottom: 16px;
+}
+
+.product-detail-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: start; margin-top: 56px;
+}
+
+.product-detail-images {
+  display: flex; flex-direction: column; gap: 24px;
+}
+
+.product-detail-images img {
+  width: 100%; aspect-ratio: 4/3;
+  object-fit: cover; border-radius: 2px;
+  border: 1px solid var(--border);
+}
+
+.product-detail-specs {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 16px; padding: 24px;
+  background: var(--cream); border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+.spec-item {
+  display: flex; flex-direction: column;
+}
+
+.spec-label {
+  font-size: 0.7rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--soft);
+  margin-bottom: 4px;
+}
+
+.spec-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem; font-weight: 400;
+  color: var(--charcoal);
+}
+
+.product-detail-info {
+  max-width: 520px;
+}
+
+.product-detail-info .product-type {
+  font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--soft); margin-bottom: 6px;
+}
+
+.product-detail-info .product-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem; font-weight: 400; color: var(--charcoal);
+  margin-bottom: 12px;
+}
+
+.product-detail-info .product-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; color: var(--oak); font-weight: 500;
+}
+
+/* ─── RESPONSIVE PRODUCT DETAIL ────────────────────────── */
+@media (max-width: 1024px) {
+  .product-detail-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────── */
+@media (max-width: 1024px) {
+  .shop-grid, .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .arch-grid, .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { gap: 48px; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 0 24px; height: 64px; }
+  .nav-links { gap: 12px; }
+  
+  section { padding: 64px 24px; }
+  .hero { padding: 80px 24px 60px; }
+  
+  .shop-grid, .portfolio-grid, .arch-grid, .team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  
+  .story-grid { grid-template-columns: 1fr; gap: 40px; }
+  .story-img img { height: 360px; }
+  
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 16px; }
+}
