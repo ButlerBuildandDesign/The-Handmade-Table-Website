@@ -274,6 +274,44 @@ const tables = [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202006%20-%2078.5%20x%2044.5%20x%2030%20-%20Walnut%20Top%20Table%20Website/AT.2006.06.JPG"
     ],
     inStock: true
+  },
+  {
+    id: 19,
+    name: "AT 2009",
+    type: "Art Table · Pine",
+    wood: "pine",
+    length: "77",
+    width: "35",
+    style: "Basket Weave",
+    price: "Contact for Price",
+    desc: "Basket weave art table, 77 x 35. Description coming soon — contact us for full details on this piece.",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.03.JPG",
+    images: [
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.03.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.04.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.010.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.011.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.014.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.018.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.019.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.020.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.022.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.026.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.030.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.032.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.033.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.040.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.042.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.043.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.044.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.046.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.049.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.051.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.053.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.055.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.057.JPG"
+    ],
+    inStock: true
   }
 ];
 
