@@ -227,6 +227,32 @@ const tables = [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%201%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%20%202-board%20top/Table%201%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%20%202-board%20top%20(3).jpeg"
     ],
     inStock: true
+  },
+  {
+    id: 17,
+    name: "SP 1001",
+    type: "Special Piece · Pine",
+    wood: "pine",
+    length: "—",
+    width: "—",
+    style: "Special Piece",
+    price: "Contact for Price",
+    desc: "Description coming soon. Contact us for full details on this piece.",
+    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.01.JPG",
+    images: [
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.01.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.02.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.03.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.04.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.05.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.06.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.07.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.08.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.09.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.010.JPG",
+      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.011.JPG"
+    ],
+    inStock: true
   }
 ];
 
@@ -272,8 +298,9 @@ function showProductDetail(tableId) {
   document.getElementById('detail-name').textContent = table.name;
   document.getElementById('detail-price').textContent = table.price;
   document.getElementById('detail-wood').textContent = table.wood.charAt(0).toUpperCase() + table.wood.slice(1);
-  document.getElementById('detail-length').textContent = table.length + '"';
-  document.getElementById('detail-width').textContent = table.width + '"';
+  const fmtDim = v => /^\d/.test(v) ? v + '"' : v;
+  document.getElementById('detail-length').textContent = fmtDim(table.length);
+  document.getElementById('detail-width').textContent = fmtDim(table.width);
   document.getElementById('detail-style').textContent = table.style.charAt(0).toUpperCase() + table.style.slice(1);
   document.getElementById('detail-description').textContent = table.desc;
 
