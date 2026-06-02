@@ -138,7 +138,7 @@
       <div class="shop-toolbar">
         <div>
           <p class="section-label">Filter by Category</p>
-          <div class="shop-filters">
+          <div class="shop-filters" id="category-filters">
             <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
             <button class="filter-btn" onclick="filterProducts('sp', this)">Specialty Table</button>
             <button class="filter-btn" onclick="filterProducts('at', this)">Art Table</button>
@@ -148,6 +148,14 @@
             <button class="filter-btn" onclick="filterProducts('ft', this)">Farm &amp; Harvest Table</button>
             <button class="filter-btn" onclick="filterProducts('tt', this)">Traditional Table</button>
             <button class="filter-btn" onclick="filterProducts('cc', this)">Coffee &amp; Console Table</button>
+          </div>
+          <p class="section-label" style="margin-top: 20px;">Filter by Length</p>
+          <div class="shop-filters" id="length-filters">
+            <button class="filter-btn active" onclick="filterByLength('all', this)">All Lengths</button>
+            <button class="filter-btn" onclick="filterByLength('small', this)">Under 70"</button>
+            <button class="filter-btn" onclick="filterByLength('medium', this)">70" – 84"</button>
+            <button class="filter-btn" onclick="filterByLength('large', this)">85" – 96"</button>
+            <button class="filter-btn" onclick="filterByLength('xlarge', this)">97" and over</button>
           </div>
         </div>
         <div class="product-count" id="product-count">Showing 15 tables</div>

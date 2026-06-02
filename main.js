@@ -6,6 +6,10 @@
 let detailImages = [];
 let detailIndex = 0;
 
+/* ═══ FILTER STATE ══════════════════════════════════════════ */
+let activeCategory = 'all';
+let activeLength = 'all';
+
 /* ═══ TABLE DATA ═══════════════════════════════════════════ */
 
 /**
@@ -683,14 +687,34 @@ function openModalFromDetail() {
 /* ═══ SHOP FUNCTIONALITY ═════════════════════════════════════ */
 
 function filterProducts(category, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('#category-filters .filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
+  activeCategory = category;
+  applyFilters();
+}
 
+function filterByLength(range, btn) {
+  document.querySelectorAll('#length-filters .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeLength = range;
+  applyFilters();
+}
+
+function applyFilters() {
   const cards = document.querySelectorAll('.product-card');
   let count = 0;
 
   cards.forEach(card => {
-    const match = category === 'all' || card.dataset.category === category;
+    const catMatch = activeCategory === 'all' || card.dataset.category === activeCategory;
+
+    const len = parseFloat(card.dataset.length) || 0;
+    let lenMatch = true;
+    if (activeLength === 'small')  lenMatch = len > 0 && len < 70;
+    else if (activeLength === 'medium') lenMatch = len >= 70 && len <= 84;
+    else if (activeLength === 'large')  lenMatch = len >= 85 && len <= 96;
+    else if (activeLength === 'xlarge') lenMatch = len >= 97;
+
+    const match = catMatch && lenMatch;
     card.style.display = match ? '' : 'none';
     if (match) count++;
   });
@@ -777,6 +801,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.className = 'product-card';
       card.dataset.wood = table.wood;
       card.dataset.category = table.category;
+      card.dataset.length = parseFloat(table.length) || 0;
       card.style.cursor = 'pointer';
       card.innerHTML = `
         <div class="product-img">
