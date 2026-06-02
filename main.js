@@ -15,34 +15,6 @@ let detailIndex = 0;
  */
 const tables = [
   {
-    id: 1,
-    name: "AT 2020",
-    category: "at",
-    type: "Art Table · Cypress",
-    wood: "cypress",
-    length: "75",
-    width: "35",
-    style: "Art Table",
-    price: "Contact for Price",
-    desc: "Antique cypress from late 1800s Philadelphia with striking linear striations and a deep, rich ebony patina. No stain — every color is entirely natural. Classified as art for its extraordinary, one-of-a-kind character.",
-    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0366.jpeg",
-    inStock: true
-  },
-  {
-    id: 2,
-    name: "CT 5056a",
-    category: "ct",
-    type: "Farm Table · Cherry",
-    wood: "cherry",
-    length: "96",
-    width: "36",
-    style: "Farm Table",
-    price: "Contact for Price",
-    desc: "Made from boards cut from lake-edge mat material near Lake Erie — massive timber planks once used as roadway for windmill construction equipment. Very old wood, newly cut, with exceptional light cherry character.",
-    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Table%209/IMG_0367.jpeg",
-    inStock: true
-  },
-  {
     id: 3,
     name: "AT 2001",
     category: "at",
