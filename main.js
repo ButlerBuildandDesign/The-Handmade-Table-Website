@@ -17,6 +17,7 @@ const tables = [
   {
     id: 1,
     name: "AT 2020",
+    category: "at",
     type: "Art Table · Cypress",
     wood: "cypress",
     length: "75",
@@ -30,6 +31,7 @@ const tables = [
   {
     id: 2,
     name: "CT 5056a",
+    category: "ct",
     type: "Farm Table · Cherry",
     wood: "cherry",
     length: "96",
@@ -43,6 +45,7 @@ const tables = [
   {
     id: 3,
     name: "AT 2001",
+    category: "at",
     type: "Art Table · Pine",
     wood: "pine",
     length: "89",
@@ -56,6 +59,7 @@ const tables = [
   {
     id: 4,
     name: "AT 2002",
+    category: "at",
     type: "Art Table · Pine — Pub Height",
     wood: "pine",
     length: "56",
@@ -69,6 +73,7 @@ const tables = [
   {
     id: 5,
     name: "AT 2003",
+    category: "at",
     type: "Art Table · Pine",
     wood: "pine",
     length: "48",
@@ -82,6 +87,7 @@ const tables = [
   {
     id: 6,
     name: "AT 2004",
+    category: "at",
     type: "Art Table · Pine",
     wood: "pine",
     length: "96",
@@ -95,6 +101,7 @@ const tables = [
   {
     id: 7,
     name: "FT 1012",
+    category: "ft",
     type: "Farm Table · Cypress",
     wood: "cypress",
     length: "97",
@@ -108,6 +115,7 @@ const tables = [
   {
     id: 8,
     name: "FT 1023",
+    category: "ft",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "69.5",
@@ -121,6 +129,7 @@ const tables = [
   {
     id: 9,
     name: "FT 1026",
+    category: "ft",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "87",
@@ -134,6 +143,7 @@ const tables = [
   {
     id: 10,
     name: "FT 1032",
+    category: "ft",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "76",
@@ -147,6 +157,7 @@ const tables = [
   {
     id: 11,
     name: "FT 1033",
+    category: "ft",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "84",
@@ -160,6 +171,7 @@ const tables = [
   {
     id: 12,
     name: "FT 1035",
+    category: "ft",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "75.5",
@@ -173,6 +185,7 @@ const tables = [
   {
     id: 13,
     name: "FT 1036",
+    category: "ft",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "90",
@@ -186,6 +199,7 @@ const tables = [
   {
     id: 14,
     name: "TT 3006",
+    category: "tt",
     type: "Thick Top · Pine",
     wood: "pine",
     length: "84.5",
@@ -199,6 +213,7 @@ const tables = [
   {
     id: 15,
     name: "TT 3008a",
+    category: "tt",
     type: "Thick Top · Poplar",
     wood: "poplar",
     length: "68",
@@ -212,6 +227,7 @@ const tables = [
   {
     id: 16,
     name: "Betty",
+    category: "tt",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "84",
@@ -231,6 +247,7 @@ const tables = [
   {
     id: 17,
     name: "SP 1001",
+    category: "sp",
     type: "Special Piece · Pine",
     wood: "pine",
     length: "—",
@@ -257,6 +274,7 @@ const tables = [
   {
     id: 18,
     name: "AT 2006",
+    category: "at",
     type: "Art Table · Walnut",
     wood: "walnut",
     length: "78.5",
@@ -278,6 +296,7 @@ const tables = [
   {
     id: 19,
     name: "AT 2009",
+    category: "at",
     type: "Art Table · Pine",
     wood: "pine",
     length: "77",
@@ -316,6 +335,7 @@ const tables = [
   {
     id: 20,
     name: "AT 2012",
+    category: "at",
     type: "Art Table · White Oak",
     wood: "oak",
     length: "96",
@@ -337,6 +357,7 @@ const tables = [
   {
     id: 22,
     name: "RO 3211",
+    category: "ro",
     type: "Round Table · Marble",
     wood: "marble",
     length: "60",
@@ -369,6 +390,7 @@ const tables = [
   {
     id: 23,
     name: "RT 3079",
+    category: "ro",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "84",
@@ -391,6 +413,7 @@ const tables = [
   {
     id: 24,
     name: "CT 5010",
+    category: "ct",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "96",
@@ -419,6 +442,7 @@ const tables = [
   {
     id: 25,
     name: "CT 5015",
+    category: "ct",
     type: "Farm Table · Oak",
     wood: "oak",
     length: "78",
@@ -438,6 +462,7 @@ const tables = [
   {
     id: 26,
     name: "TR 4008",
+    category: "tr",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "82",
@@ -466,6 +491,7 @@ const tables = [
   {
     id: 27,
     name: "TR 4013",
+    category: "tr",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "96",
@@ -493,6 +519,7 @@ const tables = [
   {
     id: 28,
     name: "CT 5605",
+    category: "ct",
     type: "Farm Table · Cherry",
     wood: "cherry",
     length: "96",
@@ -514,6 +541,7 @@ const tables = [
   {
     id: 29,
     name: "CT 5606",
+    category: "ct",
     type: "Farm Table · Oak",
     wood: "oak",
     length: "78",
@@ -537,6 +565,7 @@ const tables = [
   {
     id: 30,
     name: "TR 4101",
+    category: "tr",
     type: "Thresher · Pine",
     wood: "pine",
     length: "96",
@@ -560,6 +589,7 @@ const tables = [
   {
     id: 31,
     name: "FT 6089",
+    category: "ft",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "65",
@@ -591,6 +621,7 @@ const tables = [
   {
     id: 32,
     name: "FT 6092",
+    category: "ft",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "60",
@@ -608,6 +639,7 @@ const tables = [
   {
     id: 33,
     name: "FT 6094",
+    category: "ft",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "64",
@@ -627,6 +659,7 @@ const tables = [
   {
     id: 34,
     name: "FT 6096",
+    category: "ft",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "68.5",
@@ -646,6 +679,7 @@ const tables = [
   {
     id: 35,
     name: "FT 6099",
+    category: "ft",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "100",
@@ -676,6 +710,7 @@ const tables = [
   {
     id: 36,
     name: "FT 6044",
+    category: "ft",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "69",
@@ -696,6 +731,7 @@ const tables = [
   {
     id: 37,
     name: "FT 6045",
+    category: "ft",
     type: "Farm Table · Pine",
     wood: "pine",
     length: "100",
@@ -726,6 +762,7 @@ const tables = [
   {
     id: 38,
     name: "CC 8103",
+    category: "cc",
     type: "Coffee Table · Live Edge",
     wood: "pine",
     length: "58.5",
@@ -747,6 +784,7 @@ const tables = [
   {
     id: 39,
     name: "TT 7114",
+    category: "tt",
     type: "Thick Top · Pine",
     wood: "pine",
     length: "84",
@@ -767,6 +805,7 @@ const tables = [
   {
     id: 40,
     name: "TT 7116",
+    category: "tt",
     type: "Thick Top · Pine",
     wood: "pine",
     length: "75",
@@ -873,12 +912,7 @@ function openModalFromDetail() {
 
 /* ═══ SHOP FUNCTIONALITY ═════════════════════════════════════ */
 
-/**
- * Filter products by wood type.
- * @param {string} wood - Wood type: 'all', 'walnut', 'oak', 'chestnut', 'maple'
- * @param {HTMLElement} btn - The clicked filter button
- */
-function filterProducts(wood, btn) {
+function filterProducts(category, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 
@@ -886,7 +920,7 @@ function filterProducts(wood, btn) {
   let count = 0;
 
   cards.forEach(card => {
-    const match = wood === 'all' || card.dataset.wood === wood;
+    const match = category === 'all' || card.dataset.category === category;
     card.style.display = match ? '' : 'none';
     if (match) count++;
   });
@@ -972,6 +1006,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('div');
       card.className = 'product-card';
       card.dataset.wood = table.wood;
+      card.dataset.category = table.category;
       card.style.cursor = 'pointer';
       card.innerHTML = `
         <div class="product-img">
