@@ -673,7 +673,7 @@ const tables = [
  * Switch between pages.
  * @param {string} page - Page ID: 'home', 'shop', 'arch', 'portfolio', 'team', 'contact', 'product'
  */
-function showPage(page, pushHistory = true) {
+function showPage(page) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + page).classList.add('active');
 
@@ -690,7 +690,6 @@ function showPage(page, pushHistory = true) {
   if (navId) document.getElementById(navId).classList.add('active');
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
-  if (pushHistory) history.pushState({ page }, '', '#' + page);
   return false;
 }
 
@@ -725,8 +724,11 @@ function showProductDetail(tableId, pushHistory = true) {
 
   window.currentProduct = table;
 
-  if (pushHistory) history.pushState({ page: 'product', tableId }, '', '#product');
-  showPage('product', false);
+  if (pushHistory) {
+    history.pushState({ page: 'shop' }, '', '#shop');
+    history.pushState({ page: 'product', tableId }, '', '#product');
+  }
+  showPage('product');
 }
 
 function detailImageNav(dir) {
@@ -883,17 +885,15 @@ function handleContactSubmit(e) {
 /* ═══ INITIALIZATION ═════════════════════════════════════════ */
 
 window.addEventListener('popstate', e => {
-  if (!e.state) { showPage('home', false); return; }
+  if (!e.state) return;
   if (e.state.page === 'product' && e.state.tableId != null) {
     showProductDetail(e.state.tableId, false);
-  } else {
-    showPage(e.state.page || 'home', false);
+  } else if (e.state.page) {
+    showPage(e.state.page);
   }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  history.replaceState({ page: 'home' }, '', location.pathname);
-
   // Generate shop grid
   const shopGrid = document.getElementById('shop-grid');
   if (shopGrid) {
