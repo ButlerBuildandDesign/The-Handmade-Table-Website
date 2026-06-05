@@ -15,7 +15,7 @@
     The Handmade Table
     <span>Fine Handcrafted Furniture · Knoxville, TN</span>
   </a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="#" onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
     <li><a href="#" onclick="showPage('shop')" id="nav-shop">Shop Tables</a></li>
     <li><a href="#" onclick="showPage('arch')" id="nav-arch">Architectural Elements</a></li>
@@ -24,6 +24,9 @@
     <li><a href="#" onclick="showPage('team')" id="nav-team">Our Team</a></li>
     <li><a href="#" onclick="showPage('contact')" id="nav-contact" class="nav-shop-btn">Contact</a></li>
   </ul>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 
@@ -55,28 +58,28 @@
       <h2 class="section-title">A Legacy of <em>Craft</em></h2>
       <div class="cat-grid">
         <div class="cat-card">
-          <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/CT%205010%20-%2096%20x%2036%20-%20Four%20Board/CT.5010.010.jpeg" alt="Tables" loading="lazy">
+          <a href="#" onclick="showPage('shop')" class="cat-img-link"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/CT%205010%20-%2096%20x%2036%20-%20Four%20Board/CT.5010.010.jpeg" alt="Tables" loading="lazy"></a>
           <div class="cat-overlay">
             <div class="cat-name">Tables</div>
             <a class="cat-link" href="#" onclick="showPage('shop')">Browse →</a>
           </div>
         </div>
         <div class="cat-card">
-          <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Ted%20Green%20Stair%20(12).jpg" alt="Architectural Elements" loading="lazy">
+          <a href="#" onclick="showPage('arch')" class="cat-img-link"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Ted%20Green%20Stair%20(12).jpg" alt="Architectural Elements" loading="lazy"></a>
           <div class="cat-overlay">
             <div class="cat-name">Architectural Elements</div>
             <a class="cat-link" href="#" onclick="showPage('arch')">View →</a>
           </div>
         </div>
         <div class="cat-card">
-          <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Watkins%20Kitchen%20(13).jpg" alt="Kitchens and Cabinetry" loading="lazy">
+          <a href="#" onclick="showPage('arch')" class="cat-img-link"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Watkins%20Kitchen%20(13).jpg" alt="Kitchens and Cabinetry" loading="lazy"></a>
           <div class="cat-overlay">
             <div class="cat-name">Kitchens &amp; Cabinetry</div>
             <a class="cat-link" href="#" onclick="showPage('arch')">View →</a>
           </div>
         </div>
         <div class="cat-card">
-          <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Paneling%20(6).JPG" alt="Portfolio" loading="lazy">
+          <a href="#" onclick="showPage('portfolio')" class="cat-img-link"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Paneling%20(6).JPG" alt="Portfolio" loading="lazy"></a>
           <div class="cat-overlay">
             <div class="cat-name">Portfolio</div>
             <a class="cat-link" href="#" onclick="showPage('portfolio')">View →</a>
@@ -684,7 +687,7 @@
         <div class="product-detail-info">
           <p class="product-type" id="detail-type">Table Type</p>
           <h2 class="product-name" id="detail-name">Table Name</h2>
-          <p class="product-price" id="detail-price">Contact for Price</p>
+          <p class="product-price" id="detail-price"></p>
           
           <p id="detail-description" style="font-size: 1rem; color: var(--mid); line-height: 1.8; margin: 28px 0;">
             Product description goes here.

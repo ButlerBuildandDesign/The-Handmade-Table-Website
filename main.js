@@ -31,7 +31,7 @@ const tables = [
     length: "—",
     width: "—",
     style: "Special Piece",
-    price: "Contact for Price",
+    price: "$30,000",
     desc: "Description coming soon. Contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.04.JPG",
     images: [
@@ -58,7 +58,7 @@ const tables = [
     length: "78.5",
     width: "44.5",
     style: "Art Table",
-    price: "Contact for Price",
+    price: "SOLD",
     desc: "Walnut top art table, 78.5 x 44.5. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202006%20-%2078.5%20x%2044.5%20x%2030%20-%20Walnut%20Top%20Table%20Website/AT.2006.01.JPG",
     images: [
@@ -80,7 +80,7 @@ const tables = [
     length: "77",
     width: "35",
     style: "Basket Weave",
-    price: "Contact for Price",
+    price: "SOLD",
     desc: "Basket weave art table, 77 x 35. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.03.JPG",
     images: [
@@ -119,7 +119,7 @@ const tables = [
     length: "96",
     width: "—",
     style: "Art Table",
-    price: "Contact for Price",
+    price: "SOLD",
     desc: "Bleached white oak art table, 96\" long. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20AT%202012%20-%2096%20x%20XX%20x%2030%20-%20Bleached%20White%20Oak/AT.2012.01.JPG",
     images: [
@@ -141,7 +141,7 @@ const tables = [
     length: "60",
     width: "60",
     style: "Round",
-    price: "Contact for Price",
+    price: "$6,000",
     desc: "60-inch round white marble top table. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20RO%203211%20-%2060%20inch%20Round%20White%20Marble%20Top/RO.3211.01.JPG",
     images: [
@@ -174,7 +174,7 @@ const tables = [
     length: "84",
     width: "42",
     style: "Thresher",
-    price: "Contact for Price",
+    price: "$7,500",
     desc: "Deep brown thresher farm table, 84 x 42. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20RT%203079%20-%2084x42%20-%20Deep%20Brown%20Threasher/RT.3079.02.jpg",
     images: [
@@ -197,7 +197,7 @@ const tables = [
     length: "96",
     width: "36",
     style: "Four Board",
-    price: "Contact for Price",
+    price: "$6,000",
     desc: "Four board farm table, 96 x 36. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/CT%205010%20-%2096%20x%2036%20-%20Four%20Board/CT.5010.010.jpeg",
     images: [
@@ -226,7 +226,7 @@ const tables = [
     length: "78",
     width: "36",
     style: "Oak Pike Base",
-    price: "Contact for Price",
+    price: "$7,000",
     desc: "Oak pike base farm table, 78 x 36. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/CT%205015%20-%2078%20x%2036%20-%20Oak%20Pike%20Base/CT.5015.02.jpeg",
     images: [
@@ -246,7 +246,7 @@ const tables = [
     length: "82",
     width: "38",
     style: "Four Board",
-    price: "Contact for Price",
+    price: "SOLD",
     desc: "Four board farm table, 82 x 38. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/TR%204008%20-%2082%20x%2038%20-%20Four%20board/TR.4008.01.jpeg",
     images: [
@@ -275,7 +275,7 @@ const tables = [
     length: "96",
     width: "42",
     style: "Four Board",
-    price: "Contact for Price",
+    price: "$9,500",
     desc: "Four board farm table, 96 x 42. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/TR%204013%20-%2096%20x%2042%20-%20Four%20board/TR.4096.010.jpeg",
     images: [
@@ -303,7 +303,7 @@ const tables = [
     length: "96",
     width: "36",
     style: "Light Cherry",
-    price: "Contact for Price",
+    price: "$7,000",
     desc: "Light cherry farm table, 96 x 36. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20CT%205605%20-%2096x36%20-%20Light%20Cherry/CT.5605.01.jpg",
     images: [
@@ -325,7 +325,7 @@ const tables = [
     length: "78",
     width: "36",
     style: "Dark Stained Oak",
-    price: "Contact for Price",
+    price: "$5,000",
     desc: "Dark stained oak farm table with double leg trestle base, 78 x 36. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20CT%205606%20-%2078x36%20-%20Dark%20Stained%20Oak%20-%20double%20leg%20trestle/CT.5606.01.jpg",
     images: [
@@ -349,7 +349,7 @@ const tables = [
     length: "96",
     width: "42",
     style: "Thresher",
-    price: "Contact for Price",
+    price: "$11,000",
     desc: "Deep rich thresher farm table with turn-down base, 96 x 42. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20TR%204101%20-%2096%20x%2042%20-%20Deep%20Rich%20Thresher%20-%20turn%20down/TR.4101.02.jpg",
     images: [
@@ -373,7 +373,7 @@ const tables = [
     length: "65",
     width: "27",
     style: "Three Board",
-    price: "Contact for Price",
+    price: "$2,500",
     desc: "Three board farm table, 65 x 27. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/FT%206089%20-%2065%20x%2027%20-%20Three%20Boards/FT.6089.015.jpeg",
     images: [
@@ -405,7 +405,7 @@ const tables = [
     length: "60",
     width: "42",
     style: "Threshing Floor",
-    price: "Contact for Price",
+    price: "$4,000",
     desc: "Chocolate brown threshing floor farm table, 60 x 42. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/FT%206092%20-%2060%20x%2042%20-%20Chocolate%20brown%20theshing%20floor/FT.6092.02.jpeg",
     images: [
@@ -423,7 +423,7 @@ const tables = [
     length: "64",
     width: "40",
     style: "Granary",
-    price: "Contact for Price",
+    price: "$5,000",
     desc: "Honey brown granary 3-board farm table, 64 x 40. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/FT%206094%20-%2064%20x%2040%20-%20Honey%20Brown%20Granary%203-board/FT.6094.02.jpeg",
     images: [
@@ -443,7 +443,7 @@ const tables = [
     length: "68.5",
     width: "38",
     style: "Granary",
-    price: "Contact for Price",
+    price: "$6,500",
     desc: "Light granary farm table, 68.5 x 38. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/FT%206096%20-%2068.5%20x%2038%20-%20Light%20Granary%20Farm/FT.6096.03.jpeg",
     images: [
@@ -463,7 +463,7 @@ const tables = [
     length: "100",
     width: "38",
     style: "Farm Table",
-    price: "Contact for Price",
+    price: "$7,500",
     desc: "Farm table, 100 x 38. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/FT%206099%20-%20100%20x%2038/FT.6099.014.jpeg",
     images: [
@@ -494,7 +494,7 @@ const tables = [
     length: "69",
     width: "38",
     style: "Granary",
-    price: "Contact for Price",
+    price: "$6,000",
     desc: "Light granary farm table with stains, 69 x 38. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20FT%206044%20-%2069%20x%2038%20-%20Light%20granary%20with%20Stains/FT.6044.01.jpg",
     images: [
@@ -515,7 +515,7 @@ const tables = [
     length: "100",
     width: "28",
     style: "Colonial Pine",
-    price: "Contact for Price",
+    price: "$12,000",
     desc: "Colonial pine farm table, 100 x 28. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20FT%206045%20-%20100%20x%2028%20-%20Colonial%20Pine-%20on%20hold%20for%20a%20reshoot/FT.6045.04.jpg",
     images: [
@@ -546,7 +546,7 @@ const tables = [
     length: "58.5",
     width: "27",
     style: "Live Edge",
-    price: "Contact for Price",
+    price: "SOLD",
     desc: "Live edge coffee table, 58.5 x 27 x 17h. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20CC%208103%20-%2058.5%20x%2027%20x%2017%20-%20Live%20edge%20coffee%20table/CC.8103.01.JPG",
     images: [
@@ -568,7 +568,7 @@ const tables = [
     length: "84",
     width: "33",
     style: "Threshing Floor",
-    price: "Contact for Price",
+    price: "$8,500",
     desc: "Honey brown threshing floor 2-board top, 84 x 33. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20TT%207114%20-%2084%20x%2033%20-%20Honey%20Brown%20Threshing%20Floor%202-board%20top/TT.7114.01.jpg",
     images: [
@@ -589,7 +589,7 @@ const tables = [
     length: "75",
     width: "36",
     style: "Thresher",
-    price: "Contact for Price",
+    price: "$6,000",
     desc: "Light thresher with round sawn marks, 75 x 36. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20TT%207116%20-%2075X36%20-%20Light%20Thresher%20-%20Round%20Sawn%20Marks/TT.7116.03.jpg",
     images: [
@@ -611,7 +611,7 @@ const tables = [
     length: "75",
     width: "35",
     style: "Art Table",
-    price: "Contact for Price",
+    price: "$7,000",
     desc: "Dark cypress art table, 75 x 35. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20AT%202020%20-%2075x35%20-%20Dark%20cypress/AT.2020.02.jpg",
     images: [
@@ -635,7 +635,7 @@ const tables = [
     length: "75",
     width: "36",
     style: "Art Table",
-    price: "Contact for Price",
+    price: "$6,000",
     desc: "Dark cypress art table, 75 x 36. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20AT%202093%20-%2075%20X%2036%20-%20Dark%20Cypress/AT.2093.02.jpeg",
     images: [
@@ -655,7 +655,7 @@ const tables = [
     length: "82",
     width: "35",
     style: "Grooved Top",
-    price: "Contact for Price",
+    price: "$8,000",
     desc: "Grooved top farm style art table, 82 x 35. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20AT%202014%20-%2082%20x%20%2035%20x%2030%20-%20Grooved%20Top%20Farm%20Style/AT.2014.01.JPG",
     images: [
@@ -821,7 +821,14 @@ const portfolioProjects = [
  * Switch between pages.
  * @param {string} page - Page ID: 'home', 'shop', 'arch', 'portfolio', 'team', 'contact', 'product'
  */
+function toggleMobileNav() {
+  document.getElementById('nav-links').classList.toggle('mobile-open');
+  document.getElementById('nav-hamburger').classList.toggle('open');
+}
+
 function showPage(page) {
+  document.getElementById('nav-links').classList.remove('mobile-open');
+  document.getElementById('nav-hamburger').classList.remove('open');
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + page).classList.add('active');
 

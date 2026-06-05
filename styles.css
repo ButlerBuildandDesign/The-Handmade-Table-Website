@@ -245,6 +245,11 @@ section { padding: 96px 48px; }
   cursor: pointer;
   background: var(--charcoal);
 }
+.cat-img-link {
+  display: block;
+  width: 100%; height: 100%;
+  position: absolute; inset: 0;
+}
 .cat-card img {
   width: 100%; height: 100%; object-fit: cover;
   transition: transform 0.6s ease, opacity 0.4s;
@@ -894,24 +899,21 @@ footer {
 }
 
 @media (max-width: 768px) {
-  nav { padding: 0 24px; height: 64px; }
-  .nav-links { gap: 12px; }
-  
   section { padding: 64px 24px; }
   .hero { padding: 80px 24px 60px; }
   .hero h1 { white-space: normal; }
-  
+
   .shop-grid, .portfolio-grid, .arch-grid, .team-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-  
+
   .story-grid { grid-template-columns: 1fr; gap: 40px; }
   .story-img img { height: 360px; }
-  
+
   .cat-grid { grid-template-columns: repeat(2, 1fr); }
-  
+
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; gap: 16px; }
 }
@@ -1068,4 +1070,113 @@ footer {
   .team-modal-info-col { padding: 28px 24px; }
   .portfolio-modal-info { padding: 28px 24px 32px; }
   .portfolio-modal-gallery { aspect-ratio: 4/3; }
+}
+
+/* ─── HAMBURGER NAV ──────────────────────────────────────── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 200;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--charcoal);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+  transform-origin: center;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ─── MOBILE NAV SCROLL ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .nav-hamburger { display: none; }
+
+  nav {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: flex-start;
+    height: 64px;
+    padding: 0;
+  }
+  nav::-webkit-scrollbar { display: none; }
+
+  .nav-logo {
+    flex-shrink: 0;
+    padding-left: 20px;
+    padding-right: 28px;
+  }
+  .nav-logo span { display: none; }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 24px;
+    padding-right: 20px;
+  }
+  .nav-links li { flex-shrink: 0; }
+  .nav-links a { white-space: nowrap; font-size: 0.72rem; letter-spacing: 0.14em; }
+  .nav-links a::after { display: none; }
+}
+
+/* ─── MOBILE LAYOUT ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; height: 64px; }
+
+  .hero { padding: 100px 24px 60px; min-height: 540px; }
+  .hero h1 { white-space: normal; font-size: clamp(2rem, 9vw, 3.5rem); }
+  .hero-sub { font-size: 0.95rem; margin-bottom: 32px; }
+  .hero-ctas { flex-direction: column; align-items: center; gap: 12px; }
+  .hero-ctas .btn-primary, .hero-ctas .btn-outline { width: 100%; max-width: 280px; text-align: center; }
+
+  .hero-below { padding: 52px 24px 64px; }
+
+  .shop-hero, .arch-hero, .portfolio-hero, .team-hero, .contact-hero, .story-hero {
+    padding: 100px 24px 44px;
+    margin-top: 64px;
+  }
+
+  section { padding: 56px 24px; }
+
+  .cat-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  .shop-grid, .portfolio-grid, .arch-grid, .team-grid { grid-template-columns: 1fr; }
+
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .story-grid { grid-template-columns: 1fr; gap: 40px; }
+  .story-img img { height: 300px; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 16px; }
+
+  .modal { padding: 32px 24px; width: 94%; }
+  .modal-actions { flex-direction: column; gap: 10px; }
+  .modal-actions button { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .cat-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: clamp(1.8rem, 10vw, 2.8rem); }
+  section { padding: 44px 18px; }
+  .hero-below { padding: 40px 18px 52px; }
+  .shop-hero, .arch-hero, .portfolio-hero, .team-hero, .contact-hero, .story-hero {
+    padding: 90px 18px 36px;
+  }
+  .team-modal-card { max-height: 95vh; }
+  .portfolio-modal-gallery { aspect-ratio: 1/1; }
 }
