@@ -1026,7 +1026,7 @@ function applyFilters() {
  * @param {string} price - Price display
  * @param {string} desc - Product description
  */
-const FORMSPREE_ID = 'YOUR_FORMSPREE_ID';
+const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_KEY';
 
 function openModal(name, price) {
   document.getElementById('modal-name').textContent = name;
@@ -1047,14 +1047,18 @@ async function submitInquiry(e) {
   btn.textContent = 'Sending…';
   btn.disabled = true;
   try {
-    const res = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+    const data = new FormData(e.target);
+    data.append('access_key', WEB3FORMS_KEY);
+    const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      body: new FormData(e.target),
+      body: data,
       headers: { 'Accept': 'application/json' }
     });
-    if (res.ok) {
+    const json = await res.json();
+    if (json.success) {
       document.getElementById('modal-success').style.display = 'block';
       e.target.reset();
+      document.getElementById('modal-hidden-subject').value = document.getElementById('modal-name').textContent;
     } else {
       btn.textContent = 'Send Inquiry';
       btn.disabled = false;
@@ -1098,12 +1102,15 @@ async function handleContactSubmit(e) {
   btn.textContent = 'Sending…';
   btn.disabled = true;
   try {
-    const res = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+    const data = new FormData(form);
+    data.append('access_key', WEB3FORMS_KEY);
+    const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      body: new FormData(form),
+      body: data,
       headers: { 'Accept': 'application/json' }
     });
-    if (res.ok) {
+    const json = await res.json();
+    if (json.success) {
       btn.textContent = 'Message Sent!';
       form.reset();
       setTimeout(() => { btn.textContent = origLabel; btn.disabled = false; }, 4000);
