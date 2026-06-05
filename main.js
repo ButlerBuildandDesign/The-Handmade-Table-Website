@@ -1026,7 +1026,7 @@ function applyFilters() {
  * @param {string} price - Price display
  * @param {string} desc - Product description
  */
-const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_KEY';
+const WEB3FORMS_KEY = '4d6d7b45-e0c3-47bd-b820-258965e1ffaf';
 
 function openModal(name, price) {
   document.getElementById('modal-name').textContent = name;
