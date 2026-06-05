@@ -673,7 +673,7 @@ const tables = [
  * Switch between pages.
  * @param {string} page - Page ID: 'home', 'shop', 'arch', 'portfolio', 'team', 'contact', 'product'
  */
-function showPage(page) {
+function showPage(page, pushHistory = true) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + page).classList.add('active');
 
@@ -690,6 +690,7 @@ function showPage(page) {
   if (navId) document.getElementById(navId).classList.add('active');
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (pushHistory) history.pushState({ page }, '', '#' + page);
   return false;
 }
 
@@ -697,7 +698,7 @@ function showPage(page) {
  * Show product detail page for a specific table.
  * @param {number} tableId - Table ID
  */
-function showProductDetail(tableId) {
+function showProductDetail(tableId, pushHistory = true) {
   const table = tables.find(t => t.id === tableId);
   if (!table) return;
 
@@ -722,14 +723,10 @@ function showProductDetail(tableId) {
   document.getElementById('detail-main-image').src = detailImages[0];
   document.getElementById('detail-main-image').alt = table.name;
 
-  const defaultAbout = "Every piece of pre-industrial wood carries centuries of history. The patina, grain patterns, and unique characteristics you see are features, not flaws -- they're what makes each piece one-of-a-kind and irreplaceable.";
-  const aboutEl = document.getElementById('detail-about');
-  const aboutText = (table.about || defaultAbout).split('\n\n');
-  aboutEl.innerHTML = '<strong>About this table:</strong> ' + aboutText.map((p, i) => i === 0 ? p : '<br><br>' + p).join('');
-
   window.currentProduct = table;
 
-  showPage('product');
+  if (pushHistory) history.pushState({ page: 'product', tableId }, '', '#product');
+  showPage('product', false);
 }
 
 function detailImageNav(dir) {
@@ -737,6 +734,32 @@ function detailImageNav(dir) {
   detailIndex = (detailIndex + dir + detailImages.length) % detailImages.length;
   document.getElementById('detail-main-image').src = detailImages[detailIndex];
   document.getElementById('detail-counter').textContent = (detailIndex + 1) + ' / ' + detailImages.length;
+}
+
+function openLightbox() {
+  const hasMultiple = detailImages.length > 1;
+  document.getElementById('lightbox-img').src = detailImages[detailIndex];
+  document.getElementById('lightbox-counter').textContent = hasMultiple ? (detailIndex + 1) + ' / ' + detailImages.length : '';
+  document.getElementById('lb-prev').style.display = hasMultiple ? '' : 'none';
+  document.getElementById('lb-next').style.display = hasMultiple ? '' : 'none';
+  document.getElementById('lightbox').style.display = 'flex';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+
+function closeLightboxOutside(e) {
+  if (e.target === document.getElementById('lightbox')) closeLightbox();
+}
+
+function lightboxNav(dir) {
+  if (!detailImages || detailImages.length < 2) return;
+  detailIndex = (detailIndex + dir + detailImages.length) % detailImages.length;
+  document.getElementById('lightbox-img').src = detailImages[detailIndex];
+  document.getElementById('detail-main-image').src = detailImages[detailIndex];
+  document.getElementById('detail-counter').textContent = (detailIndex + 1) + ' / ' + detailImages.length;
+  document.getElementById('lightbox-counter').textContent = (detailIndex + 1) + ' / ' + detailImages.length;
 }
 
 /**
@@ -859,7 +882,18 @@ function handleContactSubmit(e) {
 
 /* ═══ INITIALIZATION ═════════════════════════════════════════ */
 
+window.addEventListener('popstate', e => {
+  if (!e.state) { showPage('home', false); return; }
+  if (e.state.page === 'product' && e.state.tableId != null) {
+    showProductDetail(e.state.tableId, false);
+  } else {
+    showPage(e.state.page || 'home', false);
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
+  history.replaceState({ page: 'home' }, '', location.pathname);
+
   // Generate shop grid
   const shopGrid = document.getElementById('shop-grid');
   if (shopGrid) {
@@ -898,8 +932,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Close modal with Escape key
   document.addEventListener('keydown', e => {
+    const lb = document.getElementById('lightbox');
+    const lbOpen = lb.style.display !== 'none';
     if (e.key === 'Escape') {
+      if (lbOpen) { closeLightbox(); return; }
       document.getElementById('modal-overlay').classList.remove('open');
     }
+    if (lbOpen && e.key === 'ArrowLeft')  lightboxNav(-1);
+    if (lbOpen && e.key === 'ArrowRight') lightboxNav(1);
   });
 });

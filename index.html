@@ -603,7 +603,7 @@
       <div class="product-detail-grid">
         <div class="product-detail-images">
           <div class="detail-carousel">
-            <img id="detail-main-image" src="https://via.placeholder.com/600x450" alt="Product">
+            <img id="detail-main-image" src="https://via.placeholder.com/600x450" alt="Product" onclick="openLightbox()" style="cursor:zoom-in;">
             <button class="carousel-btn carousel-prev" id="detail-prev" onclick="detailImageNav(-1)">&#8592;</button>
             <button class="carousel-btn carousel-next" id="detail-next" onclick="detailImageNav(1)">&#8594;</button>
             <span class="carousel-counter" id="detail-counter"></span>
@@ -637,15 +637,8 @@
             Product description goes here.
           </p>
 
-          <div style="margin: 40px 0; padding: 24px; background: var(--cream); border: 1px solid var(--border); border-radius: 2px;">
-            <p id="detail-about" style="font-size: 0.9rem; color: var(--mid); line-height: 1.7;">
-              <strong>About this table:</strong> Every piece of pre-industrial wood carries centuries of history. The patina, grain patterns, and unique characteristics you see are features, not flaws — they're what makes each piece one-of-a-kind and irreplaceable.
-            </p>
-          </div>
-
           <div style="display: flex; gap: 12px; flex-wrap: wrap;">
             <button class="btn-primary" id="detail-inquire" onclick="openModalFromDetail()">Inquire About This Table</button>
-            <a href="#" onclick="showPage('shop')" class="btn-outline">Back to Shop</a>
           </div>
 
           <div style="margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border);">
@@ -721,6 +714,15 @@
 </footer>
 
 <!-- ═══ INQUIRY MODAL ══════════════════════════════════ -->
+<!-- ═══ LIGHTBOX ══════════════════════════════════════════ -->
+<div id="lightbox" onclick="closeLightboxOutside(event)" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:9000; align-items:center; justify-content:center;">
+  <button onclick="closeLightbox()" style="position:absolute; top:20px; right:28px; background:none; border:none; color:white; font-size:2rem; cursor:pointer; line-height:1; padding:8px;">&#x2715;</button>
+  <button id="lb-prev" onclick="lightboxNav(-1)" style="position:absolute; left:20px; background:none; border:none; color:white; font-size:2.5rem; cursor:pointer; padding:20px; line-height:1;">&#8592;</button>
+  <img id="lightbox-img" src="" alt="" style="max-width:90vw; max-height:85vh; object-fit:contain; display:block; pointer-events:none;">
+  <button id="lb-next" onclick="lightboxNav(1)" style="position:absolute; right:20px; background:none; border:none; color:white; font-size:2.5rem; cursor:pointer; padding:20px; line-height:1;">&#8594;</button>
+  <span id="lightbox-counter" style="position:absolute; bottom:24px; left:50%; transform:translateX(-50%); color:rgba(255,255,255,0.65); font-size:0.9rem; letter-spacing:0.1em;"></span>
+</div>
+
 <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
   <div class="modal">
     <button class="modal-close" onclick="closeModalBtn()">✕</button>
