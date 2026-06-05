@@ -1047,27 +1047,26 @@ async function submitInquiry(e) {
   btn.textContent = 'Sending…';
   btn.disabled = true;
   try {
-    const data = new FormData(e.target);
-    data.append('access_key', WEB3FORMS_KEY);
-    const res = await fetch('https://api.web3forms.com/submit', {
+    const formData = new FormData(e.target);
+    formData.append('access_key', WEB3FORMS_KEY);
+    const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
+      body: formData
     });
-    const json = await res.json();
-    if (json.success) {
+    const data = await response.json();
+    if (response.ok) {
       document.getElementById('modal-success').style.display = 'block';
       e.target.reset();
       document.getElementById('modal-hidden-subject').value = document.getElementById('modal-name').textContent;
     } else {
       btn.textContent = 'Send Inquiry';
       btn.disabled = false;
-      alert('Something went wrong. Please call us or email customer@thehandmadetable.art');
+      alert('Error: ' + (data.message || 'Unknown error'));
     }
-  } catch {
+  } catch (err) {
     btn.textContent = 'Send Inquiry';
     btn.disabled = false;
-    alert('Something went wrong. Please call us or email customer@thehandmadetable.art');
+    alert('Network error: ' + err.message);
   }
 }
 
@@ -1102,27 +1101,26 @@ async function handleContactSubmit(e) {
   btn.textContent = 'Sending…';
   btn.disabled = true;
   try {
-    const data = new FormData(form);
-    data.append('access_key', WEB3FORMS_KEY);
-    const res = await fetch('https://api.web3forms.com/submit', {
+    const formData = new FormData(form);
+    formData.append('access_key', WEB3FORMS_KEY);
+    const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
+      body: formData
     });
-    const json = await res.json();
-    if (json.success) {
+    const data = await response.json();
+    if (response.ok) {
       btn.textContent = 'Message Sent!';
       form.reset();
       setTimeout(() => { btn.textContent = origLabel; btn.disabled = false; }, 4000);
     } else {
       btn.textContent = origLabel;
       btn.disabled = false;
-      alert('Something went wrong. Please email us at customer@thehandmadetable.art');
+      alert('Error: ' + (data.message || 'Unknown error'));
     }
-  } catch {
+  } catch (err) {
     btn.textContent = origLabel;
     btn.disabled = false;
-    alert('Something went wrong. Please email us at customer@thehandmadetable.art');
+    alert('Network error: ' + err.message);
   }
 }
 
