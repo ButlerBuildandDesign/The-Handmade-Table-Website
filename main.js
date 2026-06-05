@@ -677,7 +677,7 @@ const teamMembers = [
     id: 'david',
     name: 'David Grant Howard',
     role: 'Master Craftsman & Founder',
-    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    photo: 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Team%20Photos/David%20Howard.png',
     bio: [
       'David Grant Howard has spent over three decades perfecting the art of working with reclaimed pre-industrial wood. As founder of The Handmade Table, he built the business on a single principle: every piece of old-growth timber deserves to be transformed into something that will outlast another century.',
       'His technical mastery spans hand-planing, finishing, joinery, and structural design. But it\'s his instinct for reading wood — understanding its history, its grain, its character — that sets every piece apart. David selects each board personally, turning down material that doesn\'t meet his standard.',
@@ -711,7 +711,7 @@ const teamMembers = [
     id: 'bill',
     name: 'Bill',
     role: 'Architectural Elements Specialist',
-    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    photo: 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Team%20Photos/Bill%20Gibson.png',
     bio: [
       'Bill leads all of our architectural work — custom staircases, kitchen installations, accent walls, doors, and bespoke woodwork that define entire spaces. He brings a project-management mindset to complex multi-day installations.',
       'His ability to work alongside architects, designers, and homeowners means projects stay on schedule and on vision. He reads blueprints, navigates tight spaces, and solves problems in the field without losing sight of the finished result.',
@@ -733,7 +733,7 @@ const teamMembers = [
     id: 'daniel',
     name: 'Daniel Butler',
     role: 'Operations & Design',
-    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    photo: 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Team%20Photos/Daniel%20Butler.jpeg',
     bio: [
       'Daniel oversees the operational and design side of The Handmade Table — from client relationships and project coordination to brand direction and the ongoing evolution of the product line.',
       'With a background spanning both business and design, he works to ensure that every interaction a client has with the shop reflects the same level of craft and care that goes into the tables themselves.',
