@@ -880,3 +880,157 @@ footer {
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; gap: 16px; }
 }
+
+/* ─── TEAM DETAIL MODAL ──────────────────────────────────── */
+.team-modal-card {
+  background: var(--warm-white);
+  max-width: 860px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.team-modal-photo-col img {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+  display: block;
+}
+.team-modal-info-col {
+  padding: 52px 48px 48px;
+  overflow-y: auto;
+}
+.team-modal-info-col h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--ink);
+  margin: 8px 0 28px;
+  line-height: 1.2;
+}
+.team-modal-info-col p {
+  font-size: 0.95rem;
+  color: var(--mid);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.team-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--soft);
+  padding: 8px;
+  line-height: 1;
+  z-index: 10;
+}
+.team-modal-close:hover { color: var(--ink); }
+
+/* ─── PORTFOLIO PROJECT MODAL ────────────────────────────── */
+.portfolio-modal-card {
+  background: var(--warm-white);
+  max-width: 880px;
+  width: 100%;
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  margin: auto;
+}
+.portfolio-modal-gallery {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: #1a1512;
+  overflow: hidden;
+}
+.portfolio-modal-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.pm-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 18px 20px;
+  line-height: 1;
+  transition: background 0.2s;
+}
+.pm-nav-btn:hover { background: rgba(0,0,0,0.7); }
+.pm-prev-btn { left: 0; }
+.pm-next-btn { right: 0; }
+.pm-counter {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.65);
+  font-size: 0.8rem;
+  font-family: var(--font-body);
+  letter-spacing: 0.12em;
+}
+.portfolio-modal-info {
+  padding: 40px 48px 48px;
+}
+.portfolio-modal-info h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--ink);
+  margin: 8px 0 28px;
+  line-height: 1.2;
+}
+.portfolio-modal-info p {
+  font-size: 0.95rem;
+  color: var(--mid);
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+.portfolio-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(0,0,0,0.55);
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 8px 10px;
+  line-height: 1;
+  z-index: 10;
+  border-radius: 2px;
+}
+.portfolio-modal-close:hover { background: rgba(0,0,0,0.8); }
+
+/* "View Project →" label on portfolio cards */
+.portfolio-view-more {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--oak);
+  text-transform: uppercase;
+}
+
+/* Mobile adjustments for both modals */
+@media (max-width: 640px) {
+  .team-modal-card {
+    grid-template-columns: 1fr;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .team-modal-photo-col img { min-height: 260px; height: 260px; }
+  .team-modal-info-col { padding: 28px 24px; }
+  .portfolio-modal-info { padding: 28px 24px 32px; }
+  .portfolio-modal-gallery { aspect-ratio: 4/3; }
+}

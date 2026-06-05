@@ -10,6 +10,10 @@ let detailIndex = 0;
 let activeCategory = 'all';
 let activeLength = 'all';
 
+/* ═══ PORTFOLIO MODAL STATE ══════════════════════════════════ */
+let pmImages = [];
+let pmIndex  = 0;
+
 /* ═══ TABLE DATA ═══════════════════════════════════════════ */
 
 /**
@@ -667,6 +671,149 @@ const tables = [
   }
 ];
 
+/* ═══ TEAM DATA ═════════════════════════════════════════════ */
+const teamMembers = [
+  {
+    id: 'david',
+    name: 'David Grant Howard',
+    role: 'Master Craftsman & Founder',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    bio: [
+      'David Grant Howard has spent over three decades perfecting the art of working with reclaimed pre-industrial wood. As founder of The Handmade Table, he built the business on a single principle: every piece of old-growth timber deserves to be transformed into something that will outlast another century.',
+      'His technical mastery spans hand-planing, finishing, joinery, and structural design. But it\'s his instinct for reading wood — understanding its history, its grain, its character — that sets every piece apart. David selects each board personally, turning down material that doesn\'t meet his standard.',
+      'When he\'s not in the workshop, he\'s sourcing timber from demolished barns, mills, and industrial sites across the Southeast — preserving history one board at a time.'
+    ]
+  },
+  {
+    id: 'robert',
+    name: 'Robert',
+    role: 'Senior Craftsman',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    bio: [
+      'Robert has been a cornerstone of The Handmade Table for over fifteen years. His specialty is surface finishing — hand-planing boards to bring out grain patterns that machine finishing can never replicate.',
+      'He approaches every tabletop as a canvas, reading the wood\'s natural features and working with them rather than against them. The result is a surface that is both tactile and visually stunning.',
+      'Robert oversees final quality checks on every piece that leaves the shop, ensuring each table meets the standard the shop\'s reputation is built on.'
+    ]
+  },
+  {
+    id: 'chris',
+    name: 'Chris',
+    role: 'Master Joinery Specialist',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    bio: [
+      'Chris is our master joiner, responsible for the structural integrity of every table and architectural piece. He trained under traditional cabinetmakers and has spent his career refining the techniques that give our pieces their longevity.',
+      'Where others might reach for hardware, Chris reaches for hand-cut mortise-and-tenon joints, hand-fitted dovetails, and traditional wedged through-tenons. His work is invisible when everything goes right — and invisible is exactly the point.',
+      'He also designs and builds the custom bases for our dining tables, working with clients to balance proportion, weight, and visual presence.'
+    ]
+  },
+  {
+    id: 'bill',
+    name: 'Bill',
+    role: 'Architectural Elements Specialist',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    bio: [
+      'Bill leads all of our architectural work — custom staircases, kitchen installations, accent walls, doors, and bespoke woodwork that define entire spaces. He brings a project-management mindset to complex multi-day installations.',
+      'His ability to work alongside architects, designers, and homeowners means projects stay on schedule and on vision. He reads blueprints, navigates tight spaces, and solves problems in the field without losing sight of the finished result.',
+      'Bill has overseen some of our most ambitious projects, including full kitchen builds, complete staircase renovations, and whole-home paneling installations.'
+    ]
+  },
+  {
+    id: 'josh',
+    name: 'Josh',
+    role: 'Contemporary Design & Fabrication',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    bio: [
+      'Josh bridges the gap between the timeless character of reclaimed wood and the clean lines of contemporary design. He works closely with clients who want the authenticity of old-growth timber in a modern, minimal aesthetic.',
+      'His approach is subtractive — great design comes from knowing what to leave out. A Josh piece is striking not for how much it shows, but for how confidently it shows what it chooses to.',
+      'He handles fabrication from design concept through to final finish, and works particularly well on custom orders where the client has a specific vision they need help realizing.'
+    ]
+  },
+  {
+    id: 'daniel',
+    name: 'Daniel Butler',
+    role: 'Operations & Design',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    bio: [
+      'Daniel oversees the operational and design side of The Handmade Table — from client relationships and project coordination to brand direction and the ongoing evolution of the product line.',
+      'With a background spanning both business and design, he works to ensure that every interaction a client has with the shop reflects the same level of craft and care that goes into the tables themselves.',
+      'Daniel is the first point of contact for custom orders and architectural projects, and takes pride in turning a client\'s rough idea into a precise brief that the shop can execute with confidence.'
+    ]
+  }
+];
+
+/* ═══ PORTFOLIO DATA ════════════════════════════════════════ */
+const R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/';
+const portfolioProjects = [
+  {
+    id: 'watkins-kitchen',
+    title: 'Kitchen — Watkins Residence',
+    category: 'Kitchen & Cabinetry',
+    images: [
+      R2 + 'Watkins%20Kitchen%20(13).jpg',
+      R2 + 'Kitchen%20(1).jpg',
+      R2 + 'Cabinets%20(1).jpg',
+    ],
+    fullDesc: 'The Watkins kitchen represents one of our most comprehensive residential installations. The client came to us wanting a kitchen that felt lived-in from day one — not new, not shiny, but warm and grounded in history.\n\nEvery cabinet face, drawer front, shelf, and countertop edge was milled from reclaimed pre-industrial wood sourced from a mill operation that closed in the early 1900s. The material carries natural saw marks, color variation, and grain character that no new lumber can provide.\n\nThe design was collaborative — we worked directly with the family over three months of material selection, detailed drawings, and mock-ups before a single board was cut for installation. The result is a kitchen that feels both completely functional and completely one-of-a-kind.'
+  },
+  {
+    id: 'ted-green-stair',
+    title: 'Staircase — Ted Green Residence',
+    category: 'Stairs & Staircases',
+    images: [
+      R2 + 'Ted%20Green%20Stair%20(12).jpg',
+      R2 + 'Stair%20(1).JPG',
+      R2 + 'Stair%20(4).jpg',
+      R2 + 'Stair%20(8).jpg',
+      R2 + 'Magee%20Stairs%20(2).jpg',
+    ],
+    fullDesc: 'The Ted Green staircase was a full replacement of an original builder staircase — functional but characterless. The brief was simple: make it the first thing anyone notices when they walk through the front door.\n\nEvery tread was hand-planed from wide-plank reclaimed barn wood, with enough natural variation in tone and grain to give the staircase a sense of depth and age. The risers were finished in a complementary tone that plays against the warm wood without competing.\n\nCustom newel posts and balustrade were designed to work with the existing architectural proportions of the home. The finished staircase reads as if it has always been there — and that\'s exactly the effect we were after.'
+  },
+  {
+    id: 'watkins-cabinets',
+    title: 'Specialty Cabinetry — Watkins Residence',
+    category: 'Kitchen & Cabinetry',
+    images: [
+      R2 + 'Watkins%20Specialty%20Cabinets%20(2).jpg',
+      R2 + 'Reed.jpg',
+      R2 + 'Rich%20Boyd%20Work%20Bench%20Island%20(3).jpg',
+    ],
+    fullDesc: 'Following the success of the main kitchen installation, the Watkins family commissioned a series of specialty built-ins for adjoining rooms — a bar cabinet, a library unit, and a media console.\n\nAll three were built from the same timber stock as the original kitchen, ensuring visual continuity throughout the home. Each piece was designed around its specific use: the bar cabinet with deep drawers and wine storage, the library unit with adjustable shelving and concealed wiring, the media console with ventilation and cable management built invisibly into the structure.\n\nThis project is a good example of how a whole-home material language, when executed well, transforms individual rooms into a unified space.'
+  },
+  {
+    id: 'temple-interior',
+    title: 'Interior Paneling — Temple Renovation',
+    category: 'Accent Walls & Paneling',
+    images: [
+      R2 + 'Temple%20Interior%20(107)c.JPG',
+      R2 + 'IMG_1874.JPG',
+      R2 + 'IMG_1876.JPG',
+    ],
+    fullDesc: 'The Temple renovation involved installing reclaimed wood paneling throughout a large interior space — covering walls, ceiling soffits, and architectural accents across multiple rooms.\n\nThe scale of the project required careful planning to ensure material consistency across a large volume of timber. We sourced the wood in stages, selecting boards that shared enough character to read as cohesive while retaining the natural variation that makes reclaimed wood compelling.\n\nInstallation was carried out over two weeks, with Bill leading a crew of three. Each board was hand-fitted to account for slight variations in the original framing. The finished space has a depth and warmth that painted drywall cannot achieve — a complete transformation of how the building feels from the inside.'
+  },
+  {
+    id: 'tuttle-island',
+    title: 'Kitchen Island — Tuttle Residence',
+    category: 'Kitchen & Cabinetry',
+    images: [
+      R2 + '23%20-%20Tuttle%20Island%20(1)bb.JPG',
+      R2 + 'D%20Amos%20Island%20(7).jpg',
+      R2 + 'Elaine%20Alpert%20Counter%20Top%20(49).jpg',
+    ],
+    fullDesc: 'The Tuttle kitchen island was a statement piece commissioned to replace a standard cabinetry island that felt undersized and generic in a large open kitchen.\n\nThe new island is built from thick-slab reclaimed chestnut, with a top nearly three inches thick and an overhang generous enough to seat four. The base is a blend of reclaimed wood and custom metalwork — powder-coated steel legs that provide visual contrast and structural support for the heavy slab.\n\nThe client uses this island daily — for cooking, for homework, for entertaining. That durability was a core requirement, and the reclaimed chestnut delivers: dense, tight-grained, and harder than most new construction lumber. It will look better in thirty years than it does today.'
+  },
+  {
+    id: 'accent-paneling',
+    title: 'Accent Wall — Reclaimed Paneling',
+    category: 'Accent Walls & Paneling',
+    images: [
+      R2 + 'Paneling%20(6).JPG',
+      R2 + 'Paneling%20(1).JPG',
+      R2 + 'Paneling%20(4)b.JPG',
+    ],
+    fullDesc: 'Accent wall installations are one of our most requested architectural services — a single wall of reclaimed wood can define an entire room and provide a visual anchor that no paint color or wallpaper can replicate.\n\nThis project involved selecting and installing boards with natural variation in color and grain, arranged to create a rhythm across the wall without feeling uniform. The saw marks, nail holes, and patina were preserved — cleaned but not removed. A light hand-applied oil finish sealed and enriched the wood without changing its character.\n\nThe installation took two days. The effect was immediate: what had been a plain background wall became the focal point of a living room that the owners describe as finally feeling finished.'
+  }
+];
+
 /* ═══ PAGE NAVIGATION ═══════════════════════════════════════ */
 
 /**
@@ -762,6 +909,61 @@ function lightboxNav(dir) {
   document.getElementById('detail-main-image').src = detailImages[detailIndex];
   document.getElementById('detail-counter').textContent = (detailIndex + 1) + ' / ' + detailImages.length;
   document.getElementById('lightbox-counter').textContent = (detailIndex + 1) + ' / ' + detailImages.length;
+}
+
+/* ─── TEAM MODAL ────────────────────────────────────────── */
+
+function openTeamModal(memberId) {
+  const m = teamMembers.find(t => t.id === memberId);
+  if (!m) return;
+  document.getElementById('team-modal-img').src  = m.photo;
+  document.getElementById('team-modal-img').alt  = m.name;
+  document.getElementById('team-modal-role').textContent = m.role;
+  document.getElementById('team-modal-name').textContent = m.name;
+  document.getElementById('team-modal-bio').innerHTML = m.bio.map(p => `<p>${p}</p>`).join('');
+  document.getElementById('team-modal').style.display = 'flex';
+}
+
+function closeTeamModal() {
+  document.getElementById('team-modal').style.display = 'none';
+}
+
+function closeTeamModalOutside(e) {
+  if (e.target === document.getElementById('team-modal')) closeTeamModal();
+}
+
+/* ─── PORTFOLIO MODAL ───────────────────────────────────── */
+
+function openPortfolioModal(projectId) {
+  const proj = portfolioProjects.find(p => p.id === projectId);
+  if (!proj) return;
+  pmImages = proj.images;
+  pmIndex  = 0;
+  document.getElementById('pm-img').src = pmImages[0];
+  document.getElementById('pm-img').alt = proj.title;
+  document.getElementById('pm-category').textContent = proj.category;
+  document.getElementById('pm-title').textContent     = proj.title;
+  document.getElementById('pm-desc').innerHTML = proj.fullDesc.split('\n\n').map(p => `<p>${p}</p>`).join('');
+  const multi = pmImages.length > 1;
+  document.getElementById('pm-prev').style.display    = multi ? '' : 'none';
+  document.getElementById('pm-next').style.display    = multi ? '' : 'none';
+  document.getElementById('pm-counter').textContent   = multi ? '1 / ' + pmImages.length : '';
+  document.getElementById('portfolio-modal').style.display = 'flex';
+}
+
+function closePortfolioModal() {
+  document.getElementById('portfolio-modal').style.display = 'none';
+}
+
+function closePortfolioModalOutside(e) {
+  if (e.target === document.getElementById('portfolio-modal')) closePortfolioModal();
+}
+
+function portfolioModalNav(dir) {
+  if (!pmImages || pmImages.length < 2) return;
+  pmIndex = (pmIndex + dir + pmImages.length) % pmImages.length;
+  document.getElementById('pm-img').src = pmImages[pmIndex];
+  document.getElementById('pm-counter').textContent = (pmIndex + 1) + ' / ' + pmImages.length;
 }
 
 /**
@@ -930,15 +1132,21 @@ document.addEventListener('DOMContentLoaded', () => {
       `Showing ${tables.length} table${tables.length !== 1 ? 's' : ''}`;
   }
 
-  // Close modal with Escape key
+  // Close overlays with Escape key; arrow keys navigate open lightbox / portfolio modal
   document.addEventListener('keydown', e => {
-    const lb = document.getElementById('lightbox');
+    const lb   = document.getElementById('lightbox');
+    const pm   = document.getElementById('portfolio-modal');
     const lbOpen = lb.style.display !== 'none';
+    const pmOpen = pm.style.display !== 'none';
     if (e.key === 'Escape') {
       if (lbOpen) { closeLightbox(); return; }
+      if (pmOpen) { closePortfolioModal(); return; }
+      if (document.getElementById('team-modal').style.display !== 'none') { closeTeamModal(); return; }
       document.getElementById('modal-overlay').classList.remove('open');
     }
     if (lbOpen && e.key === 'ArrowLeft')  lightboxNav(-1);
     if (lbOpen && e.key === 'ArrowRight') lightboxNav(1);
+    if (pmOpen && e.key === 'ArrowLeft')  portfolioModalNav(-1);
+    if (pmOpen && e.key === 'ArrowRight') portfolioModalNav(1);
   });
 });
