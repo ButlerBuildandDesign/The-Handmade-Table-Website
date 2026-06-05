@@ -1132,6 +1132,19 @@ document.addEventListener('DOMContentLoaded', () => {
       `Showing ${tables.length} table${tables.length !== 1 ? 's' : ''}`;
   }
 
+  // Arch photo grids: click any photo to open lightbox for that section
+  document.querySelectorAll('.arch-photo-grid').forEach(grid => {
+    grid.addEventListener('click', e => {
+      const img = e.target.closest('img');
+      if (!img) return;
+      const imgs = Array.from(grid.querySelectorAll('img')).map(i => i.src);
+      const idx  = imgs.indexOf(img.src);
+      detailImages = imgs;
+      detailIndex  = idx >= 0 ? idx : 0;
+      openLightbox();
+    });
+  });
+
   // Close overlays with Escape key; arrow keys navigate open lightbox / portfolio modal
   document.addEventListener('keydown', e => {
     const lb   = document.getElementById('lightbox');
