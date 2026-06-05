@@ -814,12 +814,26 @@
     <p style="font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--oak);margin-bottom:10px;">Inquiry</p>
     <h3 id="modal-name">Table Name</h3>
     <div class="modal-price" id="modal-price"></div>
-    <p id="modal-desc">Description</p>
-    <p>To purchase or reserve this piece, reach out to our team directly. We'll confirm availability and walk you through shipping.</p>
-    <div class="modal-actions">
-      <a id="modal-email" href="#" class="btn-primary" style="flex:1;text-align:center;">Email Us About This</a>
-      <a href="tel:8652964552" class="btn-outline" style="flex:1;text-align:center;">Call (865) 296-4552</a>
-    </div>
+    <form id="modal-form" onsubmit="submitInquiry(event)" style="margin-top:20px;">
+      <input type="hidden" name="subject" id="modal-hidden-subject">
+      <div class="form-group">
+        <label for="modal-contact-name">Your Name</label>
+        <input type="text" id="modal-contact-name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="modal-contact-email">Email Address</label>
+        <input type="email" id="modal-contact-email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="modal-contact-message">Message (optional)</label>
+        <textarea id="modal-contact-message" name="message" rows="3" placeholder="Any questions or details..."></textarea>
+      </div>
+      <div class="modal-actions">
+        <button type="submit" id="modal-submit-btn" class="btn-primary" style="flex:1;">Send Inquiry</button>
+        <a href="tel:8652964552" class="btn-outline" style="flex:1;text-align:center;">Call (865) 296-4552</a>
+      </div>
+      <p id="modal-success" style="display:none;color:var(--oak);margin-top:14px;font-size:0.9rem;">Message sent — we'll be in touch soon!</p>
+    </form>
   </div>
 </div>
 

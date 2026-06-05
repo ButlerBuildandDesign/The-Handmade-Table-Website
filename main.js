@@ -872,6 +872,7 @@ function showProductDetail(tableId, pushHistory = true) {
   document.getElementById('detail-main-image').alt = table.name;
 
   window.currentProduct = table;
+  document.getElementById('detail-inquire').style.display = table.sold ? 'none' : '';
 
   if (pushHistory) {
     history.pushState({ page: 'shop' }, '', '#shop');
@@ -1025,20 +1026,45 @@ function applyFilters() {
  * @param {string} price - Price display
  * @param {string} desc - Product description
  */
-function openModal(name, price, desc) {
+const FORMSPREE_ID = 'YOUR_FORMSPREE_ID';
+
+function openModal(name, price) {
   document.getElementById('modal-name').textContent = name;
   document.getElementById('modal-price').textContent = price;
-  document.getElementById('modal-desc').textContent = desc;
-
-  const subject = encodeURIComponent('Inquiry: ' + name);
-  const body = encodeURIComponent(
-    `Hello,\n\nI'm interested in the "${name}" listed at ${price}.\n\n${desc}\n\nPlease let me know availability and next steps.\n\nThank you.`
-  );
-
-  document.getElementById('modal-email').href =
-    `mailto:customer@thehandmadetable.art?subject=${subject}&body=${body}`;
-
+  document.getElementById('modal-hidden-subject').value = 'Table Inquiry: ' + name + ' — ' + price;
+  document.getElementById('modal-success').style.display = 'none';
+  const btn = document.getElementById('modal-submit-btn');
+  btn.textContent = 'Send Inquiry';
+  btn.disabled = false;
+  document.getElementById('modal-form').reset();
+  document.getElementById('modal-hidden-subject').value = 'Table Inquiry: ' + name + ' — ' + price;
   document.getElementById('modal-overlay').classList.add('open');
+}
+
+async function submitInquiry(e) {
+  e.preventDefault();
+  const btn = document.getElementById('modal-submit-btn');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  try {
+    const res = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+      method: 'POST',
+      body: new FormData(e.target),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      document.getElementById('modal-success').style.display = 'block';
+      e.target.reset();
+    } else {
+      btn.textContent = 'Send Inquiry';
+      btn.disabled = false;
+      alert('Something went wrong. Please call us or email customer@thehandmadetable.art');
+    }
+  } catch {
+    btn.textContent = 'Send Inquiry';
+    btn.disabled = false;
+    alert('Something went wrong. Please call us or email customer@thehandmadetable.art');
+  }
 }
 
 /**
@@ -1064,26 +1090,33 @@ function closeModalBtn() {
  * Handle contact form submission.
  * @param {Event} e
  */
-function handleContactSubmit(e) {
+async function handleContactSubmit(e) {
   e.preventDefault();
-  
   const form = document.getElementById('contact-form');
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const subject = document.getElementById('subject').value;
-  const message = document.getElementById('message').value;
-  
-  // Create mailto link with form data
-  const mailtoSubject = encodeURIComponent(`Contact Form: ${subject}`);
-  const mailtoBody = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subject}\n\nMessage:\n${message}`
-  );
-  
-  window.location.href = `mailto:customer@thehandmadetable.art?subject=${mailtoSubject}&body=${mailtoBody}`;
-  
-  // Reset form
-  form.reset();
+  const btn = form.querySelector('[type="submit"]');
+  const origLabel = btn.textContent;
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  try {
+    const res = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      btn.textContent = 'Message Sent!';
+      form.reset();
+      setTimeout(() => { btn.textContent = origLabel; btn.disabled = false; }, 4000);
+    } else {
+      btn.textContent = origLabel;
+      btn.disabled = false;
+      alert('Something went wrong. Please email us at customer@thehandmadetable.art');
+    }
+  } catch {
+    btn.textContent = origLabel;
+    btn.disabled = false;
+    alert('Something went wrong. Please email us at customer@thehandmadetable.art');
+  }
 }
 
 /* ═══ INITIALIZATION ═════════════════════════════════════════ */
@@ -1120,7 +1153,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p class="product-desc">${table.desc}</p>
           <div class="product-footer">
             <div class="product-price">${table.price}</div>
-            <button class="add-btn" onclick="event.stopPropagation(); openModal('${table.name}','${table.price}','${table.desc} • Wood: ${table.wood.charAt(0).toUpperCase() + table.wood.slice(1)} • Dimensions: ${table.length}" × ${table.width}" ')">Inquire</button>
+            ${table.sold ? '' : `<button class="add-btn" onclick="event.stopPropagation(); openModal('${table.name}','${table.price}','${table.desc} • Wood: ${table.wood.charAt(0).toUpperCase() + table.wood.slice(1)} • Dimensions: ${table.length}&quot; \xd7 ${table.width}&quot; ')">Inquire</button>`}
           </div>
         </div>
       `;
