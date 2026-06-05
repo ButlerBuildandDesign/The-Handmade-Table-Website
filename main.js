@@ -831,6 +831,7 @@ function showPage(page) {
     shop: 'nav-shop',
     arch: 'nav-arch',
     portfolio: 'nav-portfolio',
+    story: 'nav-story',
     team: 'nav-team',
     contact: 'nav-contact'
   };

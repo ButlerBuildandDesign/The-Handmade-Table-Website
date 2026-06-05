@@ -145,7 +145,7 @@ nav {
 }
 
 /* ─── HERO VARIANTS (Shop, Arch, Portfolio, Team, Contact) ─── */
-.shop-hero, .arch-hero, .portfolio-hero, .team-hero, .contact-hero {
+.shop-hero, .arch-hero, .portfolio-hero, .team-hero, .contact-hero, .story-hero {
   background: var(--charcoal);
   padding: 140px 48px 60px;
   text-align: center;
@@ -153,23 +153,23 @@ nav {
 }
 
 .shop-hero .eyebrow, .arch-hero .eyebrow, .portfolio-hero .eyebrow,
-.team-hero .eyebrow, .contact-hero .eyebrow {
+.team-hero .eyebrow, .contact-hero .eyebrow, .story-hero .eyebrow {
   font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
   color: var(--oak-light); margin-bottom: 14px;
 }
 
 .shop-hero h1, .arch-hero h1, .portfolio-hero h1,
-.team-hero h1, .contact-hero h1 {
+.team-hero h1, .contact-hero h1, .story-hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 400; color: white; line-height: 1.1; margin-bottom: 16px;
 }
 
 .shop-hero h1 em, .arch-hero h1 em, .portfolio-hero h1 em,
-.team-hero h1 em, .contact-hero h1 em { color: var(--oak-light); font-style: italic; }
+.team-hero h1 em, .contact-hero h1 em, .story-hero h1 em { color: var(--oak-light); font-style: italic; }
 
 .shop-hero p, .arch-hero p, .portfolio-hero p,
-.team-hero p, .contact-hero p {
+.team-hero p, .contact-hero p, .story-hero p {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.2rem; color: rgba(255,255,255,0.6);
   font-weight: 300; max-width: 480px; margin: 0 auto;
