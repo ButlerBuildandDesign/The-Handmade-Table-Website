@@ -681,7 +681,8 @@ const teamMembers = [
     bio: [
       'David Grant Howard has spent over three decades perfecting the art of working with reclaimed pre-industrial wood. As founder of The Handmade Table, he built the business on a single principle: every piece of old-growth timber deserves to be transformed into something that will outlast another century.',
       'His technical mastery spans hand-planing, finishing, joinery, and structural design. But it\'s his instinct for reading wood — understanding its history, its grain, its character — that sets every piece apart. David selects each board personally, turning down material that doesn\'t meet his standard.',
-      'When he\'s not in the workshop, he\'s sourcing timber from demolished barns, mills, and industrial sites across the Southeast — preserving history one board at a time.'
+      'When he\'s not in the workshop, he\'s sourcing timber from demolished barns, mills, and industrial sites across the Southeast — preserving history one board at a time.',
+      'View his personal work at <a href="https://davidgranthoward.art" target="_blank" style="color:var(--oak);text-decoration:underline;">davidgranthoward.art</a>'
     ]
   },
   {
