@@ -296,6 +296,20 @@ section { padding: 96px 48px; }
   color: var(--mid); margin-top: 4px;
 }
 
+/* ─── STORY PROSE ──────────────────────────────── */
+.story-prose {
+  max-width: 720px;
+}
+.story-prose p {
+  font-size: 1.05rem; color: var(--mid);
+  line-height: 1.85; margin-bottom: 22px;
+}
+.story-prose-closing {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem !important; color: var(--charcoal) !important;
+  font-style: italic; margin-bottom: 10px !important;
+}
+
 /* ─── CUSTOM SECTION ───────────────────────────── */
 .custom-section {
   background:
