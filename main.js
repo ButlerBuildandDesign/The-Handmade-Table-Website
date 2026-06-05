@@ -69,7 +69,7 @@ const tables = [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202006%20-%2078.5%20x%2044.5%20x%2030%20-%20Walnut%20Top%20Table%20Website/AT.2006.05.JPG",
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202006%20-%2078.5%20x%2044.5%20x%2030%20-%20Walnut%20Top%20Table%20Website/AT.2006.06.JPG"
     ],
-    inStock: true
+    inStock: false, sold: true
   },
   {
     id: 19,
@@ -108,7 +108,7 @@ const tables = [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.055.JPG",
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/AT%202009%20-%2077%20x%2035%20Basket%20Weave%20Website/AT.2009.057.JPG"
     ],
-    inStock: true
+    inStock: false, sold: true
   },
   {
     id: 20,
@@ -130,7 +130,7 @@ const tables = [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20AT%202012%20-%2096%20x%20XX%20x%2030%20-%20Bleached%20White%20Oak/AT.2012.05.JPG",
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20AT%202012%20-%2096%20x%20XX%20x%2030%20-%20Bleached%20White%20Oak/AT.2012.06.JPG"
     ],
-    inStock: true
+    inStock: false, sold: true
   },
   {
     id: 22,
@@ -264,7 +264,7 @@ const tables = [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/TR%204008%20-%2082%20x%2038%20-%20Four%20board/TR.4008.012.jpeg",
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/TR%204008%20-%2082%20x%2038%20-%20Four%20board/TR.4008.013.jpeg"
     ],
-    inStock: true
+    inStock: false, sold: true
   },
   {
     id: 27,
@@ -557,7 +557,7 @@ const tables = [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20CC%208103%20-%2058.5%20x%2027%20x%2017%20-%20Live%20edge%20coffee%20table/CC.8103.05.JPG",
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20CC%208103%20-%2058.5%20x%2027%20x%2017%20-%20Live%20edge%20coffee%20table/CC.8103.06.JPG"
     ],
-    inStock: true
+    inStock: false, sold: true
   },
   {
     id: 39,
@@ -1101,7 +1101,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Generate shop grid
   const shopGrid = document.getElementById('shop-grid');
   if (shopGrid) {
-    tables.forEach(table => {
+    const sortedTables = [...tables].sort((a, b) => (a.sold ? 1 : 0) - (b.sold ? 1 : 0));
+    sortedTables.forEach(table => {
       const card = document.createElement('div');
       card.className = 'product-card';
       card.dataset.wood = table.wood;
@@ -1111,7 +1112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.innerHTML = `
         <div class="product-img">
           <img src="${table.image}" alt="${table.name}">
-          ${table.inStock ? '<span class="product-badge">In Stock</span>' : ''}
+          ${table.sold ? '<span class="product-badge product-badge-sold">Sold</span>' : table.inStock ? '<span class="product-badge">In Stock</span>' : ''}
         </div>
         <div class="product-info">
           <p class="product-type">${table.type}</p>

@@ -369,6 +369,10 @@ section { padding: 96px 48px; }
   padding: 4px 10px; border-radius: 1px;
 }
 
+.product-badge-sold {
+  background: var(--mid);
+}
+
 .product-info { padding: 24px; }
 .product-type {
   font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
