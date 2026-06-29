@@ -32,7 +32,7 @@ const tables = [
     width: "—",
     style: "Special Piece",
     price: "$30,000",
-    desc: "Description coming soon. Contact us for full details on this piece.",
+    desc: "This table might just qualify as the largest, or certainly one of the largest tables you will ever see. It is just under twenty-two feet long and forty-six inches wide and made of just two boards! The top is made from poplar boards from the floor of a very large barn. The boards used here are likely more than 200 years old. Although poplar is not usually regarded as a particularly attractive wood, age, wear, and patina have given these boards a rich honey-brown color and exceptional beauty. The base we made for this table creates an interesting contrast and juxtaposition of the very old wood top and the contemporary style of the base. There are numerous other options for the base and we would certainly entertain an alternative if you are interested in making a change.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.04.JPG",
     images: [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/SP%201001%20Website/SP.1001.04.JPG",
@@ -227,7 +227,7 @@ const tables = [
     width: "36",
     style: "Oak Pike Base",
     price: "$7,000",
-    desc: "Oak pike base farm table, 78 x 36. Description coming soon — contact us for full details on this piece.",
+    desc: "When very old and very special wood selections are available to us where the shape and the scale of the pieces are too odd or too big for a table we will sometimes mill the pieces into something we can use in a more contemporary style piece of furniture. We don't do that very often but in this case the materials were very enticing so we broke our own rule and made this table with quite old timbers that we milled. The boards in the top came from very old barn beams, probably from the mid 1800's. The base was made from the rafters from the same barn. The table style is something of a mid century modern motif and a great match for very old but milled pieces. I hope you like this as much as I do.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/CT%205015%20-%2078%20x%2036%20-%20Oak%20Pike%20Base/CT.5015.02.jpeg",
     images: [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/CT%205015%20-%2078%20x%2036%20-%20Oak%20Pike%20Base/CT.5015.02.jpeg",
@@ -276,7 +276,7 @@ const tables = [
     width: "42",
     style: "Four Board",
     price: "$9,500",
-    desc: "Four board farm table, 96 x 42. Description coming soon — contact us for full details on this piece.",
+    desc: "Pleasant surprises abound at The Handmade Table. When we select material for a table, we usually have a good sense of what it can become, but we never know its full potential until it comes out of finishing. Years of experience gives us a reliable idea of how a piece will turn out, yet the final story is not revealed until the last coat of finish is applied. This table was one of those surprises. I knew it would be good, but I did not fully anticipate just how striking it would become. The top is made from boards salvaged from an old grain bin, likely dating to around 1820–1840. The base is adapted from a design we first made many years ago when a customer brought us a photo of a table she had seen in a vineyard in France. She asked whether we could recreate it, including the base. We did, and that original table became the inspiration for many great tables over the years. The base has the kind of graceful curve and shape that only the French could come up with.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/TR%204013%20-%2096%20x%2042%20-%20Four%20board/TR.4096.010.jpeg",
     images: [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/TR%204013%20-%2096%20x%2042%20-%20Four%20board/TR.4096.010.jpeg",
@@ -444,7 +444,7 @@ const tables = [
     width: "38",
     style: "Granary",
     price: "$6,500",
-    desc: "Light granary farm table, 68.5 x 38. Description coming soon — contact us for full details on this piece.",
+    desc: "In the history of this country, there is one thing that EVERY home shared with every other. That singular thing was the farm table. Every house had at least one. It was the place where vegetables were chopped, meat cleaved and dough rolled into biscuits and bread and if there is one thing that represented the heart of everyday life, it was the table that was the one common item shared by all. The wealthy may have dined on expensive China and ate with fine linen napkins but somewhere, in the back of the house, was a farm table, looking much like the one in these photos. It is fitting that the materials for this table came from a very old grain bin. In my experience, its color, patina, and character are truly unique. The photos highlight the striking color contrast, of unknown origin, in the boards used for the top — an unusual feature that gives the table a distinctive look all its own.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/FT%206096%20-%2068.5%20x%2038%20-%20Light%20Granary%20Farm/FT.6096.03.jpeg",
     images: [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/FT%206096%20-%2068.5%20x%2038%20-%20Light%20Granary%20Farm/FT.6096.03.jpeg",
@@ -612,7 +612,7 @@ const tables = [
     width: "35",
     style: "Art Table",
     price: "$7,000",
-    desc: "Dark cypress art table, 75 x 35. Description coming soon — contact us for full details on this piece.",
+    desc: "This table features striking linear striations and a deep, rich ebony patina. Its dark coloration adds an elegant touch when paired with the right linens and plateware, which is why we classify it as an \"art\" table. We reserve that designation for pieces with distinctive characteristics that set them apart from anything else we have or have made. Capturing the true character of a table like this in a photograph is difficult, but I hope you can see enough to appreciate its underlying beauty. The species of wood we use in our studio spans the landscape of varieties. This table was made from an antique cypress, probably from the late 1800's, which came from the Philadelphia, PA area. As with almost everything we make what you see is the natural patina. There is no stain on this table. At the time this continent was settled by Europeans the cypress ranges stretched from the Mid Atlantic to Texas.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20AT%202020%20-%2075x35%20-%20Dark%20cypress/AT.2020.02.jpg",
     images: [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20AT%202020%20-%2075x35%20-%20Dark%20cypress/AT.2020.02.jpg",
