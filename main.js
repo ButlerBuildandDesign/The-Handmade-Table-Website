@@ -218,26 +218,6 @@ const tables = [
     inStock: true
   },
   {
-    id: 25,
-    name: "CT 5015",
-    category: "ct",
-    type: "Farm Table · Oak",
-    wood: "oak",
-    length: "78",
-    width: "36",
-    style: "Oak Pike Base",
-    price: "$7,000",
-    desc: "When very old and very special wood selections are available to us where the shape and the scale of the pieces are too odd or too big for a table we will sometimes mill the pieces into something we can use in a more contemporary style piece of furniture. We don't do that very often but in this case the materials were very enticing so we broke our own rule and made this table with quite old timbers that we milled. The boards in the top came from very old barn beams, probably from the mid 1800's. The base was made from the rafters from the same barn. The table style is something of a mid century modern motif and a great match for very old but milled pieces. I hope you like this as much as I do.",
-    image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/CT%205015%20-%2078%20x%2036%20-%20Oak%20Pike%20Base/CT.5015.02.jpeg",
-    images: [
-      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/CT%205015%20-%2078%20x%2036%20-%20Oak%20Pike%20Base/CT.5015.02.jpeg",
-      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/CT%205015%20-%2078%20x%2036%20-%20Oak%20Pike%20Base/CT.5015.01.jpeg",
-      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/CT%205015%20-%2078%20x%2036%20-%20Oak%20Pike%20Base/CT.5015.03.jpeg",
-      "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/CT%205015%20-%2078%20x%2036%20-%20Oak%20Pike%20Base/CT.5015.04.jpeg"
-    ],
-    inStock: true
-  },
-  {
     id: 26,
     name: "TR 4008",
     category: "tr",
