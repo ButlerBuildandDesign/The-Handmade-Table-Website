@@ -1142,6 +1142,14 @@ window.addEventListener('popstate', e => {
   }
 });
 
+function buildShortDesc(table) {
+  const [typeName] = table.type.split(' · ');
+  const wood = table.wood.toLowerCase();
+  const dims = table.length !== '—' ? `, ${table.length}" × ${table.width}"` : '';
+  const article = /^[aeiou]/i.test(typeName) ? 'An' : 'A';
+  return `${article} ${typeName.toLowerCase()}${dims}, handcrafted from antique ${wood}.`;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // Generate shop grid
   const shopGrid = document.getElementById('shop-grid');
@@ -1162,7 +1170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="product-info">
           <p class="product-type">${table.type}</p>
           <h3 class="product-name">${table.name}</h3>
-          <p class="product-desc">${table.desc}</p>
+          <p class="product-desc">${buildShortDesc(table)}</p>
           <div class="product-footer">
             <div class="product-price">${table.price}</div>
             ${table.sold ? '' : `<button class="add-btn" onclick="event.stopPropagation(); openModal('${table.name}','${table.price}','${table.desc} • Wood: ${table.wood.charAt(0).toUpperCase() + table.wood.slice(1)} • Dimensions: ${table.length}&quot; \xd7 ${table.width}&quot; ')">Inquire</button>`}
