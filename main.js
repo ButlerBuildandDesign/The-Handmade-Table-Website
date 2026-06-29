@@ -198,7 +198,7 @@ const tables = [
     width: "36",
     style: "Four Board",
     price: "$6,000",
-    desc: "Four board farm table, 96 x 36. Description coming soon — contact us for full details on this piece.",
+    desc: "As you know, most everything we make is made from an antique material of one description or another. This table is a worthy exception. On a visit to a supplier of mine in Upstate New York near the Great Lakes, I was shown some large planks that had been used in the construction of a modern \"plank road\" to a saw mill. In colonial times, big thick planks were used to make solid surfaces to keep wagons from sinking into the mud. I had no idea anything like that still existed but they in fact do, at least in tiny quantities. Plank roads were common in colonial times but almost unheard of since asphalt came around. I do not think the planks were terribly old but they had such an unusual patina and character that I bought the few that were there. I used the planks to make a few tables and this is the last of the bunch. The table is all cherry with a simple tapered leg. There is no stain or color added to this one. What you see is the natural patina.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/CT%205010%20-%2096%20x%2036%20-%20Four%20Board/CT.5010.010.jpeg",
     images: [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/CT%205010%20-%2096%20x%2036%20-%20Four%20Board/CT.5010.010.jpeg",
@@ -304,7 +304,7 @@ const tables = [
     width: "36",
     style: "Light Cherry",
     price: "$7,000",
-    desc: "Light cherry farm table, 96 x 36. Description coming soon — contact us for full details on this piece.",
+    desc: "When very old and very special wood selections are available to us where the shape and the scale of the pieces are too odd or too big for a table we will sometimes mill the pieces into something we can use in a more contemporary style piece of furniture. We don't do that very often but in this case the materials were very enticing so we broke our own rule and made this table with quite old timbers that we milled. The boards in the top came from very old barn beams, probably from the mid 1800's. The base was made from the rafters from the same barn. The table style is something of a mid century modern motif and a great match for very old but milled pieces. I hope you like this as much as I do.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20CT%205605%20-%2096x36%20-%20Light%20Cherry/CT.5605.01.jpg",
     images: [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20CT%205605%20-%2096x36%20-%20Light%20Cherry/CT.5605.01.jpg",
