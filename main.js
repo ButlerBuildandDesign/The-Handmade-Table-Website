@@ -28,8 +28,8 @@ const tables = [
     category: "sp",
     type: "Special Piece · Pine",
     wood: "pine",
-    length: "—",
-    width: "—",
+    length: "22 feet",
+    width: "46",
     style: "Special Piece",
     price: "$30,000",
     desc: "This table might just qualify as the largest, or certainly one of the largest tables you will ever see. It is just under twenty-two feet long and forty-six inches wide and made of just two boards! The top is made from poplar boards from the floor of a very large barn. The boards used here are likely more than 200 years old. Although poplar is not usually regarded as a particularly attractive wood, age, wear, and patina have given these boards a rich honey-brown color and exceptional beauty. The base we made for this table creates an interesting contrast and juxtaposition of the very old wood top and the contemporary style of the base. There are numerous other options for the base and we would certainly entertain an alternative if you are interested in making a change.",
@@ -1125,7 +1125,11 @@ window.addEventListener('popstate', e => {
 function buildShortDesc(table) {
   const [typeName] = table.type.split(' · ');
   const wood = table.wood.toLowerCase();
-  const dims = table.length !== '—' ? `, ${table.length}" × ${table.width}"` : '';
+  let dims = '';
+  if (table.length !== '—') {
+    const lStr = /feet|ft/i.test(table.length) ? table.length : `${table.length}"`;
+    dims = `, ${lStr} × ${table.width}"`;
+  }
   const article = /^[aeiou]/i.test(typeName) ? 'An' : 'A';
   return `${article} ${typeName.toLowerCase()}${dims}, handcrafted from antique ${wood}.`;
 }
