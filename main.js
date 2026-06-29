@@ -326,7 +326,7 @@ const tables = [
     width: "36",
     style: "Dark Stained Oak",
     price: "$5,000",
-    desc: "Dark stained oak farm table with double leg trestle base, 78 x 36. Description coming soon — contact us for full details on this piece.",
+    desc: "When very old and very special wood selections are available to us where the shape and the scale of the pieces are too odd or too big for a table we will sometimes mill the pieces into something we can use in a more contemporary style piece of furniture. We don't do that very often but in this case the materials were very enticing so we broke our own rule and made this table with quite old timbers that we milled. The boards in the top came from very old barn beams, probably from the mid 1800's. The base was made from the rafters from the same barn. The table style is something of a mid century modern motif and a great match for very old but milled pieces. I hope you like this as much as I do.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20CT%205606%20-%2078x36%20-%20Dark%20Stained%20Oak%20-%20double%20leg%20trestle/CT.5606.01.jpg",
     images: [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20CT%205606%20-%2078x36%20-%20Dark%20Stained%20Oak%20-%20double%20leg%20trestle/CT.5606.01.jpg",
