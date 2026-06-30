@@ -169,7 +169,7 @@ const tables = [
     id: 23,
     name: "RO 3280",
     category: "ro",
-    type: "Round Table · Pine",
+    type: "Racetrack · Pine",
     wood: "pine",
     length: "84",
     width: "42",
@@ -1123,19 +1123,10 @@ window.addEventListener('popstate', e => {
 });
 
 function buildShortDesc(table) {
-  const [typeName] = table.type.split(' · ');
-  const wood = table.wood.toLowerCase();
-  let dims = '';
-  if (table.length !== '—') {
-    if (table.width === '—') {
-      dims = `, ${table.length}`;
-    } else {
-      const lStr = /feet|ft/i.test(table.length) ? table.length : `${table.length}"`;
-      dims = `, ${lStr} × ${table.width}"`;
-    }
-  }
-  const article = /^[aeiou]/i.test(typeName) ? 'An' : 'A';
-  return `${article} ${typeName.toLowerCase()}${dims}, handcrafted from antique ${wood}.`;
+  if (table.length === '—') return '';
+  if (table.width === '—') return table.length;
+  const lStr = /feet|ft/i.test(table.length) ? table.length : `${table.length}"`;
+  return `${lStr} × ${table.width}"`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
