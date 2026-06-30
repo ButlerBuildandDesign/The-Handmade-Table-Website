@@ -26,7 +26,7 @@ const tables = [
     id: 17,
     name: "SP 1001",
     category: "sp",
-    type: "Special Piece · Pine",
+    type: "Specialty Table · Pine",
     wood: "pine",
     length: "22 feet",
     width: "46",
@@ -138,8 +138,8 @@ const tables = [
     category: "ro",
     type: "Round Table · Marble",
     wood: "marble",
-    length: "60",
-    width: "60",
+    length: "60\" diameter",
+    width: "—",
     style: "Round",
     price: "$6,000",
     desc: "60-inch round white marble top table. Description coming soon — contact us for full details on this piece.",
@@ -169,7 +169,7 @@ const tables = [
     id: 23,
     name: "RO 3280",
     category: "ro",
-    type: "Racetrack · Pine",
+    type: "Round Table · Pine",
     wood: "pine",
     length: "84",
     width: "42",
@@ -192,7 +192,7 @@ const tables = [
     id: 24,
     name: "CT 5010",
     category: "ct",
-    type: "Farm Table · Pine",
+    type: "Contemporary Table · Pine",
     wood: "pine",
     length: "96",
     width: "36",
@@ -221,7 +221,7 @@ const tables = [
     id: 26,
     name: "TR 4008",
     category: "tr",
-    type: "Farm Table · Pine",
+    type: "Trestle Table · Pine",
     wood: "pine",
     length: "82",
     width: "38",
@@ -250,7 +250,7 @@ const tables = [
     id: 27,
     name: "TR 4013",
     category: "tr",
-    type: "Farm Table · Pine",
+    type: "Trestle Table · Pine",
     wood: "pine",
     length: "96",
     width: "42",
@@ -278,7 +278,7 @@ const tables = [
     id: 28,
     name: "CT 5605",
     category: "ct",
-    type: "Farm Table · Cherry",
+    type: "Contemporary Table · Cherry",
     wood: "cherry",
     length: "96",
     width: "36",
@@ -300,7 +300,7 @@ const tables = [
     id: 29,
     name: "CT 5606",
     category: "ct",
-    type: "Farm Table · Oak",
+    type: "Contemporary Table · Oak",
     wood: "oak",
     length: "78",
     width: "36",
@@ -324,7 +324,7 @@ const tables = [
     id: 30,
     name: "TR 4101",
     category: "tr",
-    type: "Thresher · Pine",
+    type: "Trestle Table · Pine",
     wood: "pine",
     length: "96",
     width: "42",
@@ -543,7 +543,7 @@ const tables = [
     id: 39,
     name: "TT 7114",
     category: "tt",
-    type: "Thick Top · Pine",
+    type: "Traditional Table · Pine",
     wood: "pine",
     length: "84",
     width: "33",
@@ -564,7 +564,7 @@ const tables = [
     id: 40,
     name: "TT 7116",
     category: "tt",
-    type: "Thick Top · Pine",
+    type: "Traditional Table · Pine",
     wood: "pine",
     length: "75",
     width: "36",
@@ -1127,8 +1127,12 @@ function buildShortDesc(table) {
   const wood = table.wood.toLowerCase();
   let dims = '';
   if (table.length !== '—') {
-    const lStr = /feet|ft/i.test(table.length) ? table.length : `${table.length}"`;
-    dims = `, ${lStr} × ${table.width}"`;
+    if (table.width === '—') {
+      dims = `, ${table.length}`;
+    } else {
+      const lStr = /feet|ft/i.test(table.length) ? table.length : `${table.length}"`;
+      dims = `, ${lStr} × ${table.width}"`;
+    }
   }
   const article = /^[aeiou]/i.test(typeName) ? 'An' : 'A';
   return `${article} ${typeName.toLowerCase()}${dims}, handcrafted from antique ${wood}.`;
