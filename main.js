@@ -727,18 +727,18 @@ const R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20
 const portfolioProjects = [
   {
     id: 'watkins-kitchen',
-    title: 'Kitchen — Watkins Residence',
+    title: 'Kitchen',
     category: 'Kitchen & Cabinetry',
     images: [
       R2 + 'Watkins%20Kitchen%20(13).jpg',
       R2 + 'Kitchen%20(1).jpg',
       R2 + 'Cabinets%20(1).jpg',
     ],
-    fullDesc: 'The Watkins kitchen represents one of our most comprehensive residential installations. The client came to us wanting a kitchen that felt lived-in from day one — not new, not shiny, but warm and grounded in history.\n\nEvery cabinet face, drawer front, shelf, and countertop was milled from antique wood originally made between 1760 and 1880 — hand-crafted before factory production existed. What you see in the color and surface character is the natural patina of that wood. We use no stains. The look comes entirely from the material itself.\n\nThe countertops are fully sealed and impervious to water — they won\'t ring or stain, and even the undersides are finished. One of the most practical advantages of a wood top over stone or synthetic is that when it eventually shows wear, it can be refurbished to look exactly as it did the day it arrived. No messy polishing processes, no replacement — a simple, quick process brings it back completely.\n\nThe design was collaborative — we worked directly with the family over three months of material selection and detailed drawings before a single board was cut. The result is a kitchen that feels both completely functional and completely one-of-a-kind.'
+    fullDesc: 'This is one of our most comprehensive residential kitchen installations. The client came to us wanting a kitchen that felt lived-in from day one — not new, not shiny, but warm and grounded in history.\n\nEvery cabinet face, drawer front, shelf, and countertop was milled from antique wood originally made between 1760 and 1880 — hand-crafted before factory production existed. What you see in the color and surface character is the natural patina of that wood. We use no stains. The look comes entirely from the material itself.\n\nThe countertops are fully sealed and impervious to water — they won\'t ring or stain, and even the undersides are finished. One of the most practical advantages of a wood top over stone or synthetic is that when it eventually shows wear, it can be refurbished to look exactly as it did the day it arrived. No messy polishing processes, no replacement — a simple, quick process brings it back completely.\n\nThe design was collaborative — we worked directly with the family over three months of material selection and detailed drawings before a single board was cut. The result is a kitchen that feels both completely functional and completely one-of-a-kind.'
   },
   {
     id: 'ted-green-stair',
-    title: 'Staircase — Ted Green Residence',
+    title: 'Staircase',
     category: 'Stairs & Staircases',
     images: [
       R2 + 'Ted%20Green%20Stair%20(12).jpg',
@@ -747,44 +747,44 @@ const portfolioProjects = [
       R2 + 'Stair%20(8).jpg',
       R2 + 'Magee%20Stairs%20(2).jpg',
     ],
-    fullDesc: 'The Ted Green staircase was a full replacement of an original builder staircase — functional but characterless. The brief was simple: make it the first thing anyone notices when they walk through the front door.\n\nEvery tread was hand-planed from wide-plank reclaimed barn wood, with enough natural variation in tone and grain to give the staircase a sense of depth and age. The risers were finished in a complementary tone that plays against the warm wood without competing.\n\nCustom newel posts and balustrade were designed to work with the existing architectural proportions of the home. The finished staircase reads as if it has always been there — and that\'s exactly the effect we were after.'
+    fullDesc: 'This staircase was a full replacement of an original builder staircase — functional but characterless. The brief was simple: make it the first thing anyone notices when they walk through the front door.\n\nEvery tread was hand-planed from wide-plank reclaimed barn wood, with enough natural variation in tone and grain to give the staircase a sense of depth and age. The risers were finished in a complementary tone that plays against the warm wood without competing.\n\nCustom newel posts and balustrade were designed to work with the existing architectural proportions of the home. The finished staircase reads as if it has always been there — and that\'s exactly the effect we were after.'
   },
   {
     id: 'watkins-cabinets',
-    title: 'Specialty Cabinetry — Watkins Residence',
+    title: 'Specialty Cabinetry',
     category: 'Kitchen & Cabinetry',
     images: [
       R2 + 'Watkins%20Specialty%20Cabinets%20(2).jpg',
       R2 + 'Reed.jpg',
       R2 + 'Rich%20Boyd%20Work%20Bench%20Island%20(3).jpg',
     ],
-    fullDesc: 'Following the success of the main kitchen installation, the Watkins family commissioned a series of specialty built-ins for adjoining rooms — a bar cabinet, a library unit, and a media console.\n\nAll three were built from the same antique timber stock as the original kitchen — wood originally made by hand between 1760 and 1880, before the industrial era changed how materials were produced. The surface character, color, and grain you see is entirely natural patina. No stains are used on any of our pieces.\n\nEach piece was designed around its specific use: the bar cabinet with deep drawers and wine storage, the library unit with adjustable shelving and concealed wiring, the media console with ventilation built invisibly into the structure. All surfaces are fully sealed — impervious to water, easy to clean, and refurbishable for generations. This project is a good example of how a consistent antique material language, carried through an entire home, creates spaces that feel both unified and irreplaceable.'
+    fullDesc: 'Following the success of the main kitchen installation, we were commissioned to build a series of specialty built-ins for adjoining rooms — a bar cabinet, a library unit, and a media console.\n\nAll three were built from the same antique timber stock as the original kitchen — wood originally made by hand between 1760 and 1880, before the industrial era changed how materials were produced. The surface character, color, and grain you see is entirely natural patina. No stains are used on any of our pieces.\n\nEach piece was designed around its specific use: the bar cabinet with deep drawers and wine storage, the library unit with adjustable shelving and concealed wiring, the media console with ventilation built invisibly into the structure. All surfaces are fully sealed — impervious to water, easy to clean, and refurbishable for generations. This project is a good example of how a consistent antique material language, carried through an entire home, creates spaces that feel both unified and irreplaceable.'
   },
   {
     id: 'temple-interior',
-    title: 'Interior Paneling — Temple Renovation',
+    title: 'Interior Paneling',
     category: 'Accent Walls & Paneling',
     images: [
       R2 + 'Temple%20Interior%20(107)c.JPG',
       R2 + 'IMG_1874.JPG',
       R2 + 'IMG_1876.JPG',
     ],
-    fullDesc: 'The Temple renovation involved installing reclaimed wood paneling throughout a large interior space — covering walls, ceiling soffits, and architectural accents across multiple rooms.\n\nThe scale of the project required careful planning to ensure material consistency across a large volume of timber. We sourced the wood in stages, selecting boards that shared enough character to read as cohesive while retaining the natural variation that makes reclaimed wood compelling.\n\nInstallation was carried out over two weeks, with Bill leading a crew of three. Each board was hand-fitted to account for slight variations in the original framing. The finished space has a depth and warmth that painted drywall cannot achieve — a complete transformation of how the building feels from the inside.'
+    fullDesc: 'This project involved installing reclaimed wood paneling throughout a large interior space — covering walls, ceiling soffits, and architectural accents across multiple rooms.\n\nThe scale of the project required careful planning to ensure material consistency across a large volume of timber. We sourced the wood in stages, selecting boards that shared enough character to read as cohesive while retaining the natural variation that makes reclaimed wood compelling.\n\nInstallation was carried out over two weeks, with Bill leading a crew of three. Each board was hand-fitted to account for slight variations in the original framing. The finished space has a depth and warmth that painted drywall cannot achieve — a complete transformation of how the building feels from the inside.'
   },
   {
     id: 'tuttle-island',
-    title: 'Kitchen Island — Tuttle Residence',
+    title: 'Kitchen Island',
     category: 'Kitchen & Cabinetry',
     images: [
       R2 + '23%20-%20Tuttle%20Island%20(1)bb.JPG',
       R2 + 'D%20Amos%20Island%20(7).jpg',
       R2 + 'Elaine%20Alpert%20Counter%20Top%20(49).jpg',
     ],
-    fullDesc: 'The Tuttle kitchen island was commissioned to replace a standard cabinetry island that felt undersized and generic in a large open kitchen. The new top is built from antique wood originally harvested and worked by hand between 1760 and 1880 — the color and surface character are entirely natural patina. No stains are used.\n\nThe slab runs nearly three inches thick with an overhang generous enough to seat four. It is completely sealed — impervious to water infiltration, will not ring or stain, and can withstand normal kitchen heat without issue. You clean it with soap and water. When it eventually shows the wear of daily life, it can be refurbished to look exactly as it did on day one — something no stone top or synthetic surface can offer.\n\nFor clients who want the ability to cut directly on the surface, we embed a removable oil-finished cutting board inset into the top. The island\'s base combines reclaimed wood with powder-coated steel legs for structural support and visual contrast. It will look better in thirty years than it does today.'
+    fullDesc: 'This kitchen island was commissioned to replace a standard cabinetry island that felt undersized and generic in a large open kitchen. The new top is built from antique wood originally harvested and worked by hand between 1760 and 1880 — the color and surface character are entirely natural patina. No stains are used.\n\nThe slab runs nearly three inches thick with an overhang generous enough to seat four. It is completely sealed — impervious to water infiltration, will not ring or stain, and can withstand normal kitchen heat without issue. You clean it with soap and water. When it eventually shows the wear of daily life, it can be refurbished to look exactly as it did on day one — something no stone top or synthetic surface can offer.\n\nFor clients who want the ability to cut directly on the surface, we embed a removable oil-finished cutting board inset into the top. The island\'s base combines reclaimed wood with powder-coated steel legs for structural support and visual contrast. It will look better in thirty years than it does today.'
   },
   {
     id: 'accent-paneling',
-    title: 'Accent Wall — Reclaimed Paneling',
+    title: 'Accent Wall',
     category: 'Accent Walls & Paneling',
     images: [
       R2 + 'Paneling%20(6).JPG',
