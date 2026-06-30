@@ -615,7 +615,7 @@ const tables = [
     length: "75",
     width: "36",
     style: "Art Table",
-    price: "$6,000",
+    price: "SOLD",
     desc: "Dark cypress art table, 75 x 36. Description coming soon — contact us for full details on this piece.",
     image: "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20AT%202093%20-%2075%20X%2036%20-%20Dark%20Cypress/AT.2093.02.jpeg",
     images: [
@@ -624,7 +624,7 @@ const tables = [
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20AT%202093%20-%2075%20X%2036%20-%20Dark%20Cypress/AT.2093.03.jpeg",
       "https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Website%20AT%202093%20-%2075%20X%2036%20-%20Dark%20Cypress/AT.2093.04.jpeg"
     ],
-    inStock: true
+    inStock: false, sold: true
   },
   {
     id: 43,
