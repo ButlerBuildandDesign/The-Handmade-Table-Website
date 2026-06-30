@@ -26,8 +26,8 @@ const tables = [
     id: 17,
     name: "SP 1001",
     category: "sp",
-    type: "Specialty Table · Pine",
-    wood: "pine",
+    type: "Specialty Table · Poplar",
+    wood: "poplar",
     length: "22 feet",
     width: "46",
     style: "Special Piece",
@@ -192,8 +192,8 @@ const tables = [
     id: 24,
     name: "CT 5010",
     category: "ct",
-    type: "Contemporary Table · Pine",
-    wood: "pine",
+    type: "Contemporary Table · Cherry",
+    wood: "cherry",
     length: "96",
     width: "36",
     style: "Four Board",
@@ -845,7 +845,7 @@ function showProductDetail(tableId, pushHistory = true) {
   document.getElementById('detail-name').textContent = table.name;
   document.getElementById('detail-price').textContent = table.price;
   document.getElementById('detail-wood').textContent = table.wood.charAt(0).toUpperCase() + table.wood.slice(1);
-  const fmtDim = v => /^\d/.test(v) ? v + '"' : v;
+  const fmtDim = v => /^\d/.test(v) && !/"/.test(v) && !/feet|ft/i.test(v) ? v + '"' : v;
   document.getElementById('detail-length').textContent = fmtDim(table.length);
   document.getElementById('detail-width').textContent = fmtDim(table.width);
   document.getElementById('detail-style').textContent = table.style.charAt(0).toUpperCase() + table.style.slice(1);
