@@ -806,6 +806,19 @@ function toggleMobileNav() {
   document.getElementById('nav-hamburger').classList.toggle('open');
 }
 
+function showPortfolioSub(section, btn) {
+  document.querySelectorAll('.portfolio-sub').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.portfolio-subnav-btn').forEach(b => b.classList.remove('active'));
+  const sub = document.getElementById('port-sub-' + section);
+  if (sub) sub.classList.add('active');
+  if (btn) {
+    btn.classList.add('active');
+  } else {
+    const navBtn = document.getElementById('port-subnav-btn-' + section);
+    if (navBtn) navBtn.classList.add('active');
+  }
+}
+
 function showShopSub(section, btn) {
   document.querySelectorAll('.shop-sub').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.shop-subnav-btn').forEach(b => b.classList.remove('active'));
@@ -838,6 +851,7 @@ function showPage(page) {
   if (navId) document.getElementById(navId).classList.add('active');
 
   if (page === 'shop') showShopSub('tables');
+  if (page === 'portfolio') showPortfolioSub('tables');
   window.scrollTo({ top: 0, behavior: 'smooth' });
   return false;
 }
