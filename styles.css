@@ -328,6 +328,33 @@ section { padding: 96px 48px; }
 .custom-section .btn-outline { color: white; border-color: rgba(255,255,255,0.4); }
 .custom-section .btn-outline:hover { border-color: var(--oak-light); color: var(--oak-light); }
 
+/* ─── SHOP SUB-NAV ──────────────────────────────── */
+.shop-subnav-bar {
+  display: flex;
+  background: var(--cream);
+  border-bottom: 2px solid var(--border);
+  padding: 0 40px;
+}
+.shop-subnav-btn {
+  padding: 16px 28px;
+  border: none;
+  background: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--soft);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.shop-subnav-btn.active { color: var(--oak-dark); border-bottom-color: var(--oak); }
+.shop-subnav-btn:hover:not(.active) { color: var(--mid); }
+.shop-sub { display: none; }
+.shop-sub.active { display: block; }
+
 /* ─── SHOP SECTION ──────────────────────────────── */
 .shop-section { background: var(--warm-white); border-top: 1px solid var(--border); }
 

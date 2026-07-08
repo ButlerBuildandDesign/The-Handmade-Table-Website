@@ -806,6 +806,19 @@ function toggleMobileNav() {
   document.getElementById('nav-hamburger').classList.toggle('open');
 }
 
+function showShopSub(section, btn) {
+  document.querySelectorAll('.shop-sub').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.shop-subnav-btn').forEach(b => b.classList.remove('active'));
+  const sub = document.getElementById('shop-sub-' + section);
+  if (sub) sub.classList.add('active');
+  if (btn) {
+    btn.classList.add('active');
+  } else {
+    const navBtn = document.getElementById('subnav-btn-' + section);
+    if (navBtn) navBtn.classList.add('active');
+  }
+}
+
 function showPage(page) {
   document.getElementById('nav-links').classList.remove('mobile-open');
   document.getElementById('nav-hamburger').classList.remove('open');
@@ -816,7 +829,6 @@ function showPage(page) {
   const navMap = {
     home: 'nav-home',
     shop: 'nav-shop',
-    arch: 'nav-arch',
     portfolio: 'nav-portfolio',
     story: 'nav-story',
     team: 'nav-team',
@@ -825,6 +837,7 @@ function showPage(page) {
   const navId = navMap[page];
   if (navId) document.getElementById(navId).classList.add('active');
 
+  if (page === 'shop') showShopSub('tables');
   window.scrollTo({ top: 0, behavior: 'smooth' });
   return false;
 }

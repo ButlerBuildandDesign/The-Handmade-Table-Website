@@ -19,7 +19,6 @@
     <li><a href="#" onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
     <li><a href="#" onclick="showPage('shop')" id="nav-shop">Shop</a></li>
     <li><a href="#" onclick="showPage('portfolio')" id="nav-portfolio">Portfolio</a></li>
-    <li><a href="#" onclick="showPage('arch')" id="nav-arch">Architectural Elements</a></li>
     <li><a href="#" onclick="showPage('story')" id="nav-story">Our Story</a></li>
     <li><a href="#" onclick="showPage('team')" id="nav-team">Our Team</a></li>
     <li><a href="#" onclick="showPage('contact')" id="nav-contact" class="nav-shop-btn">Contact</a></li>
@@ -65,17 +64,17 @@
           </div>
         </div>
         <div class="cat-card">
-          <a href="#" onclick="showPage('arch')" class="cat-img-link"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Ted%20Green%20Stair%20(12).jpg" alt="Architectural Elements" loading="lazy"></a>
+          <a href="#" onclick="showPage('shop'); showShopSub('arch')" class="cat-img-link"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Ted%20Green%20Stair%20(12).jpg" alt="Architectural Elements" loading="lazy"></a>
           <div class="cat-overlay">
             <div class="cat-name">Architectural Elements</div>
-            <a class="cat-link" href="#" onclick="showPage('arch')">View →</a>
+            <a class="cat-link" href="#" onclick="showPage('shop'); showShopSub('arch')">View →</a>
           </div>
         </div>
         <div class="cat-card">
-          <a href="#" onclick="showPage('arch')" class="cat-img-link"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Watkins%20Kitchen%20(13).jpg" alt="Kitchens and Cabinetry" loading="lazy"></a>
+          <a href="#" onclick="showPage('shop'); showShopSub('arch')" class="cat-img-link"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Watkins%20Kitchen%20(13).jpg" alt="Kitchens and Cabinetry" loading="lazy"></a>
           <div class="cat-overlay">
             <div class="cat-name">Kitchens &amp; Cabinetry</div>
-            <a class="cat-link" href="#" onclick="showPage('arch')">View →</a>
+            <a class="cat-link" href="#" onclick="showPage('shop'); showShopSub('arch')">View →</a>
           </div>
         </div>
         <div class="cat-card">
@@ -131,183 +130,200 @@
 
   <div class="shop-hero">
     <p class="eyebrow">Available Now</p>
-    <h1>Shop Individual <em>Tables</em></h1>
-    <p>Each table is one-of-a-kind. When it's gone, it's gone. All pieces ship nationwide from Knoxville, TN.</p>
+    <h1>Shop Our <em>Work</em></h1>
+    <p>Handcrafted tables, furniture, and architectural elements made from antique materials. All pieces ship nationwide from Knoxville, TN.</p>
   </div>
 
-  <section class="shop-section">
-    <div class="section-inner">
+  <!-- Sub-navigation -->
+  <div class="shop-subnav-bar">
+    <button class="shop-subnav-btn active" id="subnav-btn-tables" onclick="showShopSub('tables', this)">Tables</button>
+    <button class="shop-subnav-btn" id="subnav-btn-furniture" onclick="showShopSub('furniture', this)">Furniture</button>
+    <button class="shop-subnav-btn" id="subnav-btn-arch" onclick="showShopSub('arch', this)">Architectural Elements</button>
+  </div>
 
-      <div class="shop-toolbar">
-        <div>
-          <p class="section-label">Filter by Category</p>
-          <div class="shop-filters" id="category-filters">
-            <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
-            <button class="filter-btn" onclick="filterProducts('sp', this)">Specialty Table</button>
-            <button class="filter-btn" onclick="filterProducts('at', this)">Art Table</button>
-            <button class="filter-btn" onclick="filterProducts('ro', this)">Round, Oval, and Racetrack Table</button>
-            <button class="filter-btn" onclick="filterProducts('tr', this)">Trestle Table</button>
-            <button class="filter-btn" onclick="filterProducts('ct', this)">Contemporary Table</button>
-            <button class="filter-btn" onclick="filterProducts('ft', this)">Farm &amp; Harvest Table</button>
-            <button class="filter-btn" onclick="filterProducts('tt', this)">Traditional Table</button>
-            <button class="filter-btn" onclick="filterProducts('cc', this)">Coffee &amp; Console Table</button>
+  <!-- ── Tables sub-section ────────────────────────────── -->
+  <div class="shop-sub active" id="shop-sub-tables">
+
+    <section class="shop-section">
+      <div class="section-inner">
+
+        <div class="shop-toolbar">
+          <div>
+            <p class="section-label">Filter by Category</p>
+            <div class="shop-filters" id="category-filters">
+              <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
+              <button class="filter-btn" onclick="filterProducts('sp', this)">Specialty Table</button>
+              <button class="filter-btn" onclick="filterProducts('at', this)">Art Table</button>
+              <button class="filter-btn" onclick="filterProducts('ro', this)">Round, Oval, and Racetrack Table</button>
+              <button class="filter-btn" onclick="filterProducts('tr', this)">Trestle Table</button>
+              <button class="filter-btn" onclick="filterProducts('ct', this)">Contemporary Table</button>
+              <button class="filter-btn" onclick="filterProducts('ft', this)">Farm &amp; Harvest Table</button>
+              <button class="filter-btn" onclick="filterProducts('tt', this)">Traditional Table</button>
+              <button class="filter-btn" onclick="filterProducts('cc', this)">Coffee &amp; Console Table</button>
+            </div>
+            <p class="section-label" style="margin-top: 20px;">Filter by Length</p>
+            <div class="shop-filters" id="length-filters">
+              <button class="filter-btn active" onclick="filterByLength('all', this)">All Lengths</button>
+              <button class="filter-btn" onclick="filterByLength('small', this)">Under 70"</button>
+              <button class="filter-btn" onclick="filterByLength('medium', this)">70" – 84"</button>
+              <button class="filter-btn" onclick="filterByLength('large', this)">85" – 96"</button>
+              <button class="filter-btn" onclick="filterByLength('xlarge', this)">97" and over</button>
+            </div>
           </div>
-          <p class="section-label" style="margin-top: 20px;">Filter by Length</p>
-          <div class="shop-filters" id="length-filters">
-            <button class="filter-btn active" onclick="filterByLength('all', this)">All Lengths</button>
-            <button class="filter-btn" onclick="filterByLength('small', this)">Under 70"</button>
-            <button class="filter-btn" onclick="filterByLength('medium', this)">70" – 84"</button>
-            <button class="filter-btn" onclick="filterByLength('large', this)">85" – 96"</button>
-            <button class="filter-btn" onclick="filterByLength('xlarge', this)">97" and over</button>
+          <div class="product-count" id="product-count">Showing 15 tables</div>
+        </div>
+
+        <div class="shop-grid" id="shop-grid">
+          <!-- Tables will be generated by JavaScript -->
+        </div>
+
+        <div class="shop-note">
+          <div class="shop-note-icon">✦</div>
+          <div class="shop-note-text">
+            <h4>Every Table is One of a Kind</h4>
+            <p>Because we use reclaimed pre-industrial wood, no two pieces are ever identical. Clicking "Inquire" opens a pre-filled email to our team — we'll confirm availability, discuss finish options, and arrange shipping from Knoxville. Questions? Call <a href="tel:8652964552">(865) 296-4552</a> or email <a href="mailto:customer@thehandmadetable.art">customer@thehandmadetable.art</a>.</p>
           </div>
         </div>
-        <div class="product-count" id="product-count">Showing 15 tables</div>
-      </div>
 
-      <div class="shop-grid" id="shop-grid">
-        <!-- Tables will be generated by JavaScript -->
       </div>
+    </section>
 
-      <div class="shop-note">
-        <div class="shop-note-icon">✦</div>
-        <div class="shop-note-text">
-          <h4>Every Table is One of a Kind</h4>
-          <p>Because we use reclaimed pre-industrial wood, no two pieces are ever identical. Clicking "Inquire" opens a pre-filled email to our team — we'll confirm availability, discuss finish options, and arrange shipping from Knoxville. Questions? Call <a href="tel:8652964552">(865) 296-4552</a> or email <a href="mailto:customer@thehandmadetable.art">customer@thehandmadetable.art</a>.</p>
+    <section class="custom-section">
+      <p class="section-label">Don't See What You Need?</p>
+      <h2 class="section-title">We Build <em style="color:var(--oak-light)">Anything</em></h2>
+      <p class="section-intro">Custom dimensions, specific wood species, your grandfather's old barn wood — bring us the idea and we'll make it real.</p>
+      <a href="#" onclick="showPage('contact')" class="btn-primary">Start a Custom Order</a>
+    </section>
+
+  </div><!-- /shop-sub-tables -->
+
+  <!-- ── Furniture sub-section ─────────────────────────── -->
+  <div class="shop-sub" id="shop-sub-furniture">
+
+    <section style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 100px 20px; text-align: center;">
+      <div class="section-inner" style="max-width: 600px;">
+        <p class="section-label">Coming Soon</p>
+        <h2 class="section-title">Furniture <em>Collection</em></h2>
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--mid); line-height: 1.8; margin-top: 24px;">We are currently curating our furniture collection. In the meantime, contact us to discuss custom furniture pieces built from the same antique materials as our tables.</p>
+        <a href="#" onclick="showPage('contact')" class="btn-primary" style="margin-top: 36px; display: inline-block;">Contact Us</a>
+      </div>
+    </section>
+
+  </div><!-- /shop-sub-furniture -->
+
+  <!-- ── Architectural Elements sub-section ───────────── -->
+  <div class="shop-sub" id="shop-sub-arch">
+
+    <section style="background: var(--warm-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+      <div class="section-inner" style="max-width: 800px;">
+        <p class="section-label">Our Craft</p>
+        <h2 class="section-title">Where Elegance Meets <em>Function</em></h2>
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--mid); line-height: 1.8; margin-top: 24px;">Step into a world where elegance and functionality harmonize, where walls become works of art, and where staircases lead you to new heights of inspiration. Every architectural element we craft carries the same commitment to authenticity and timeless beauty as our tables — built from pre-industrial reclaimed wood, designed to last centuries.</p>
+      </div>
+    </section>
+
+    <section class="arch-feature-section">
+      <div class="section-inner">
+        <div class="arch-feature-header">
+          <p class="section-label">Kitchens &amp; Cabinetry</p>
+          <h2 class="section-title">Counter Tops &amp; <em>Cabinetry</em></h2>
+          <p class="arch-feature-desc">Welcome to our Kitchen Counters and Cabinetry section, where timeless beauty derived from antique materials meets functional elegance. Each piece is crafted from pre-industrial reclaimed wood, bringing centuries of character into the heart of your home.</p>
+        </div>
+        <div class="arch-photo-grid">
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Kitchen%20(1).jpg" alt="Kitchen" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Cabinets%20(1).jpg" alt="Cabinets" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Watkins%20Kitchen%20(13).jpg" alt="Kitchen" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Watkins%20Specialty%20Cabinets%20(2).jpg" alt="Specialty Cabinets" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Elaine%20Alpert%20Counter%20Top%20(49).jpg" alt="Counter Top" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Rich%20Boyd%20Work%20Bench%20Island%20(3).jpg" alt="Work Bench Island" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/23%20-%20Tuttle%20Island%20(1)bb.JPG" alt="Island" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/D%20Amos%20Island%20(7).jpg" alt="Island" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Reed.jpg" alt="Custom Cabinetry" loading="lazy"></div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <section class="arch-feature-section" style="background: var(--warm-white);">
+      <div class="section-inner">
+        <div class="arch-feature-header">
+          <p class="section-label">Stairs &amp; Staircases</p>
+          <h2 class="section-title">Architectural <em>Staircases</em></h2>
+          <p class="arch-feature-desc">Welcome to our Stairs and Staircases section, where functional elegance ascends to new heights. Explore a world of architectural mastery — hand-crafted from reclaimed pre-industrial wood, each staircase is a one-of-a-kind statement built to last generations.</p>
+        </div>
+        <div class="arch-photo-grid">
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Ted%20Green%20Stair%20(12).jpg" alt="Staircase" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Magee%20Stairs%20(2).jpg" alt="Staircase" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Stair%20(1).JPG" alt="Staircase" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Stair%20(4).jpg" alt="Staircase" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Stair%20(8).jpg" alt="Staircase" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Temple%20Interior%20(107)c.JPG" alt="Stair Tread" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/yellowmtnpropics011.jpg" alt="Staircase" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
 
-  <section class="custom-section">
-    <p class="section-label">Don't See What You Need?</p>
-    <h2 class="section-title">We Build <em style="color:var(--oak-light)">Anything</em></h2>
-    <p class="section-intro">Custom dimensions, specific wood species, your grandfather's old barn wood — bring us the idea and we'll make it real.</p>
-    <a href="#" onclick="showPage('contact')" class="btn-primary">Start a Custom Order</a>
-  </section>
+    <section class="arch-feature-section">
+      <div class="section-inner">
+        <div class="arch-feature-header">
+          <p class="section-label">Accent Walls &amp; Paneling</p>
+          <h2 class="section-title">Walls as <em>Art</em></h2>
+          <p class="arch-feature-desc">Welcome to our Accent Walls and Paneling section, where walls transform into captivating works of art. Explore a stunning array of options to elevate your space — from rustic reclaimed barn siding to refined hand-planed panels, each installation is entirely unique.</p>
+        </div>
+        <div class="arch-photo-grid">
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Paneling%20(1).JPG" alt="Paneling" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Paneling%20(4)b.JPG" alt="Paneling" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Paneling%20(6).JPG" alt="Paneling" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/IMG_1876.JPG" alt="Interior Woodwork" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="arch-feature-section" style="background: var(--warm-white);">
+      <div class="section-inner">
+        <div style="margin-bottom: 64px;">
+          <p class="section-label">Doors &amp; Entrances</p>
+          <h2 class="section-title">A Statement of <em>Style</em></h2>
+          <p class="arch-feature-desc">Welcome to our Doors and Entrances section, where the gateway to your home becomes a statement of style and sophistication. Each door is crafted from centuries-old wood, carrying a history and character no new material can replicate.</p>
+        </div>
+        <div class="arch-photo-grid">
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Doors%20(2).JPG" alt="Door" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Doors%20(4).JPG" alt="Door" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Doors%20(8).jpg" alt="Door" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="arch-feature-section">
+      <div class="section-inner">
+        <div style="margin-bottom: 64px;">
+          <p class="section-label">Antique Flooring</p>
+          <h2 class="section-title">History Beneath Your <em>Feet</em></h2>
+          <p class="arch-feature-desc">Step back in time with our enchanting Flooring collection. Experience the allure of yesteryears as you walk upon floors steeped in history — hand-planed, reclaimed planks that carry the patina of centuries.</p>
+        </div>
+        <div class="arch-photo-grid">
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Floors%20(5).jpg" alt="Flooring" loading="lazy"></div>
+          <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Floors%20(6).jpg" alt="Flooring" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="custom-section">
+      <p class="section-label">Ready to Reimagine Your Space?</p>
+      <h2 class="section-title">Let's <em style="color:var(--oak-light)">Create</em></h2>
+      <p class="section-intro">We work with architects, designers, and homeowners to bring custom architectural visions to life. Every project begins with a conversation.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="#" onclick="showPage('contact')" class="btn-primary">Schedule a Consultation</a>
+        <a href="tel:8652964552" class="btn-outline" style="color:white;border-color:rgba(255,255,255,0.4)">Call (865) 296-4552</a>
+      </div>
+    </section>
+
+  </div><!-- /shop-sub-arch -->
 
 </div><!-- /page-shop -->
 
 
-<!-- ═══ ARCHITECTURAL FEATURES PAGE ══════════════════════ -->
-<div class="page" id="page-arch">
-
-  <div class="arch-hero">
-    <p class="eyebrow">Beyond Tables</p>
-    <h1>Architectural <em>Features</em></h1>
-    <p>From kitchen cabinetry to hand-planed flooring, stairs, and custom woodwork — we bring reclaimed history into every corner of your home.</p>
-  </div>
-
-  <!-- INTRO -->
-  <section style="background: var(--warm-white); border-bottom: 1px solid var(--border);">
-    <div class="section-inner" style="max-width: 800px;">
-      <p class="section-label">Our Craft</p>
-      <h2 class="section-title">Where Elegance Meets <em>Function</em></h2>
-      <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--mid); line-height: 1.8; margin-top: 24px;">Step into a world where elegance and functionality harmonize, where walls become works of art, and where staircases lead you to new heights of inspiration. Every architectural element we craft carries the same commitment to authenticity and timeless beauty as our tables — built from pre-industrial reclaimed wood, designed to last centuries.</p>
-    </div>
-  </section>
-
-  <!-- KITCHENS & CABINETRY -->
-  <section class="arch-feature-section">
-    <div class="section-inner">
-      <div class="arch-feature-header">
-        <p class="section-label">Kitchens &amp; Cabinetry</p>
-        <h2 class="section-title">Counter Tops &amp; <em>Cabinetry</em></h2>
-        <p class="arch-feature-desc">Welcome to our Kitchen Counters and Cabinetry section, where timeless beauty derived from antique materials meets functional elegance. Each piece is crafted from pre-industrial reclaimed wood, bringing centuries of character into the heart of your home.</p>
-      </div>
-      <div class="arch-photo-grid">
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Kitchen%20(1).jpg" alt="Kitchen" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Cabinets%20(1).jpg" alt="Cabinets" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Watkins%20Kitchen%20(13).jpg" alt="Watkins Kitchen" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Watkins%20Specialty%20Cabinets%20(2).jpg" alt="Watkins Specialty Cabinets" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Elaine%20Alpert%20Counter%20Top%20(49).jpg" alt="Counter Top" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Rich%20Boyd%20Work%20Bench%20Island%20(3).jpg" alt="Work Bench Island" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/23%20-%20Tuttle%20Island%20(1)bb.JPG" alt="Island" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/D%20Amos%20Island%20(7).jpg" alt="Island" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Reed.jpg" alt="Custom Cabinetry" loading="lazy"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STAIRS & STAIRCASES -->
-  <section class="arch-feature-section" style="background: var(--warm-white);">
-    <div class="section-inner">
-      <div class="arch-feature-header">
-        <p class="section-label">Stairs &amp; Staircases</p>
-        <h2 class="section-title">Architectural <em>Staircases</em></h2>
-        <p class="arch-feature-desc">Welcome to our Stairs and Staircases section, where functional elegance ascends to new heights. Explore a world of architectural mastery — hand-crafted from reclaimed pre-industrial wood, each staircase is a one-of-a-kind statement built to last generations.</p>
-      </div>
-      <div class="arch-photo-grid">
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Ted%20Green%20Stair%20(12).jpg" alt="Staircase" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Magee%20Stairs%20(2).jpg" alt="Staircase" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Stair%20(1).JPG" alt="Staircase" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Stair%20(4).jpg" alt="Staircase" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Stair%20(8).jpg" alt="Staircase" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Temple%20Interior%20(107)c.JPG" alt="Stair Tread" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/yellowmtnpropics011.jpg" alt="Staircase" loading="lazy"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ACCENT WALLS & PANELING -->
-  <section class="arch-feature-section">
-    <div class="section-inner">
-      <div class="arch-feature-header">
-        <p class="section-label">Accent Walls &amp; Paneling</p>
-        <h2 class="section-title">Walls as <em>Art</em></h2>
-        <p class="arch-feature-desc">Welcome to our Accent Walls and Paneling section, where walls transform into captivating works of art. Explore a stunning array of options to elevate your space — from rustic reclaimed barn siding to refined hand-planed panels, each installation is entirely unique.</p>
-      </div>
-      <div class="arch-photo-grid">
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Paneling%20(1).JPG" alt="Paneling" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Paneling%20(4)b.JPG" alt="Paneling" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Paneling%20(6).JPG" alt="Paneling" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/IMG_1876.JPG" alt="Interior Woodwork" loading="lazy"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DOORS -->
-  <section class="arch-feature-section" style="background: var(--warm-white);">
-    <div class="section-inner">
-      <div style="margin-bottom: 64px;">
-        <p class="section-label">Doors &amp; Entrances</p>
-        <h2 class="section-title">A Statement of <em>Style</em></h2>
-        <p class="arch-feature-desc">Welcome to our Doors and Entrances section, where the gateway to your home becomes a statement of style and sophistication. Each door is crafted from centuries-old wood, carrying a history and character no new material can replicate.</p>
-      </div>
-      <div class="arch-photo-grid">
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Doors%20(2).JPG" alt="Door" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Doors%20(4).JPG" alt="Door" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Doors%20(8).jpg" alt="Door" loading="lazy"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FLOORING -->
-  <section class="arch-feature-section">
-    <div class="section-inner">
-      <div style="margin-bottom: 64px;">
-        <p class="section-label">Antique Flooring</p>
-        <h2 class="section-title">History Beneath Your <em>Feet</em></h2>
-        <p class="arch-feature-desc">Step back in time with our enchanting Flooring collection. Experience the allure of yesteryears as you walk upon floors steeped in history — hand-planed, reclaimed planks that carry the patina of centuries.</p>
-      </div>
-      <div class="arch-photo-grid">
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Floors%20(5).jpg" alt="Flooring" loading="lazy"></div>
-        <div class="arch-photo-item"><img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Floors%20(6).jpg" alt="Flooring" loading="lazy"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="custom-section">
-    <p class="section-label">Ready to Reimagine Your Space?</p>
-    <h2 class="section-title">Let's <em style="color:var(--oak-light)">Create</em></h2>
-    <p class="section-intro">We work with architects, designers, and homeowners to bring custom architectural visions to life. Every project begins with a conversation.</p>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="#" onclick="showPage('contact')" class="btn-primary">Schedule a Consultation</a>
-      <a href="tel:8652964552" class="btn-outline" style="color:white;border-color:rgba(255,255,255,0.4)">Call (865) 296-4552</a>
-    </div>
-  </section>
-
-</div><!-- /page-arch -->
+<!-- stub kept so showPage('arch') doesn't crash if called -->
+<div class="page" id="page-arch"></div>
 
 
 <!-- ═══ PORTFOLIO PAGE ════════════════════════════════════ -->
