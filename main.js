@@ -668,23 +668,23 @@ const teamMembers = [
   {
     id: 'robert',
     name: 'Robert',
-    role: 'Senior Craftsman',
+    role: 'Finance & Customer Relations',
     photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
     bio: [
-      'Robert has been a cornerstone of The Handmade Table for over fifteen years. His specialty is surface finishing — hand-planing boards to bring out grain patterns that machine finishing can never replicate.',
-      'He approaches every tabletop as a canvas, reading the wood\'s natural features and working with them rather than against them. The result is a surface that is both tactile and visually stunning.',
-      'Robert oversees final quality checks on every piece that leaves the shop, ensuring each table meets the standard the shop\'s reputation is built on.'
+      'Robert manages the financial operations and customer relationships at The Handmade Table. He is often the first voice a client hears and the one who sees a transaction through from initial inquiry to final delivery.',
+      'His background in finance gives the business the structure it needs to operate at a high level, while his people-first approach ensures that every client feels looked after throughout the process.',
+      'Robert works closely with David and Daniel to keep projects on budget and on schedule, and takes pride in making sure the experience of buying a table is as good as the table itself.'
     ]
   },
   {
     id: 'antoine',
     name: 'Antoine',
-    role: 'Master Joinery Specialist',
+    role: 'Joinery & Base Construction',
     photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
     bio: [
-      'Antoine is our master joiner, responsible for the structural integrity of every table and architectural piece. He trained under traditional cabinetmakers and has spent his career refining the techniques that give our pieces their longevity.',
-      'Where others might reach for hardware, Antoine reaches for hand-cut mortise-and-tenon joints, hand-fitted dovetails, and traditional wedged through-tenons. His work is invisible when everything goes right — and invisible is exactly the point.',
-      'He also designs and builds the custom bases for our dining tables, working with clients to balance proportion, weight, and visual presence.'
+      'Antoine handles joinery and base construction for our tables and architectural pieces. He brings a steady, practiced hand to the work that holds everything together — the joints, the bases, and the structural connections that determine how a piece performs over time.',
+      'His work tends to be the part of a table you never see, but you would notice immediately if it were not done right. Antoine takes that seriously.',
+      'He builds the custom bases for our dining tables and works through the joinery on architectural installations, making sure every connection is clean, tight, and built to last.'
     ]
   },
   {
