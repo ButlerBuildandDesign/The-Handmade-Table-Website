@@ -677,36 +677,36 @@ const teamMembers = [
     ]
   },
   {
-    id: 'chris',
-    name: 'Chris',
+    id: 'antoine',
+    name: 'Antoine',
     role: 'Master Joinery Specialist',
     photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
     bio: [
-      'Chris is our master joiner, responsible for the structural integrity of every table and architectural piece. He trained under traditional cabinetmakers and has spent his career refining the techniques that give our pieces their longevity.',
-      'Where others might reach for hardware, Chris reaches for hand-cut mortise-and-tenon joints, hand-fitted dovetails, and traditional wedged through-tenons. His work is invisible when everything goes right — and invisible is exactly the point.',
+      'Antoine is our master joiner, responsible for the structural integrity of every table and architectural piece. He trained under traditional cabinetmakers and has spent his career refining the techniques that give our pieces their longevity.',
+      'Where others might reach for hardware, Antoine reaches for hand-cut mortise-and-tenon joints, hand-fitted dovetails, and traditional wedged through-tenons. His work is invisible when everything goes right — and invisible is exactly the point.',
       'He also designs and builds the custom bases for our dining tables, working with clients to balance proportion, weight, and visual presence.'
     ]
   },
   {
     id: 'bill',
     name: 'Bill',
-    role: 'Architectural Elements Specialist',
+    role: 'Finish Specialist',
     photo: 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Team%20Photos/Bill%20Gibson.png',
     bio: [
-      'Bill leads all of our architectural work — custom staircases, kitchen installations, accent walls, doors, and bespoke woodwork that define entire spaces. He brings a project-management mindset to complex multi-day installations.',
-      'His ability to work alongside architects, designers, and homeowners means projects stay on schedule and on vision. He reads blueprints, navigates tight spaces, and solves problems in the field without losing sight of the finished result.',
-      'Bill has overseen some of our most ambitious projects, including full kitchen builds, complete staircase renovations, and whole-home paneling installations.'
+      'Bill is our finish specialist, responsible for the final stage of every piece that leaves the shop. His work is what the client sees and touches first — and he treats that responsibility seriously.',
+      'He has spent years mastering the art of hand-applied finishes on antique wood, understanding how old-growth material absorbs and responds differently than anything new. Getting a finish right on a 200-year-old board requires patience, experience, and a careful eye.',
+      'Bill\'s finishes protect the wood without masking it. The goal is always the same: to let the natural patina and character of the material speak for itself, preserved and enhanced rather than hidden.'
     ]
   },
   {
-    id: 'josh',
-    name: 'Josh',
-    role: 'Contemporary Design & Fabrication',
+    id: 'billy',
+    name: 'Billy',
+    role: 'Flooring & Architectural Elements',
     photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
     bio: [
-      'Josh bridges the gap between the timeless character of reclaimed wood and the clean lines of contemporary design. He works closely with clients who want the authenticity of old-growth timber in a modern, minimal aesthetic.',
-      'His approach is subtractive — great design comes from knowing what to leave out. A Josh piece is striking not for how much it shows, but for how confidently it shows what it chooses to.',
-      'He handles fabrication from design concept through to final finish, and works particularly well on custom orders where the client has a specific vision they need help realizing.'
+      'Billy leads our flooring and architectural elements work — from hand-planed reclaimed plank floors to custom staircases, accent walls, paneling, and bespoke woodwork installations throughout the home.',
+      'His background spans both finish carpentry and large-scale site installation, which means he can take a project from raw material selection all the way through to a finished floor or wall without losing precision at any stage.',
+      'Billy has installed reclaimed floors and architectural elements in homes across the region, and brings the same standard of craft to a ten-foot accent wall as to a full-home flooring project. If it involves wood going into a structure, Billy is the one doing it.'
     ]
   },
   {
