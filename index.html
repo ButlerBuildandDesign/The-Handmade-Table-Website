@@ -26,7 +26,14 @@
         <li><a href="#" onclick="showPage('portfolio'); showPortfolioSub('artistic')">Artistic Pieces</a></li>
       </ul>
     </li>
-    <li><a href="#" onclick="showPage('shop')" id="nav-shop">Shop</a></li>
+    <li class="nav-dropdown">
+      <a href="#" onclick="showPage('shop')" id="nav-shop">Shop</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="#" onclick="showPage('shop'); showShopSub('tables')">Tables</a></li>
+        <li><a href="#" onclick="showPage('shop'); showShopSub('furniture')">Furniture</a></li>
+        <li><a href="#" onclick="showPage('shop'); showShopSub('arch')">Architectural Elements</a></li>
+      </ul>
+    </li>
     <li class="nav-dropdown">
       <a href="#" onclick="showPage('story')" id="nav-story">Our Story</a>
       <ul class="nav-dropdown-menu">
