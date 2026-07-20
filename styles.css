@@ -327,8 +327,14 @@ section { padding: 96px 48px; }
 }
 
 /* ─── STORY PROSE ──────────────────────────────── */
+.story-heading {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
 .story-prose {
   max-width: 720px;
+  margin: 0 auto;
 }
 .story-prose p {
   font-size: 1.05rem; color: var(--mid);

@@ -27,7 +27,13 @@
       </ul>
     </li>
     <li><a href="#" onclick="showPage('shop')" id="nav-shop">Shop</a></li>
-    <li><a href="#" onclick="showPage('story')" id="nav-story">Our Story</a></li>
+    <li class="nav-dropdown">
+      <a href="#" onclick="showPage('story')" id="nav-story">Our Story</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="#" onclick="showPage('story')">Origin Story</a></li>
+        <li><a href="#" onclick="showPage('story', 'section-philosophy')">Our Philosophy</a></li>
+      </ul>
+    </li>
     <li><a href="#" onclick="showPage('team')" id="nav-team">Our Team</a></li>
     <li><a href="#" onclick="showPage('contact')" id="nav-contact" class="nav-shop-btn">Contact</a></li>
   </ul>
@@ -495,6 +501,10 @@
 
   <section style="background: var(--warm-white); border-top: 1px solid var(--border);">
     <div class="section-inner">
+      <div class="story-heading">
+        <p class="section-label">The Beginning</p>
+        <h2 class="section-title">Origin <em>Story</em></h2>
+      </div>
       <div class="story-prose">
         <p>Some things have a way of finding you. That's about the best way to explain how David Grant Howard ended up making tables in a small shop in Knoxville, Tennessee. It wasn't where the road seemed to be pointing, not by a long shot — but looking back, it's hard to imagine it going any other way.</p>
         <p>David grew up in Greeneville, Tennessee, tucked into the foothills of the Appalachian Mountains on one of the old roads that carried settlers west into Kentucky and beyond. History wasn't something you read about in Greeneville — it was something you walked through every day. Names like Nathaniel Greene, Davy Crockett, Daniel Boone, Andrew Jackson, Sam Houston, and Confederate General John Hunt Morgan weren't just figures in a textbook; they were part of the furniture of the place. Someone once asked David where his love of history and old things came from, and he thought on it a moment before saying, "I don't really know." A close childhood friend standing nearby spoke right up: "David, look around you."</p>
@@ -516,7 +526,7 @@
     </div>
   </section>
 
-  <section style="border-top: 1px solid var(--border);">
+  <section id="section-philosophy" style="border-top: 1px solid var(--border);">
     <div class="section-inner">
       <p class="section-label">Our Philosophy</p>
       <h2 class="section-title">Reclaimed Wood is <em>Sacred</em></h2>

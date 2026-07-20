@@ -832,7 +832,7 @@ function showShopSub(section, btn) {
   }
 }
 
-function showPage(page) {
+function showPage(page, anchorId) {
   document.getElementById('nav-links').classList.remove('mobile-open');
   document.getElementById('nav-hamburger').classList.remove('open');
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -852,7 +852,13 @@ function showPage(page) {
 
   if (page === 'shop') showShopSub('tables');
   if (page === 'portfolio') showPortfolioSub('tables');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  const anchor = anchorId && document.getElementById(anchorId);
+  if (anchor) {
+    anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
   return false;
 }
 
