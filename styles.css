@@ -389,11 +389,11 @@ section { padding: 96px 48px; }
 /* ─── PORTFOLIO CATEGORY GRID ────────────────────── */
 .portfolio-cat-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-  max-width: 1200px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 56px 40px 64px;
+  padding: 64px 56px 80px;
   background: var(--cream);
 }
 .portfolio-cat-card {
@@ -402,7 +402,7 @@ section { padding: 96px 48px; }
 }
 .portfolio-cat-img {
   position: relative;
-  aspect-ratio: 1/1;
+  aspect-ratio: 4/3;
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--charcoal);
@@ -413,27 +413,32 @@ section { padding: 96px 48px; }
   opacity: 0.9;
 }
 .portfolio-cat-card:hover .portfolio-cat-img img { transform: scale(1.07); opacity: 1; }
-.portfolio-cat-card.active .portfolio-cat-img { outline: 2px solid var(--oak); outline-offset: 4px; }
 .placeholder-img {
   display: flex; align-items: center; justify-content: center;
   background: repeating-linear-gradient(45deg, var(--border), var(--border) 12px, var(--warm-white) 12px, var(--warm-white) 24px);
   color: var(--soft); font-family: 'Jost', sans-serif;
-  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em;
+  font-size: 0.85rem; font-weight: 500; letter-spacing: 0.14em;
   text-transform: uppercase; text-align: center; padding: 20px;
 }
 .portfolio-cat-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.2rem; font-weight: 400;
+  font-size: 1.6rem; font-weight: 400;
   color: var(--charcoal);
-  margin-top: 20px;
+  margin-top: 24px;
   letter-spacing: 0.02em;
   transition: color 0.2s;
 }
-.portfolio-cat-card:hover .portfolio-cat-title,
-.portfolio-cat-card.active .portfolio-cat-title { color: var(--oak-dark); }
+.portfolio-cat-card:hover .portfolio-cat-title { color: var(--oak-dark); }
 
-.portfolio-sub { display: none; }
-.portfolio-sub.active { display: block; }
+.portfolio-back-link {
+  display: inline-block;
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--oak-light);
+  text-decoration: none; opacity: 0.85;
+  margin-bottom: 22px;
+  transition: opacity 0.2s;
+}
+.portfolio-back-link:hover { opacity: 1; text-decoration: underline; }
 
 /* ─── SHOP SECTION ──────────────────────────────── */
 .shop-section { background: var(--warm-white); border-top: 1px solid var(--border); }
@@ -1020,7 +1025,7 @@ footer {
   .story-img img { height: 360px; }
 
   .cat-grid { grid-template-columns: repeat(2, 1fr); }
-  .portfolio-cat-grid { grid-template-columns: repeat(2, 1fr); padding: 48px 24px 56px; }
+  .portfolio-cat-grid { grid-template-columns: 1fr; gap: 40px; padding: 48px 24px 56px; }
 
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; gap: 16px; }

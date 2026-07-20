@@ -20,10 +20,10 @@
     <li class="nav-dropdown">
       <a href="#" onclick="showPage('portfolio')" id="nav-portfolio">Portfolio</a>
       <ul class="nav-dropdown-menu">
-        <li><a href="#" onclick="showPage('portfolio'); showPortfolioSub('tables')">Tables</a></li>
-        <li><a href="#" onclick="showPage('portfolio'); showPortfolioSub('arch')">Architectural Elements</a></li>
-        <li><a href="#" onclick="showPage('portfolio'); showPortfolioSub('kitchen')">Kitchen &amp; Cabinetry</a></li>
-        <li><a href="#" onclick="showPage('portfolio'); showPortfolioSub('artistic')">Artistic Pieces</a></li>
+        <li><a href="#" onclick="showPage('portfolio-tables')">Tables</a></li>
+        <li><a href="#" onclick="showPage('portfolio-arch')">Architectural Elements</a></li>
+        <li><a href="#" onclick="showPage('portfolio-kitchen')">Kitchen &amp; Cabinetry</a></li>
+        <li><a href="#" onclick="showPage('portfolio-artistic')">Artistic Pieces</a></li>
       </ul>
     </li>
     <li class="nav-dropdown">
@@ -355,146 +355,171 @@
 
   <!-- Category selector -->
   <div class="portfolio-cat-grid">
-    <div class="portfolio-cat-card active" id="portcat-tables" onclick="showPortfolioSub('tables', this)">
+    <div class="portfolio-cat-card" id="portcat-tables" onclick="showPage('portfolio-tables')">
       <div class="portfolio-cat-img placeholder-img"><span>Image Coming Soon</span></div>
       <h3 class="portfolio-cat-title">Tables</h3>
     </div>
-    <div class="portfolio-cat-card" id="portcat-arch" onclick="showPortfolioSub('arch', this)">
+    <div class="portfolio-cat-card" id="portcat-arch" onclick="showPage('portfolio-arch')">
       <div class="portfolio-cat-img placeholder-img"><span>Image Coming Soon</span></div>
       <h3 class="portfolio-cat-title">Architectural Elements</h3>
     </div>
-    <div class="portfolio-cat-card" id="portcat-kitchen" onclick="showPortfolioSub('kitchen', this)">
+    <div class="portfolio-cat-card" id="portcat-kitchen" onclick="showPage('portfolio-kitchen')">
       <div class="portfolio-cat-img placeholder-img"><span>Image Coming Soon</span></div>
       <h3 class="portfolio-cat-title">Kitchen &amp; Cabinetry</h3>
     </div>
-    <div class="portfolio-cat-card" id="portcat-artistic" onclick="showPortfolioSub('artistic', this)">
+    <div class="portfolio-cat-card" id="portcat-artistic" onclick="showPage('portfolio-artistic')">
       <div class="portfolio-cat-img placeholder-img"><span>Image Coming Soon</span></div>
       <h3 class="portfolio-cat-title">Artistic Pieces</h3>
     </div>
   </div>
 
-  <!-- ── Tables sub-section ────────────────────────────── -->
-  <div class="portfolio-sub active" id="port-sub-tables">
-
-    <section style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 100px 20px; text-align: center;">
-      <div class="section-inner" style="max-width: 600px;">
-        <p class="section-label">Coming Soon</p>
-        <h2 class="section-title">Table <em>Portfolio</em></h2>
-        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--mid); line-height: 1.8; margin-top: 24px;">We are building out our table portfolio. In the meantime, browse our current available tables in the shop — each one represents the same standard of craft.</p>
-        <a href="#" onclick="showPage('shop')" class="btn-primary" style="margin-top: 36px; display: inline-block;">Browse Tables</a>
-      </div>
-    </section>
-
-  </div><!-- /port-sub-tables -->
-
-  <!-- ── Architectural Elements sub-section ───────────── -->
-  <div class="portfolio-sub" id="port-sub-arch">
-
-    <section class="shop-section">
-      <div class="section-inner">
-
-        <div class="portfolio-intro">
-          <p class="section-label">Selected Works</p>
-          <h2 class="section-title">Spaces <em>Transformed</em></h2>
-        </div>
-
-        <div class="portfolio-grid">
-          <div class="portfolio-item" onclick="openPortfolioModal('watkins-kitchen')" style="cursor:pointer;">
-            <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Watkins%20Kitchen%20(13).jpg" alt="Kitchen" loading="lazy">
-            <div class="portfolio-info">
-              <h3>Kitchen</h3>
-              <p>A complete kitchen built from antique reclaimed wood. Custom cabinetry and countertops that anchor the entire space.</p>
-              <span class="portfolio-view-more">View Project →</span>
-            </div>
-          </div>
-
-          <div class="portfolio-item" onclick="openPortfolioModal('ted-green-stair')" style="cursor:pointer;">
-            <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Ted%20Green%20Stair%20(12).jpg" alt="Staircase" loading="lazy">
-            <div class="portfolio-info">
-              <h3>Staircase</h3>
-              <p>A full staircase renovation using hand-planed reclaimed treads and custom railings. Designed to be the centerpiece of the home.</p>
-              <span class="portfolio-view-more">View Project →</span>
-            </div>
-          </div>
-
-          <div class="portfolio-item" onclick="openPortfolioModal('watkins-cabinets')" style="cursor:pointer;">
-            <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Watkins%20Specialty%20Cabinets%20(2).jpg" alt="Specialty Cabinets" loading="lazy">
-            <div class="portfolio-info">
-              <h3>Specialty Cabinetry</h3>
-              <p>Custom built-in cabinetry crafted from antique reclaimed materials. No two pieces are ever identical.</p>
-              <span class="portfolio-view-more">View Project →</span>
-            </div>
-          </div>
-
-          <div class="portfolio-item" onclick="openPortfolioModal('temple-interior')" style="cursor:pointer;">
-            <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Temple%20Interior%20(107)c.JPG" alt="Interior Paneling" loading="lazy">
-            <div class="portfolio-info">
-              <h3>Interior Paneling</h3>
-              <p>Full interior paneling installation using reclaimed pre-industrial wood. The warmth of old growth in a contemporary space.</p>
-              <span class="portfolio-view-more">View Project →</span>
-            </div>
-          </div>
-
-          <div class="portfolio-item" onclick="openPortfolioModal('tuttle-island')" style="cursor:pointer;">
-            <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/23%20-%20Tuttle%20Island%20(1)bb.JPG" alt="Kitchen Island" loading="lazy">
-            <div class="portfolio-info">
-              <h3>Kitchen Island</h3>
-              <p>A substantial reclaimed wood island that defines the kitchen. Built to function daily and last a lifetime.</p>
-              <span class="portfolio-view-more">View Project →</span>
-            </div>
-          </div>
-
-          <div class="portfolio-item" onclick="openPortfolioModal('accent-paneling')" style="cursor:pointer;">
-            <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Paneling%20(6).JPG" alt="Accent Wall" loading="lazy">
-            <div class="portfolio-info">
-              <h3>Accent Wall</h3>
-              <p>Hand-finished reclaimed boards installed as a feature wall. The grain, saw marks, and patina are left entirely natural.</p>
-              <span class="portfolio-view-more">View Project →</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="custom-section">
-      <p class="section-label">Inspired?</p>
-      <h2 class="section-title">Let's Build Your <em style="color:var(--oak-light)">Story</em></h2>
-      <p class="section-intro">Every project starts with a conversation about your vision, your space, and what history means to you.</p>
-      <a href="#" onclick="showPage('contact')" class="btn-primary">Start Your Project</a>
-    </section>
-
-  </div><!-- /port-sub-arch -->
-
-  <!-- ── Kitchen & Cabinetry sub-section ──────────────── -->
-  <div class="portfolio-sub" id="port-sub-kitchen">
-
-    <section style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 100px 20px; text-align: center;">
-      <div class="section-inner" style="max-width: 600px;">
-        <p class="section-label">Coming Soon</p>
-        <h2 class="section-title">Kitchen &amp; <em>Cabinetry</em></h2>
-        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--mid); line-height: 1.8; margin-top: 24px;">We are building out our kitchen and cabinetry portfolio. In the meantime, reach out to discuss a custom kitchen or cabinetry project of your own.</p>
-        <a href="#" onclick="showPage('contact')" class="btn-primary" style="margin-top: 36px; display: inline-block;">Start a Project</a>
-      </div>
-    </section>
-
-  </div><!-- /port-sub-kitchen -->
-
-  <!-- ── Artistic Pieces sub-section ──────────────────── -->
-  <div class="portfolio-sub" id="port-sub-artistic">
-
-    <section style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 100px 20px; text-align: center;">
-      <div class="section-inner" style="max-width: 600px;">
-        <p class="section-label">Coming Soon</p>
-        <h2 class="section-title">Artistic <em>Pieces</em></h2>
-        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--mid); line-height: 1.8; margin-top: 24px;">We are building out our portfolio of one-of-a-kind artistic pieces. In the meantime, reach out to discuss a custom commission of your own.</p>
-        <a href="#" onclick="showPage('contact')" class="btn-primary" style="margin-top: 36px; display: inline-block;">Start a Project</a>
-      </div>
-    </section>
-
-  </div><!-- /port-sub-artistic -->
-
 </div><!-- /page-portfolio -->
+
+
+<!-- ═══ PORTFOLIO: TABLES ═══════════════════════════════ -->
+<div class="page" id="page-portfolio-tables">
+
+  <div class="portfolio-hero">
+    <a href="#" onclick="return showPage('portfolio')" class="portfolio-back-link">&larr; Back to Portfolio</a>
+    <p class="eyebrow">Our Work</p>
+    <h1>Table <em>Portfolio</em></h1>
+  </div>
+
+  <section style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 100px 20px; text-align: center;">
+    <div class="section-inner" style="max-width: 600px;">
+      <p class="section-label">Coming Soon</p>
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--mid); line-height: 1.8; margin-top: 12px;">We are building out our table portfolio. In the meantime, browse our current available tables in the shop — each one represents the same standard of craft.</p>
+      <a href="#" onclick="showPage('shop')" class="btn-primary" style="margin-top: 36px; display: inline-block;">Browse Tables</a>
+    </div>
+  </section>
+
+</div><!-- /page-portfolio-tables -->
+
+
+<!-- ═══ PORTFOLIO: ARCHITECTURAL ELEMENTS ═══════════════ -->
+<div class="page" id="page-portfolio-arch">
+
+  <div class="portfolio-hero">
+    <a href="#" onclick="return showPage('portfolio')" class="portfolio-back-link">&larr; Back to Portfolio</a>
+    <p class="eyebrow">Our Work</p>
+    <h1>Architectural <em>Elements</em></h1>
+  </div>
+
+  <section class="shop-section">
+    <div class="section-inner">
+
+      <div class="portfolio-intro">
+        <p class="section-label">Selected Works</p>
+        <h2 class="section-title">Spaces <em>Transformed</em></h2>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item" onclick="openPortfolioModal('watkins-kitchen')" style="cursor:pointer;">
+          <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Watkins%20Kitchen%20(13).jpg" alt="Kitchen" loading="lazy">
+          <div class="portfolio-info">
+            <h3>Kitchen</h3>
+            <p>A complete kitchen built from antique reclaimed wood. Custom cabinetry and countertops that anchor the entire space.</p>
+            <span class="portfolio-view-more">View Project →</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openPortfolioModal('ted-green-stair')" style="cursor:pointer;">
+          <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Ted%20Green%20Stair%20(12).jpg" alt="Staircase" loading="lazy">
+          <div class="portfolio-info">
+            <h3>Staircase</h3>
+            <p>A full staircase renovation using hand-planed reclaimed treads and custom railings. Designed to be the centerpiece of the home.</p>
+            <span class="portfolio-view-more">View Project →</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openPortfolioModal('watkins-cabinets')" style="cursor:pointer;">
+          <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Watkins%20Specialty%20Cabinets%20(2).jpg" alt="Specialty Cabinets" loading="lazy">
+          <div class="portfolio-info">
+            <h3>Specialty Cabinetry</h3>
+            <p>Custom built-in cabinetry crafted from antique reclaimed materials. No two pieces are ever identical.</p>
+            <span class="portfolio-view-more">View Project →</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openPortfolioModal('temple-interior')" style="cursor:pointer;">
+          <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Temple%20Interior%20(107)c.JPG" alt="Interior Paneling" loading="lazy">
+          <div class="portfolio-info">
+            <h3>Interior Paneling</h3>
+            <p>Full interior paneling installation using reclaimed pre-industrial wood. The warmth of old growth in a contemporary space.</p>
+            <span class="portfolio-view-more">View Project →</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openPortfolioModal('tuttle-island')" style="cursor:pointer;">
+          <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/23%20-%20Tuttle%20Island%20(1)bb.JPG" alt="Kitchen Island" loading="lazy">
+          <div class="portfolio-info">
+            <h3>Kitchen Island</h3>
+            <p>A substantial reclaimed wood island that defines the kitchen. Built to function daily and last a lifetime.</p>
+            <span class="portfolio-view-more">View Project →</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" onclick="openPortfolioModal('accent-paneling')" style="cursor:pointer;">
+          <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Architectural%20%26%20Cabinetry/Paneling%20(6).JPG" alt="Accent Wall" loading="lazy">
+          <div class="portfolio-info">
+            <h3>Accent Wall</h3>
+            <p>Hand-finished reclaimed boards installed as a feature wall. The grain, saw marks, and patina are left entirely natural.</p>
+            <span class="portfolio-view-more">View Project →</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="custom-section">
+    <p class="section-label">Inspired?</p>
+    <h2 class="section-title">Let's Build Your <em style="color:var(--oak-light)">Story</em></h2>
+    <p class="section-intro">Every project starts with a conversation about your vision, your space, and what history means to you.</p>
+    <a href="#" onclick="showPage('contact')" class="btn-primary">Start Your Project</a>
+  </section>
+
+</div><!-- /page-portfolio-arch -->
+
+
+<!-- ═══ PORTFOLIO: KITCHEN & CABINETRY ═══════════════════ -->
+<div class="page" id="page-portfolio-kitchen">
+
+  <div class="portfolio-hero">
+    <a href="#" onclick="return showPage('portfolio')" class="portfolio-back-link">&larr; Back to Portfolio</a>
+    <p class="eyebrow">Our Work</p>
+    <h1>Kitchen &amp; <em>Cabinetry</em></h1>
+  </div>
+
+  <section style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 100px 20px; text-align: center;">
+    <div class="section-inner" style="max-width: 600px;">
+      <p class="section-label">Coming Soon</p>
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--mid); line-height: 1.8; margin-top: 12px;">We are building out our kitchen and cabinetry portfolio. In the meantime, reach out to discuss a custom kitchen or cabinetry project of your own.</p>
+      <a href="#" onclick="showPage('contact')" class="btn-primary" style="margin-top: 36px; display: inline-block;">Start a Project</a>
+    </div>
+  </section>
+
+</div><!-- /page-portfolio-kitchen -->
+
+
+<!-- ═══ PORTFOLIO: ARTISTIC PIECES ═══════════════════════ -->
+<div class="page" id="page-portfolio-artistic">
+
+  <div class="portfolio-hero">
+    <a href="#" onclick="return showPage('portfolio')" class="portfolio-back-link">&larr; Back to Portfolio</a>
+    <p class="eyebrow">Our Work</p>
+    <h1>Artistic <em>Pieces</em></h1>
+  </div>
+
+  <section style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 100px 20px; text-align: center;">
+    <div class="section-inner" style="max-width: 600px;">
+      <p class="section-label">Coming Soon</p>
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--mid); line-height: 1.8; margin-top: 12px;">We are building out our portfolio of one-of-a-kind artistic pieces. In the meantime, reach out to discuss a custom commission of your own.</p>
+      <a href="#" onclick="showPage('contact')" class="btn-primary" style="margin-top: 36px; display: inline-block;">Start a Project</a>
+    </div>
+  </section>
+
+</div><!-- /page-portfolio-artistic -->
 
 
 <!-- ═══ OUR STORY PAGE ════════════════════════════════════ -->

@@ -806,19 +806,6 @@ function toggleMobileNav() {
   document.getElementById('nav-hamburger').classList.toggle('open');
 }
 
-function showPortfolioSub(section, btn) {
-  document.querySelectorAll('.portfolio-sub').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.portfolio-cat-card').forEach(b => b.classList.remove('active'));
-  const sub = document.getElementById('port-sub-' + section);
-  if (sub) sub.classList.add('active');
-  if (btn) {
-    btn.classList.add('active');
-  } else {
-    const navBtn = document.getElementById('portcat-' + section);
-    if (navBtn) navBtn.classList.add('active');
-  }
-}
-
 function showShopSub(section, btn) {
   document.querySelectorAll('.shop-sub').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.shop-subnav-btn').forEach(b => b.classList.remove('active'));
@@ -843,6 +830,10 @@ function showPage(page, anchorId) {
     home: 'nav-home',
     shop: 'nav-shop',
     portfolio: 'nav-portfolio',
+    'portfolio-tables': 'nav-portfolio',
+    'portfolio-arch': 'nav-portfolio',
+    'portfolio-kitchen': 'nav-portfolio',
+    'portfolio-artistic': 'nav-portfolio',
     story: 'nav-story',
     team: 'nav-team',
     contact: 'nav-contact'
@@ -851,7 +842,6 @@ function showPage(page, anchorId) {
   if (navId) document.getElementById(navId).classList.add('active');
 
   if (page === 'shop') showShopSub('tables');
-  if (page === 'portfolio') showPortfolioSub('tables');
 
   const anchor = anchorId && document.getElementById(anchorId);
   if (anchor) {
