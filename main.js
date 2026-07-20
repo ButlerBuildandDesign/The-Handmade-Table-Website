@@ -808,13 +808,13 @@ function toggleMobileNav() {
 
 function showPortfolioSub(section, btn) {
   document.querySelectorAll('.portfolio-sub').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.portfolio-subnav-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.portfolio-cat-card').forEach(b => b.classList.remove('active'));
   const sub = document.getElementById('port-sub-' + section);
   if (sub) sub.classList.add('active');
   if (btn) {
     btn.classList.add('active');
   } else {
-    const navBtn = document.getElementById('port-subnav-btn-' + section);
+    const navBtn = document.getElementById('portcat-' + section);
     if (navBtn) navBtn.classList.add('active');
   }
 }

@@ -22,6 +22,8 @@
       <ul class="nav-dropdown-menu">
         <li><a href="#" onclick="showPage('portfolio'); showPortfolioSub('tables')">Tables</a></li>
         <li><a href="#" onclick="showPage('portfolio'); showPortfolioSub('arch')">Architectural Elements</a></li>
+        <li><a href="#" onclick="showPage('portfolio'); showPortfolioSub('kitchen')">Kitchen &amp; Cabinetry</a></li>
+        <li><a href="#" onclick="showPage('portfolio'); showPortfolioSub('artistic')">Artistic Pieces</a></li>
       </ul>
     </li>
     <li><a href="#" onclick="showPage('shop')" id="nav-shop">Shop</a></li>
@@ -338,10 +340,24 @@
     <p>In this fast-paced world of mass production overseas production and hollow facades, we like to believe we create special things; Slowly, simply, made by hand, one piece at a time.</p>
   </div>
 
-  <!-- Sub-navigation -->
-  <div class="portfolio-subnav-bar">
-    <button class="portfolio-subnav-btn active" id="port-subnav-btn-tables" onclick="showPortfolioSub('tables', this)">Tables</button>
-    <button class="portfolio-subnav-btn" id="port-subnav-btn-arch" onclick="showPortfolioSub('arch', this)">Architectural Elements</button>
+  <!-- Category selector -->
+  <div class="portfolio-cat-grid">
+    <div class="portfolio-cat-card active" id="portcat-tables" onclick="showPortfolioSub('tables', this)">
+      <div class="portfolio-cat-img placeholder-img"><span>Image Coming Soon</span></div>
+      <h3 class="portfolio-cat-title">Tables</h3>
+    </div>
+    <div class="portfolio-cat-card" id="portcat-arch" onclick="showPortfolioSub('arch', this)">
+      <div class="portfolio-cat-img placeholder-img"><span>Image Coming Soon</span></div>
+      <h3 class="portfolio-cat-title">Architectural Elements</h3>
+    </div>
+    <div class="portfolio-cat-card" id="portcat-kitchen" onclick="showPortfolioSub('kitchen', this)">
+      <div class="portfolio-cat-img placeholder-img"><span>Image Coming Soon</span></div>
+      <h3 class="portfolio-cat-title">Kitchen &amp; Cabinetry</h3>
+    </div>
+    <div class="portfolio-cat-card" id="portcat-artistic" onclick="showPortfolioSub('artistic', this)">
+      <div class="portfolio-cat-img placeholder-img"><span>Image Coming Soon</span></div>
+      <h3 class="portfolio-cat-title">Artistic Pieces</h3>
+    </div>
   </div>
 
   <!-- ── Tables sub-section ────────────────────────────── -->
@@ -436,6 +452,34 @@
     </section>
 
   </div><!-- /port-sub-arch -->
+
+  <!-- ── Kitchen & Cabinetry sub-section ──────────────── -->
+  <div class="portfolio-sub" id="port-sub-kitchen">
+
+    <section style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 100px 20px; text-align: center;">
+      <div class="section-inner" style="max-width: 600px;">
+        <p class="section-label">Coming Soon</p>
+        <h2 class="section-title">Kitchen &amp; <em>Cabinetry</em></h2>
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--mid); line-height: 1.8; margin-top: 24px;">We are building out our kitchen and cabinetry portfolio. In the meantime, reach out to discuss a custom kitchen or cabinetry project of your own.</p>
+        <a href="#" onclick="showPage('contact')" class="btn-primary" style="margin-top: 36px; display: inline-block;">Start a Project</a>
+      </div>
+    </section>
+
+  </div><!-- /port-sub-kitchen -->
+
+  <!-- ── Artistic Pieces sub-section ──────────────────── -->
+  <div class="portfolio-sub" id="port-sub-artistic">
+
+    <section style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 100px 20px; text-align: center;">
+      <div class="section-inner" style="max-width: 600px;">
+        <p class="section-label">Coming Soon</p>
+        <h2 class="section-title">Artistic <em>Pieces</em></h2>
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--mid); line-height: 1.8; margin-top: 24px;">We are building out our portfolio of one-of-a-kind artistic pieces. In the meantime, reach out to discuss a custom commission of your own.</p>
+        <a href="#" onclick="showPage('contact')" class="btn-primary" style="margin-top: 36px; display: inline-block;">Start a Project</a>
+      </div>
+    </section>
+
+  </div><!-- /port-sub-artistic -->
 
 </div><!-- /page-portfolio -->
 
