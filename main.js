@@ -815,6 +815,25 @@ function renderArtTableGrid() {
   ).join('');
 }
 
+/* ═══ PORTFOLIO: ARCHITECTURAL ELEMENTS — FULL GALLERY ═══════ */
+const ARCH_ELEMENTS_R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Portfolio_Architectural%20Elements/';
+const ARCH_ELEMENTS_JPG_EXCEPTIONS = [8, 13]; // these two are .jpg, not .jpeg
+const archElementsImages = Array.from({ length: 42 }, (_, i) => {
+  const n = i + 1;
+  const ext = ARCH_ELEMENTS_JPG_EXCEPTIONS.includes(n) ? 'jpg' : 'jpeg';
+  return ARCH_ELEMENTS_R2 + 'Portfolio_Tables_AT' + n + '.' + ext;
+});
+
+function renderArchElementsGrid() {
+  const grid = document.getElementById('arch-elements-grid');
+  if (!grid || grid.childElementCount) return;
+  grid.innerHTML = archElementsImages.map((src, i) =>
+    `<div class="portfolio-photo" onclick="openGalleryLightbox(archElementsImages, ${i})">
+      <img src="${src}" alt="Architectural Elements" loading="lazy">
+    </div>`
+  ).join('');
+}
+
 /* ═══ PAGE NAVIGATION ═══════════════════════════════════════ */
 
 /**
@@ -865,6 +884,7 @@ function showPage(page, anchorId) {
 
   if (page === 'shop') showShopSub('tables');
   if (page === 'portfolio-tables-art') renderArtTableGrid();
+  if (page === 'portfolio-arch') renderArchElementsGrid();
 
   const anchor = anchorId && document.getElementById(anchorId);
   if (anchor) {
