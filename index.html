@@ -376,7 +376,7 @@
 </div><!-- /page-portfolio -->
 
 
-<!-- ═══ PORTFOLIO: TABLES ═══════════════════════════════ -->
+<!-- ═══ PORTFOLIO: TABLES (hub) ══════════════════════════ -->
 <div class="page" id="page-portfolio-tables">
 
   <div class="portfolio-hero">
@@ -385,15 +385,58 @@
     <h1>Table <em>Portfolio</em></h1>
   </div>
 
+  <div class="portfolio-cat-grid">
+    <div class="portfolio-cat-card" id="portcat-tables-art" onclick="showPage('portfolio-tables-art')">
+      <div class="portfolio-cat-img">
+        <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/PORTFOLIO_Tables_AT/AT.01.jpg" alt="Art Table" loading="lazy">
+      </div>
+      <h3 class="portfolio-cat-title">Art Table</h3>
+    </div>
+    <div class="portfolio-cat-card" id="portcat-tables-contemporary" onclick="showPage('portfolio-tables-contemporary')">
+      <div class="portfolio-cat-img placeholder-img"><span>Image Coming Soon</span></div>
+      <h3 class="portfolio-cat-title">Contemporary</h3>
+    </div>
+  </div>
+
+</div><!-- /page-portfolio-tables -->
+
+
+<!-- ═══ PORTFOLIO: TABLES — ART TABLE ════════════════════ -->
+<div class="page" id="page-portfolio-tables-art">
+
+  <div class="portfolio-hero">
+    <a href="#" onclick="return showPage('portfolio-tables')" class="portfolio-back-link">&larr; Back to Tables</a>
+    <p class="eyebrow">Our Work</p>
+    <h1>Art <em>Table</em></h1>
+  </div>
+
+  <section class="shop-section">
+    <div class="section-inner">
+      <div class="portfolio-photo-grid" id="art-table-grid"></div>
+    </div>
+  </section>
+
+</div><!-- /page-portfolio-tables-art -->
+
+
+<!-- ═══ PORTFOLIO: TABLES — CONTEMPORARY ═════════════════ -->
+<div class="page" id="page-portfolio-tables-contemporary">
+
+  <div class="portfolio-hero">
+    <a href="#" onclick="return showPage('portfolio-tables')" class="portfolio-back-link">&larr; Back to Tables</a>
+    <p class="eyebrow">Our Work</p>
+    <h1>Contemporary <em>Tables</em></h1>
+  </div>
+
   <section style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 100px 20px; text-align: center;">
     <div class="section-inner" style="max-width: 600px;">
       <p class="section-label">Coming Soon</p>
-      <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--mid); line-height: 1.8; margin-top: 12px;">We are building out our table portfolio. In the meantime, browse our current available tables in the shop — each one represents the same standard of craft.</p>
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--mid); line-height: 1.8; margin-top: 12px;">We are building out our contemporary table portfolio. In the meantime, browse our current available tables in the shop — each one represents the same standard of craft.</p>
       <a href="#" onclick="showPage('shop')" class="btn-primary" style="margin-top: 36px; display: inline-block;">Browse Tables</a>
     </div>
   </section>
 
-</div><!-- /page-portfolio-tables -->
+</div><!-- /page-portfolio-tables-contemporary -->
 
 
 <!-- ═══ PORTFOLIO: ARCHITECTURAL ELEMENTS ═══════════════ -->
@@ -559,10 +602,10 @@
   </section>
 
   <section id="section-philosophy" style="border-top: 1px solid var(--border);">
-    <div class="section-inner">
+    <div class="section-inner" style="text-align: center;">
       <p class="section-label">Our Philosophy</p>
       <h2 class="section-title">Reclaimed Wood is <em>Sacred</em></h2>
-      <div style="max-width: 700px;">
+      <div style="max-width: 700px; margin: 0 auto;">
         <p style="font-size: 1rem; color: var(--mid); margin-bottom: 20px;">Every piece of pre-industrial wood in our workshop carries centuries of history. A beam from an 1820s barn, planks from a mill that operated for 150 years, floorboards that have supported generations of families — these materials deserve respect.</p>
         <p style="font-size: 1rem; color: var(--mid); margin-bottom: 20px;">Our approach isn't to cover up that history or sand it away. It's to honor it. The patina, the saw marks, the grain — these are features, not flaws. We design around them, highlight them, and let each piece tell its own story.</p>
         <p style="font-size: 1rem; color: var(--mid);">That's the heart of what we do. Not just building beautiful furniture, but preserving and celebrating the objects that came before.</p>

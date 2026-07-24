@@ -689,6 +689,33 @@ section { padding: 96px 48px; }
   font-size: 0.9rem; color: var(--mid); line-height: 1.6;
 }
 
+/* ─── PORTFOLIO PHOTO GRID (simple gallery + lightbox) ── */
+.portfolio-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.portfolio-photo {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  cursor: zoom-in;
+  background: var(--charcoal);
+}
+.portfolio-photo img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s, opacity 0.3s;
+  opacity: 0.94;
+}
+.portfolio-photo:hover img { transform: scale(1.06); opacity: 1; }
+
+@media (max-width: 1024px) {
+  .portfolio-photo-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+}
+@media (max-width: 480px) {
+  .portfolio-photo-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+
 /* ─── TEAM SECTION ─────────────────────────────────── */
 .team-intro {
   margin-bottom: 64px;

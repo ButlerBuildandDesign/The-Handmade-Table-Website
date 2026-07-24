@@ -795,6 +795,26 @@ const portfolioProjects = [
   }
 ];
 
+/* ═══ PORTFOLIO: TABLES — ART TABLE PHOTOS ═══════════════════ */
+const ART_TABLE_R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/PORTFOLIO_Tables_AT/';
+const artTableImages = [
+  'AT.01.jpg', 'AT.02.jpg', 'AT.03.jpg', 'AT.04.jpg', 'AT.07.jpg',
+  'AT.010.JPG', 'AT.011.JPG', 'AT.012.jpg', 'AT.013.jpg', 'AT.014.jpg',
+  'AT.015.jpg', 'AT.016.jpg', 'AT.017.jpg', 'AT.018.jpg', 'AT.019.jpg',
+  'AT.021.jpg', 'AT.022.jpg', 'AT.023.JPG', 'AT.024.JPG', 'AT.025.JPG',
+  'AT.026.JPG'
+].map(name => ART_TABLE_R2 + name);
+
+function renderArtTableGrid() {
+  const grid = document.getElementById('art-table-grid');
+  if (!grid || grid.childElementCount) return;
+  grid.innerHTML = artTableImages.map((src, i) =>
+    `<div class="portfolio-photo" onclick="openGalleryLightbox(artTableImages, ${i})">
+      <img src="${src}" alt="Art Table" loading="lazy">
+    </div>`
+  ).join('');
+}
+
 /* ═══ PAGE NAVIGATION ═══════════════════════════════════════ */
 
 /**
@@ -831,6 +851,8 @@ function showPage(page, anchorId) {
     shop: 'nav-shop',
     portfolio: 'nav-portfolio',
     'portfolio-tables': 'nav-portfolio',
+    'portfolio-tables-art': 'nav-portfolio',
+    'portfolio-tables-contemporary': 'nav-portfolio',
     'portfolio-arch': 'nav-portfolio',
     'portfolio-kitchen': 'nav-portfolio',
     'portfolio-artistic': 'nav-portfolio',
@@ -842,6 +864,7 @@ function showPage(page, anchorId) {
   if (navId) document.getElementById(navId).classList.add('active');
 
   if (page === 'shop') showShopSub('tables');
+  if (page === 'portfolio-tables-art') renderArtTableGrid();
 
   const anchor = anchorId && document.getElementById(anchorId);
   if (anchor) {
@@ -898,10 +921,27 @@ function detailImageNav(dir) {
   document.getElementById('detail-counter').textContent = (detailIndex + 1) + ' / ' + detailImages.length;
 }
 
+let lightboxMode = 'detail';
+let galleryImages = [];
+let galleryIndex = 0;
+
 function openLightbox() {
+  lightboxMode = 'detail';
   const hasMultiple = detailImages.length > 1;
   document.getElementById('lightbox-img').src = detailImages[detailIndex];
   document.getElementById('lightbox-counter').textContent = hasMultiple ? (detailIndex + 1) + ' / ' + detailImages.length : '';
+  document.getElementById('lb-prev').style.display = hasMultiple ? '' : 'none';
+  document.getElementById('lb-next').style.display = hasMultiple ? '' : 'none';
+  document.getElementById('lightbox').style.display = 'flex';
+}
+
+function openGalleryLightbox(images, index) {
+  lightboxMode = 'gallery';
+  galleryImages = images;
+  galleryIndex = index || 0;
+  const hasMultiple = galleryImages.length > 1;
+  document.getElementById('lightbox-img').src = galleryImages[galleryIndex];
+  document.getElementById('lightbox-counter').textContent = hasMultiple ? (galleryIndex + 1) + ' / ' + galleryImages.length : '';
   document.getElementById('lb-prev').style.display = hasMultiple ? '' : 'none';
   document.getElementById('lb-next').style.display = hasMultiple ? '' : 'none';
   document.getElementById('lightbox').style.display = 'flex';
@@ -916,6 +956,13 @@ function closeLightboxOutside(e) {
 }
 
 function lightboxNav(dir) {
+  if (lightboxMode === 'gallery') {
+    if (!galleryImages || galleryImages.length < 2) return;
+    galleryIndex = (galleryIndex + dir + galleryImages.length) % galleryImages.length;
+    document.getElementById('lightbox-img').src = galleryImages[galleryIndex];
+    document.getElementById('lightbox-counter').textContent = (galleryIndex + 1) + ' / ' + galleryImages.length;
+    return;
+  }
   if (!detailImages || detailImages.length < 2) return;
   detailIndex = (detailIndex + dir + detailImages.length) % detailImages.length;
   document.getElementById('lightbox-img').src = detailImages[detailIndex];
