@@ -738,6 +738,37 @@ section { padding: 96px 48px; }
   .portfolio-photo-grid { grid-template-columns: 1fr; gap: 16px; }
 }
 
+/* Masonry variant — tiles keep their natural aspect ratio and pack
+   tightly into columns, old-school photo-wall style, instead of the
+   uniform cropped grid above. */
+.portfolio-photo-grid.portfolio-photo-grid--masonry {
+  display: block;
+  column-count: 4;
+  column-gap: 14px;
+}
+.portfolio-photo-grid--masonry .portfolio-photo {
+  aspect-ratio: unset;
+  display: inline-block;
+  width: 100%;
+  break-inside: avoid;
+  margin-bottom: 14px;
+}
+.portfolio-photo-grid--masonry .portfolio-photo img {
+  width: 100%; height: auto;
+  object-fit: unset;
+  display: block;
+}
+@media (max-width: 1024px) {
+  .portfolio-photo-grid.portfolio-photo-grid--masonry { column-count: 3; }
+}
+@media (max-width: 768px) {
+  .portfolio-photo-grid.portfolio-photo-grid--masonry { column-count: 2; column-gap: 10px; }
+  .portfolio-photo-grid--masonry .portfolio-photo { margin-bottom: 10px; }
+}
+@media (max-width: 480px) {
+  .portfolio-photo-grid.portfolio-photo-grid--masonry { column-count: 1; }
+}
+
 /* ─── TEAM SECTION ─────────────────────────────────── */
 .team-intro {
   margin-bottom: 64px;
