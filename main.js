@@ -848,6 +848,22 @@ function renderFarmTableGrid() {
   ).join('');
 }
 
+/* ═══ PORTFOLIO: TABLES — CONTEMPORARY TABLE PHOTOS ══════════ */
+const CONTEMPORARY_TABLE_R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Portfolio_Tables_CT/';
+const contemporaryTableImages = Array.from({ length: 5 }, (_, i) =>
+  CONTEMPORARY_TABLE_R2 + 'Portfolio_Tables_CT' + (i + 1) + '.jpeg'
+);
+
+function renderContemporaryTableGrid() {
+  const grid = document.getElementById('contemporary-table-grid');
+  if (!grid || grid.childElementCount) return;
+  grid.innerHTML = contemporaryTableImages.map((src, i) =>
+    `<div class="portfolio-photo" onclick="openGalleryLightbox(contemporaryTableImages, ${i})">
+      <img src="${src}" alt="Contemporary Table" loading="lazy">
+    </div>`
+  ).join('');
+}
+
 /* ═══ PORTFOLIO: FURNITURE PHOTOS ═════════════════════════════ */
 const PORTFOLIO_FURNITURE_R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Portfolio_Furniture/';
 const portfolioFurnitureImages = Array.from({ length: 8 }, (_, i) =>
@@ -936,6 +952,7 @@ function showPage(page, anchorId) {
   if (page === 'portfolio-tables-art') renderArtTableGrid();
   if (page === 'portfolio-tables-coffee-console') renderCoffeeConsoleGrid();
   if (page === 'portfolio-tables-farm') renderFarmTableGrid();
+  if (page === 'portfolio-tables-contemporary') renderContemporaryTableGrid();
   if (page === 'portfolio-furniture') renderPortfolioFurnitureGrid();
   if (page === 'portfolio-arch') renderArchElementsGrid();
 
