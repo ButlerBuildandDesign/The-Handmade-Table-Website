@@ -432,6 +432,26 @@ section { padding: 96px 48px; }
 }
 .portfolio-cat-card:hover .portfolio-cat-title { color: var(--oak-dark); }
 
+/* Compact variant — used on hub pages (e.g. Tables) with many tiles */
+.portfolio-cat-grid.portfolio-cat-grid--compact {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  padding: 48px 40px 64px;
+}
+.portfolio-cat-grid--compact .portfolio-cat-img { aspect-ratio: 1/1; }
+.portfolio-cat-grid--compact .portfolio-cat-title { font-size: 1.05rem; margin-top: 16px; }
+
+@media (max-width: 1024px) {
+  .portfolio-cat-grid.portfolio-cat-grid--compact { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .portfolio-cat-grid.portfolio-cat-grid--compact { grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 40px 24px 48px; }
+}
+@media (max-width: 480px) {
+  .portfolio-cat-grid.portfolio-cat-grid--compact { grid-template-columns: 1fr; }
+}
+
 .portfolio-back-link {
   display: inline-block;
   font-size: 0.72rem; font-weight: 500; letter-spacing: 0.16em;
