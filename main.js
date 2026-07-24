@@ -896,6 +896,22 @@ function renderSpecialtyTableGrid() {
   ).join('');
 }
 
+/* ═══ PORTFOLIO: TABLES — ROUND, OVAL & RACETRACK PHOTOS ═════ */
+const ROUND_TABLE_R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Portfolio_Tables_RO/';
+const roundTableImages = Array.from({ length: 2 }, (_, i) =>
+  ROUND_TABLE_R2 + 'Portfolio_Tables_RO' + (i + 1) + '.jpeg'
+);
+
+function renderRoundTableGrid() {
+  const grid = document.getElementById('round-table-grid');
+  if (!grid || grid.childElementCount) return;
+  grid.innerHTML = roundTableImages.map((src, i) =>
+    `<div class="portfolio-photo" onclick="openGalleryLightbox(roundTableImages, ${i})">
+      <img src="${src}" alt="Round, Oval, and Racetrack Table" loading="lazy">
+    </div>`
+  ).join('');
+}
+
 /* ═══ PORTFOLIO: FURNITURE PHOTOS ═════════════════════════════ */
 const PORTFOLIO_FURNITURE_R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Portfolio_Furniture/';
 const portfolioFurnitureImages = Array.from({ length: 8 }, (_, i) =>
@@ -971,6 +987,7 @@ function showPage(page, anchorId) {
     'portfolio-tables-contemporary': 'nav-portfolio',
     'portfolio-tables-trestle': 'nav-portfolio',
     'portfolio-tables-specialty': 'nav-portfolio',
+    'portfolio-tables-round': 'nav-portfolio',
     'portfolio-furniture': 'nav-portfolio',
     'portfolio-arch': 'nav-portfolio',
     'portfolio-kitchen': 'nav-portfolio',
@@ -989,6 +1006,7 @@ function showPage(page, anchorId) {
   if (page === 'portfolio-tables-contemporary') renderContemporaryTableGrid();
   if (page === 'portfolio-tables-trestle') renderTrestleTableGrid();
   if (page === 'portfolio-tables-specialty') renderSpecialtyTableGrid();
+  if (page === 'portfolio-tables-round') renderRoundTableGrid();
   if (page === 'portfolio-furniture') renderPortfolioFurnitureGrid();
   if (page === 'portfolio-arch') renderArchElementsGrid();
 
