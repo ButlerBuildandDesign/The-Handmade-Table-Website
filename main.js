@@ -912,6 +912,22 @@ function renderRoundTableGrid() {
   ).join('');
 }
 
+/* ═══ PORTFOLIO: TABLES — TRADITIONAL TABLE PHOTOS ═══════════ */
+const TRADITIONAL_TABLE_R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Portfolio_Tables_TT/';
+const traditionalTableImages = Array.from({ length: 4 }, (_, i) =>
+  TRADITIONAL_TABLE_R2 + 'Portfolio_Tables_TT' + (i + 1) + '.jpeg'
+);
+
+function renderTraditionalTableGrid() {
+  const grid = document.getElementById('traditional-table-grid');
+  if (!grid || grid.childElementCount) return;
+  grid.innerHTML = traditionalTableImages.map((src, i) =>
+    `<div class="portfolio-photo" onclick="openGalleryLightbox(traditionalTableImages, ${i})">
+      <img src="${src}" alt="Traditional Table" loading="lazy">
+    </div>`
+  ).join('');
+}
+
 /* ═══ PORTFOLIO: FURNITURE PHOTOS ═════════════════════════════ */
 const PORTFOLIO_FURNITURE_R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Portfolio_Furniture/';
 const portfolioFurnitureImages = Array.from({ length: 8 }, (_, i) =>
@@ -988,6 +1004,7 @@ function showPage(page, anchorId) {
     'portfolio-tables-trestle': 'nav-portfolio',
     'portfolio-tables-specialty': 'nav-portfolio',
     'portfolio-tables-round': 'nav-portfolio',
+    'portfolio-tables-traditional': 'nav-portfolio',
     'portfolio-furniture': 'nav-portfolio',
     'portfolio-arch': 'nav-portfolio',
     'portfolio-kitchen': 'nav-portfolio',
@@ -1007,6 +1024,7 @@ function showPage(page, anchorId) {
   if (page === 'portfolio-tables-trestle') renderTrestleTableGrid();
   if (page === 'portfolio-tables-specialty') renderSpecialtyTableGrid();
   if (page === 'portfolio-tables-round') renderRoundTableGrid();
+  if (page === 'portfolio-tables-traditional') renderTraditionalTableGrid();
   if (page === 'portfolio-furniture') renderPortfolioFurnitureGrid();
   if (page === 'portfolio-arch') renderArchElementsGrid();
 
