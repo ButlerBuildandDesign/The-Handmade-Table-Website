@@ -21,6 +21,7 @@
       <a href="#" onclick="showPage('portfolio')" id="nav-portfolio">Portfolio</a>
       <ul class="nav-dropdown-menu">
         <li><a href="#" onclick="showPage('portfolio-tables')">Tables</a></li>
+        <li><a href="#" onclick="showPage('portfolio-furniture')">Furniture</a></li>
         <li><a href="#" onclick="showPage('portfolio-arch')">Architectural Elements</a></li>
         <li><a href="#" onclick="showPage('portfolio-kitchen')">Kitchen &amp; Cabinetry</a></li>
         <li><a href="#" onclick="showPage('portfolio-artistic')">Artistic Pieces</a></li>
@@ -355,6 +356,12 @@
       <div class="portfolio-cat-img placeholder-img"><span>Image Coming Soon</span></div>
       <h3 class="portfolio-cat-title">Tables</h3>
     </div>
+    <div class="portfolio-cat-card" id="portcat-furniture" onclick="showPage('portfolio-furniture')">
+      <div class="portfolio-cat-img">
+        <img src="https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Portfolio_Furniture/Portfolio_Furniture_1.jpeg" alt="Furniture" loading="lazy">
+      </div>
+      <h3 class="portfolio-cat-title">Furniture</h3>
+    </div>
     <div class="portfolio-cat-card" id="portcat-arch" onclick="showPage('portfolio-arch')">
       <div class="portfolio-cat-img placeholder-img"><span>Image Coming Soon</span></div>
       <h3 class="portfolio-cat-title">Architectural Elements</h3>
@@ -370,6 +377,24 @@
   </div>
 
 </div><!-- /page-portfolio -->
+
+
+<!-- ═══ PORTFOLIO: FURNITURE ═════════════════════════════ -->
+<div class="page" id="page-portfolio-furniture">
+
+  <div class="portfolio-hero">
+    <a href="#" onclick="return showPage('portfolio')" class="portfolio-back-link">&larr; Back to Portfolio</a>
+    <p class="eyebrow">Our Work</p>
+    <h1>Furniture <em>Portfolio</em></h1>
+  </div>
+
+  <section class="shop-section">
+    <div class="section-inner">
+      <div class="portfolio-photo-grid" id="portfolio-furniture-grid"></div>
+    </div>
+  </section>
+
+</div><!-- /page-portfolio-furniture -->
 
 
 <!-- ═══ PORTFOLIO: TABLES (hub) ══════════════════════════ -->

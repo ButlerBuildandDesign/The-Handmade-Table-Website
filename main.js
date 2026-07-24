@@ -831,6 +831,22 @@ function renderCoffeeConsoleGrid() {
   ).join('');
 }
 
+/* ═══ PORTFOLIO: FURNITURE PHOTOS ═════════════════════════════ */
+const PORTFOLIO_FURNITURE_R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Portfolio_Furniture/';
+const portfolioFurnitureImages = Array.from({ length: 8 }, (_, i) =>
+  PORTFOLIO_FURNITURE_R2 + 'Portfolio_Furniture_' + (i + 1) + '.jpeg'
+);
+
+function renderPortfolioFurnitureGrid() {
+  const grid = document.getElementById('portfolio-furniture-grid');
+  if (!grid || grid.childElementCount) return;
+  grid.innerHTML = portfolioFurnitureImages.map((src, i) =>
+    `<div class="portfolio-photo" onclick="openGalleryLightbox(portfolioFurnitureImages, ${i})">
+      <img src="${src}" alt="Furniture" loading="lazy">
+    </div>`
+  ).join('');
+}
+
 /* ═══ PORTFOLIO: ARCHITECTURAL ELEMENTS — FULL GALLERY ═══════ */
 const ARCH_ELEMENTS_R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Portfolio_Architectural%20Elements/';
 const ARCH_ELEMENTS_EXCLUDED = [8, 13]; // .jpg, not .jpeg — excluded from the gallery
@@ -887,6 +903,7 @@ function showPage(page, anchorId) {
     'portfolio-tables-art': 'nav-portfolio',
     'portfolio-tables-coffee-console': 'nav-portfolio',
     'portfolio-tables-contemporary': 'nav-portfolio',
+    'portfolio-furniture': 'nav-portfolio',
     'portfolio-arch': 'nav-portfolio',
     'portfolio-kitchen': 'nav-portfolio',
     'portfolio-artistic': 'nav-portfolio',
@@ -900,6 +917,7 @@ function showPage(page, anchorId) {
   if (page === 'shop') showShopSub('tables');
   if (page === 'portfolio-tables-art') renderArtTableGrid();
   if (page === 'portfolio-tables-coffee-console') renderCoffeeConsoleGrid();
+  if (page === 'portfolio-furniture') renderPortfolioFurnitureGrid();
   if (page === 'portfolio-arch') renderArchElementsGrid();
 
   const anchor = anchorId && document.getElementById(anchorId);
