@@ -831,6 +831,23 @@ function renderCoffeeConsoleGrid() {
   ).join('');
 }
 
+/* ═══ PORTFOLIO: TABLES — FARM TABLE PHOTOS ══════════════════ */
+const FARM_TABLE_R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Portfolio_Tables_FT/';
+const FARM_TABLE_EXCLUDED = [9, 41]; // missing from the R2 folder
+const farmTableImages = Array.from({ length: 44 }, (_, i) => i + 1)
+  .filter(n => !FARM_TABLE_EXCLUDED.includes(n))
+  .map(n => FARM_TABLE_R2 + 'Portfolio_Tables_FT' + n + '.jpeg');
+
+function renderFarmTableGrid() {
+  const grid = document.getElementById('farm-table-grid');
+  if (!grid || grid.childElementCount) return;
+  grid.innerHTML = farmTableImages.map((src, i) =>
+    `<div class="portfolio-photo" onclick="openGalleryLightbox(farmTableImages, ${i})">
+      <img src="${src}" alt="Farm Table" loading="lazy">
+    </div>`
+  ).join('');
+}
+
 /* ═══ PORTFOLIO: FURNITURE PHOTOS ═════════════════════════════ */
 const PORTFOLIO_FURNITURE_R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Portfolio_Furniture/';
 const portfolioFurnitureImages = Array.from({ length: 8 }, (_, i) =>
@@ -902,6 +919,7 @@ function showPage(page, anchorId) {
     'portfolio-tables': 'nav-portfolio',
     'portfolio-tables-art': 'nav-portfolio',
     'portfolio-tables-coffee-console': 'nav-portfolio',
+    'portfolio-tables-farm': 'nav-portfolio',
     'portfolio-tables-contemporary': 'nav-portfolio',
     'portfolio-furniture': 'nav-portfolio',
     'portfolio-arch': 'nav-portfolio',
@@ -917,6 +935,7 @@ function showPage(page, anchorId) {
   if (page === 'shop') showShopSub('tables');
   if (page === 'portfolio-tables-art') renderArtTableGrid();
   if (page === 'portfolio-tables-coffee-console') renderCoffeeConsoleGrid();
+  if (page === 'portfolio-tables-farm') renderFarmTableGrid();
   if (page === 'portfolio-furniture') renderPortfolioFurnitureGrid();
   if (page === 'portfolio-arch') renderArchElementsGrid();
 
