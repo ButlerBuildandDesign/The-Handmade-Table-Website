@@ -19,6 +19,12 @@
 
 html { scroll-behavior: smooth; }
 
+/* Bump the base type scale up a notch on desktop — everything else on the
+   site is sized in rem, so this scales all text proportionally. */
+@media (min-width: 1025px) {
+  html { font-size: 112.5%; }
+}
+
 body {
   font-family: 'Jost', sans-serif;
   background: var(--cream);
