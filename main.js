@@ -805,12 +805,18 @@ const artTableImages = [
   'AT.026.JPG'
 ].map(name => ART_TABLE_R2 + name);
 
+function artTableLabel(src) {
+  const m = src.match(/AT\.(\d+)\./);
+  return m ? 'AT' + parseInt(m[1], 10) : '';
+}
+
 function renderArtTableGrid() {
   const grid = document.getElementById('art-table-grid');
   if (!grid || grid.childElementCount) return;
   grid.innerHTML = artTableImages.map((src, i) =>
     `<div class="portfolio-photo" onclick="openGalleryLightbox(artTableImages, ${i})">
       <img src="${src}" alt="Art Table" loading="lazy">
+      <span class="portfolio-photo-label">${artTableLabel(src)}</span>
     </div>`
   ).join('');
 }
