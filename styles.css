@@ -165,10 +165,6 @@ nav {
   font-size: 1.1rem; font-weight: 600; letter-spacing: 0.06em;
   color: var(--mid); max-width: 560px; margin: 28px auto 44px;
 }
-.hero-ctas {
-  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
-}
-
 /* ─── HERO VARIANTS (Shop, Arch, Portfolio, Team, Contact) ─── */
 .shop-hero, .arch-hero, .portfolio-hero, .team-hero, .contact-hero, .story-hero {
   background: var(--charcoal);
@@ -1281,8 +1277,6 @@ footer {
   .hero { padding: 100px 24px 60px; min-height: 540px; }
   .hero h1 { white-space: normal; font-size: clamp(2rem, 9vw, 3.5rem); }
   .hero-sub { font-size: 0.95rem; margin-bottom: 32px; }
-  .hero-ctas { flex-direction: column; align-items: center; gap: 12px; }
-  .hero-ctas .btn-primary, .hero-ctas .btn-outline { width: 100%; max-width: 280px; text-align: center; }
 
   .shop-hero, .arch-hero, .portfolio-hero, .team-hero, .contact-hero, .story-hero {
     padding: 100px 24px 44px;
