@@ -796,30 +796,14 @@ const portfolioProjects = [
 ];
 
 /* ═══ PORTFOLIO: TABLES — ART TABLE PHOTOS ═══════════════════ */
+/* Curated set matching the Art Table portfolio mock-up, in the order
+   they appear on the page (used for lightbox prev/next navigation). */
 const ART_TABLE_R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/PORTFOLIO_Tables_AT/';
 const artTableImages = [
-  'AT.01.jpg', 'AT.02.jpg', 'AT.03.jpg', 'AT.04.jpg', 'AT.07.jpg',
-  'AT.010.JPG', 'AT.011.JPG', 'AT.012.jpg', 'AT.013.jpg', 'AT.014.jpg',
-  'AT.015.jpg', 'AT.016.jpg', 'AT.017.jpg', 'AT.018.jpg', 'AT.019.jpg',
-  'AT.021.jpg', 'AT.022.jpg', 'AT.023.JPG', 'AT.024.JPG', 'AT.025.JPG',
-  'AT.026.JPG'
+  'AT.024.JPG', 'AT.023.JPG', 'AT.025.JPG',
+  'AT.02.jpg', 'AT.016.jpg', 'AT.014.jpg',
+  'AT.010.JPG', 'AT.04.jpg'
 ].map(name => ART_TABLE_R2 + name);
-
-function artTableLabel(src) {
-  const m = src.match(/AT\.(\d+)\./);
-  return m ? 'AT' + parseInt(m[1], 10) : '';
-}
-
-function renderArtTableGrid() {
-  const grid = document.getElementById('art-table-grid');
-  if (!grid || grid.childElementCount) return;
-  grid.innerHTML = artTableImages.map((src, i) =>
-    `<div class="portfolio-photo" onclick="openGalleryLightbox(artTableImages, ${i})">
-      <img src="${src}" alt="Art Table" loading="lazy">
-      <span class="portfolio-photo-label">${artTableLabel(src)}</span>
-    </div>`
-  ).join('');
-}
 
 /* ═══ PORTFOLIO: TABLES — COFFEE & CONSOLE PHOTOS ════════════ */
 const COFFEE_CONSOLE_R2 = 'https://pub-783c0f87e6f341c197ff7ad4188ba57e.r2.dev/Portfolio_Tables_CC/';
@@ -1023,7 +1007,6 @@ function showPage(page, anchorId) {
   if (navId) document.getElementById(navId).classList.add('active');
 
   if (page === 'shop') showShopSub('tables');
-  if (page === 'portfolio-tables-art') renderArtTableGrid();
   if (page === 'portfolio-tables-coffee-console') renderCoffeeConsoleGrid();
   if (page === 'portfolio-tables-farm') renderFarmTableGrid();
   if (page === 'portfolio-tables-contemporary') renderContemporaryTableGrid();

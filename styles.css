@@ -732,24 +732,6 @@ section { padding: 96px 48px; }
 }
 .portfolio-photo:hover img { transform: scale(1.06); opacity: 1; }
 
-.portfolio-photo-label {
-  position: absolute;
-  bottom: 6px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255,255,255,0.92);
-  color: #000;
-  font-family: 'Jost', sans-serif;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 2px 7px;
-  border-radius: 2px;
-  line-height: 1.4;
-  pointer-events: none;
-  z-index: 2;
-}
-
 @media (max-width: 1024px) {
   .portfolio-photo-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
 }
@@ -757,35 +739,100 @@ section { padding: 96px 48px; }
   .portfolio-photo-grid { grid-template-columns: 1fr; gap: 16px; }
 }
 
-/* Masonry variant — tiles keep their natural aspect ratio and pack
-   tightly into columns, old-school photo-wall style, instead of the
-   uniform cropped grid above. */
-.portfolio-photo-grid.portfolio-photo-grid--masonry {
-  display: block;
-  column-count: 4;
-  column-gap: 14px;
-}
-.portfolio-photo-grid--masonry .portfolio-photo {
-  aspect-ratio: unset;
-  display: inline-block;
+/* ─── ART TABLE STORY LAYOUT ─────────────────────────── */
+.art-story-hero img,
+.art-story-pair img,
+.art-accent-row img,
+.art-story-pair-uneven img {
   width: 100%;
-  break-inside: avoid;
-  margin-bottom: 14px;
-}
-.portfolio-photo-grid--masonry .portfolio-photo img {
-  width: 100%; height: auto;
-  object-fit: unset;
   display: block;
+  border: 1px solid var(--border);
+  cursor: zoom-in;
+  transition: opacity 0.3s;
 }
-@media (max-width: 1024px) {
-  .portfolio-photo-grid.portfolio-photo-grid--masonry { column-count: 3; }
+.art-story-hero img:hover,
+.art-story-pair img:hover,
+.art-accent-row img:hover,
+.art-story-pair-uneven img:hover {
+  opacity: 0.9;
 }
+.art-story-hero { margin-bottom: 28px; }
+
+.art-story-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.art-story-text {
+  max-width: 720px;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  background: var(--cream);
+  padding: 40px 44px;
+}
+.art-story-text p {
+  font-size: 1rem;
+  color: var(--mid);
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+.art-story-text p:last-child { margin-bottom: 0; }
+
+.art-accent-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.art-story-pair-uneven {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Pull quotes */
+.pull-quote {
+  text-align: center;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 0;
+}
+.pull-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--charcoal);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.pull-quote cite {
+  display: block;
+  font-style: normal;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--oak);
+}
+.pull-quote--inline {
+  border: 1px solid var(--border);
+  background: var(--cream);
+  padding: 40px 32px;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
-  .portfolio-photo-grid.portfolio-photo-grid--masonry { column-count: 2; column-gap: 10px; }
-  .portfolio-photo-grid--masonry .portfolio-photo { margin-bottom: 10px; }
-}
-@media (max-width: 480px) {
-  .portfolio-photo-grid.portfolio-photo-grid--masonry { column-count: 1; }
+  .art-story-pair,
+  .art-accent-row,
+  .art-story-pair-uneven {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .art-story-text { padding: 32px 24px; }
+  .pull-quote p { font-size: 1.25rem; }
 }
 
 /* ─── TEAM SECTION ─────────────────────────────────── */
